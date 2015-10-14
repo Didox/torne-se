@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Titulo:</strong>
+  <%= @aula.titulo %>
+</p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @aula.descricao %>
+</p>
+
+<p>
+  <strong>Link youtube:</strong>
+  <%= @aula.link_youtube %>
+</p>
+
+<%= link_to 'Edit', edit_aula_path(@aula) %> |
+<%= link_to 'Back', aulas_path %>
