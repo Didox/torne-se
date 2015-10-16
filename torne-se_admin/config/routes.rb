@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
 
   # You can have the root of your site routed with "root"
-  root 'home#index'
+  root 'home#index', as: :home
   get 'login' => 'login#login'
   get 'logout' => 'login#logout'
   post 'logar' => 'login#logar'

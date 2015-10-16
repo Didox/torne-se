@@ -13,15 +13,15 @@
 
   <div class="field">
     <%= f.label :titulo %><br>
-    <%= f.text_field :titulo %>
+    <%= f.text_field :titulo, required: true  %>
   </div>
   <div class="field">
     <%= f.label :descricao %><br>
-    <%= f.text_field :descricao %>
+    <%= f.text_field :descricao, required: true  %>
   </div>
   <div class="field">
     <%= f.label :link_youtube %><br>
-    <%= f.text_field :link_youtube %>
+    <%= f.text_field :link_youtube, required: true  %>
   </div>
   <div class="actions">
     <%= f.submit %>

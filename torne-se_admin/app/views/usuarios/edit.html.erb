@@ -1,6 +1,8 @@
-<h1>Editing Usuario</h1>
+<div class="jumbotron">
+	<h1>Editing Usuario</h1>
 
-<%= render 'form' %>
+	<%= render 'form' %>
 
-<%= link_to 'Show', @usuario %> |
-<%= link_to 'Back', usuarios_path %>
+	<%= link_to 'Ver', @usuario, class: 'btn btn-info' %> |
+	<%= link_to 'Voltar', usuarios_path, class: 'btn btn-default' %>
+</div>
