@@ -10,7 +10,7 @@ class LoginController < ApplicationController
 		if usuario.present? && usuario.size > 0
 			session[:mensagem_de_falha] = ""
 			cookies[:usuario_logado] = usuario.first.id
-			redirect_to root_path
+			redirect_to home_path
 		else
 			session[:mensagem_de_falha] = "Usuário ou senha inválida"
 			redirect_to login_path

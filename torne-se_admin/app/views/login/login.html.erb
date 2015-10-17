@@ -1,12 +1,13 @@
-<h1>Login Torne-se um Programador</h1>
+<div class="jumbotron">
+	<h1>Login Torne-se um Programador</h1>
 
-<form action="<%= logar_path %>" method="POST">
-	<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-	Login
-	<input type="text" name="login"/><br>
-	Senha
-	<input type="password" name="password"/><br>
-	<input type="submit" value="logar"/><br>
-	<%= @mensagem_de_falha %>
-
-</form>
+	<form action="<%= logar_path %>" method="POST">
+		<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+		Login
+		<input type="text" name="login"/><br>
+		Senha
+		<input type="password" name="password"/><br>
+		<input type="submit" value="logar" id="logar"/><br>
+		<%= @mensagem_de_falha %>
+	</form>
+</div>

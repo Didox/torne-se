@@ -1,7 +1,7 @@
 <div class="jumbotron">
   <p id="notice"><%= notice %></p>
 
-  <h1>Listing Aulas</h1>
+  <h1>Lista de Aulas</h1>
 
   <table>
     <thead>
@@ -19,9 +19,9 @@
           <td><%= aula.titulo %></td>
           <td><%= aula.descricao %></td>
           <td><%= aula.link_youtube %></td>
-          <td><%= link_to 'Show', aula %></td>
-          <td><%= link_to 'Edit', edit_aula_path(aula) %></td>
-          <td><%= link_to 'Destroy', aula, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Show', aula, class: "btn btn-xs btn-info" %></td>
+          <td><%= link_to 'Edit', edit_aula_path(aula), class: "btn btn-xs btn-warning" %></td>
+          <td><%= link_to 'Destroy', aula, class: "btn btn-xs btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
     </tbody>
@@ -29,5 +29,5 @@
 
   <br>
 
-  <%= link_to 'New Aula', new_aula_path %>
+  <%= link_to 'Nova aula', new_aula_path, class: "btn btn-primary" %>
 </div>
