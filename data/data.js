@@ -1,6 +1,6 @@
 var version = {
-	v = '1',
-	message = 'Atualizar'
+	v: '1',
+	message: 'Atualizar'
 }
 
 var data = [
