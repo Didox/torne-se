@@ -168,17 +168,8 @@ function createWindow(exitOnClose){
 var win = createWindow(true);
 
 win.addEventListener('android:back',function(e){
-  var dialog = Ti.UI.createAlertDialog({
-    buttonNames: ['Sim', 'Não'],
-    message: 'Você sairá do aplicativo. Deseja continuar?'
-  });
-  dialog.addEventListener('click', function(e){
-    if (e.index === 0){
-      win.close();
-      Titanium.Android.currentActivity.finish();
-    }
-  });
-  dialog.show();
+  win.close();
+  Titanium.Android.currentActivity.finish();
 });
 
 var webview = Ti.UI.createWebView({
@@ -207,7 +198,11 @@ win.add(webview);
 win.open();
 
 var openURL = function(url, message) {
-  if(message == undefined) message = 'Você sairá do aplicativo. Deseja continuar?';
+  if(message == undefined){
+    Ti.Platform.openURL(url);
+    return;
+  }
+
   var confirm = Titanium.UI.createAlertDialog({
     message: message,
     buttonNames: ['Sim', 'Não']

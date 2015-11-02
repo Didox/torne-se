@@ -21,16 +21,6 @@ app.isMobile = function(){
   else { return false; }
 };
 
-app.getYoutubeVideoHtml5 = function(tag){
-  var video_url = tag.match(/www.*?(\"|\')/);
-  if(video_url === null) return '';
-
-  video_url = video_url[0].replace(/\"|'/g,'');
-  video_url = video_url.indexOf("http") === -1 ? "http://" + video_url : video_url;
-  video_url = video_url.indexOf("?") === -1 ? video_url + "?html5=1" : video_url + "&html5=1";
-  return video_url;
-};
-
 app.getYoutubeImagem = function(youtube_url){
   var id_video = app.getIdYoutubeImagem(youtube_url);
   return video_imagem = "http://img.youtube.com/vi/"+ id_video + "/hqdefault.jpg";
@@ -38,7 +28,7 @@ app.getYoutubeImagem = function(youtube_url){
 
 app.getHtmlVideo = function(youtube_url) {
   var video = app.getIdYoutubeImagem(youtube_url);
-  return "<iframe width='100%' src='https://www.youtube.com/embed/"+video+"' frameborder='0' allowfullscreen></iframe>";
+  return "<iframe width='98%' height='300px' src='https://www.youtube.com/embed/"+video+"' frameborder='0' allowfullscreen></iframe>";
 };
 
 app.getIdYoutubeImagem = function(youtube_url){
