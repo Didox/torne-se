@@ -1,10 +1,10 @@
 var version = {
-  v: '2',
+  v: '1',
   message: 'A nova versão do app está disponível para download'
 }
 
 var aviso = {
-  message: ''
+  message: 'você já marcou sua aula particular hoje? aproveite: (055 11) 976144154'
 }
 
 var data = [
