@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width,user-scalable=no">
+    <link rel="stylesheet" href="HTML/css/global.css">
+    <script src="HTML/js/api.js"></script>
+    <title>Torne-se Index</title>
+  </head>
+  <body class="home">
+    <header>
+      <a href="app.backWindow();" class="logo" >Projeto torne-se um programador</a>
+    </header>
+    <p class="carregando" style="display:none">Carregando</p>
+    <div class="containar">
+      <div class="buttons">
+        <button type="button" onclick="app.backWindow();">Voltar</button>
+      </div>
+      <div>
+        <ul id="videos">
+        </ul>
+      </div>
+    </div>
+    <footer><div>Uma iniciativa Didox Business & Technology</div></footer>
+    <script src="HTML/js/zepto.js"></script>
+    <script src="HTML/js/index.js"></script>
+    <script type="text/javascript" src="https://rawgit.com/Didox/torne-se/master/data/data.js"></script>
+    <script type="text/javascript">
+      var html = "";
+      for(i=0;i<data.length; i++){
+        html += "<li>";
+        html += "  <div class='video'>";
+        html += "    <a href=\"javascript:app.openInternalLink('video.html?id=" + app.getIdYoutubeImagem(data[i].videoYoutube) + "');\">";
+        html += "      <img src='" + app.getYoutubeImagem(data[i].videoYoutube) + "' style='width: 200px;'>";
+        html += "      <p>" + data[i].titulo + "</p>";
+        html += "    </a>";
+        html += "  </div>";
+        html += "</li>"
+      }
+      $("#videos").html(html);
+    </script>
+  </body>
+</html>

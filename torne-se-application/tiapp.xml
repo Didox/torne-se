@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ti:app 
+  xmlns:ti="http://ti.appcelerator.org">
+  <property name="acs-oauth-secret-production" type="string">d445AmUkh60OQUT2BcsXVexiNDbbf50Z</property>
+  <property name="acs-oauth-key-production" type="string">DIsOC6vbU03ie3TgNycFRoQVJRuemNvX</property>
+  <property name="acs-api-key-production" type="string">jiKkVDID3REcM7Ow1LyPLuKMz5O9urP6</property>
+  <property name="acs-oauth-secret-development" type="string">D1D94EGSiUfZ9Yp8notlf243T25CbShm</property>
+  <property name="acs-oauth-key-development" type="string">DICo67clcBHnxZjbKWpK5SMmnE3C6eQF</property>
+  <property name="acs-api-key-development" type="string">a1A1repDICOfttCksgkrKQuZ8BpRGBQD</property>
+  <property name="acs-push-type-development" type="string">gcm</property>
+  <property name="acs-push-type-production" type="string">gcm</property>
+  <property name="acs-push-type" type="string">gcm</property>
+  <id>com.didox.programador</id>
+  <name>Torne-se um programador</name>
+  <version>1</version>
+  <publisher>Torne-se um programador</publisher>
+  <url>https://www.facebook.com/Projeto-Torne-se-um-programador-1588864738032373</url>
+  <description>not specified</description>
+  <copyright>2015 by Didox Business &amp; Technology</copyright>
+  <icon>tornese.png</icon>
+  <persistent-wifi>false</persistent-wifi>
+  <prerendered-icon>false</prerendered-icon>
+  <statusbar-style>default</statusbar-style>
+  <statusbar-hidden>true</statusbar-hidden>
+  <fullscreen>true</fullscreen>
+  <navbar-hidden>true</navbar-hidden>
+  <analytics>true</analytics>
+  <guid>97df5999-4766-464a-9ddd-1397ac4d9f26</guid>
+  <property name="ti.ui.defaultunit" type="string">system</property>
+  <iphone>
+    <orientations device="iphone">
+      <orientation>Ti.UI.PORTRAIT</orientation>
+    </orientations>
+    <orientations device="ipad">
+      <orientation>Ti.UI.PORTRAIT</orientation>
+    </orientations>
+  </iphone>
+  <android 
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <manifest android:installLocation="preferExternal"/>
+    <manifest android:versionCode="21" android:versionName="5.0" package="com.didox.programador">
+      <activity android:configChanges="keyboardHidden|orientation" android:label="instafire" android:name=".InstafireActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Titanium">
+        <intent-filter>
+          <action android:name="android.intent.action.MAIN"/>
+          <category android:name="android.intent.category.LAUNCHER"/>
+        </intent-filter>
+      </activity>
+      <activity android:configChanges="keyboardHidden|orientation" android:name="ti.modules.titanium.facebook.FBActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+      <activity android:configChanges="keyboardHidden|orientation" android:name="org.appcelerator.titanium.TiActivity" android:screenOrientation="portrait"/>
+      <activity android:configChanges="keyboardHidden|orientation" android:name="org.appcelerator.titanium.TiTranslucentActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Translucent"/>
+      <activity android:configChanges="keyboardHidden|orientation" android:name="org.appcelerator.titanium.TiModalActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Translucent"/>
+      <activity android:configChanges="keyboardHidden|orientation" android:name="ti.modules.titanium.ui.TiTabActivity" android:screenOrientation="portrait"/>
+      <activity android:configChanges="keyboardHidden|orientation" android:name="ti.modules.titanium.ui.android.TiPreferencesActivity" android:screenOrientation="portrait"/>
+      <service android:exported="false" android:name="org.appcelerator.titanium.analytics.TiAnalyticsService"/>
+      <uses-sdk android:maxSdkVersion="21" android:minSdkVersion="16" android:targetSdkVersion="21"/>
+    </manifest>
+  </android>
+  <ios>
+    <plist>
+      <dict>
+        <key>NSLocationAlwaysUsageDescription</key>
+        <string>
+                    Specify the reason for accessing the user's location information.
+                    This appears in the alert dialog when asking the user for permission to
+                    access their location.
+                </string>
+      </dict>
+    </plist>
+  </ios>
+  <mobileweb>
+    <precache/>
+    <splash>
+      <enabled>false</enabled>
+      <inline-css-images>true</inline-css-images>
+    </splash>
+    <theme>default</theme>
+  </mobileweb>
+  <modules>
+    <module platform="commonjs">ti.cloud</module>
+    <module platform="android">ti.cloudpush</module>
+  </modules>
+  <deployment-targets>
+    <target device="android">true</target>
+    <target device="blackberry">false</target>
+    <target device="ipad">true</target>
+    <target device="iphone">true</target>
+    <target device="mobileweb">false</target>
+    <target device="tizen">false</target>
+  </deployment-targets>
+  <sdk-version>4.1.0.GA</sdk-version>
+  <property name="ti.deploytype">test</property>
+  <property name="ti.android.useLegacyWindow" type="bool">true</property>
+  <property name="appc-app-id" type="string">5637994cd1837e53779299da</property>
+</ti:app>

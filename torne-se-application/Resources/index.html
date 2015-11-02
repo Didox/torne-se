@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width,user-scalable=no">
+    <link rel="stylesheet" href="HTML/css/global.css">
+    <script src="HTML/js/api.js"></script>
+    <title>Torne-se Index</title>
+  </head>
+  <body class="home">
+    <header>
+      <a href="#" class="logo" >Projeto torne-se um programador</a>
+    </header>
+    <p class="carregando" style="display:none">Carregando</p>
+    <div class="containar">
+      <div class="top">
+        <img src="HTML/images/torne-se-image.jpg">
+      </div>
+      <div class="buttons">
+        <button type="button" onclick="app.openInternalLink('videos.html');">Videos</button>
+        <button type="button" onclick="app.openInternalLink('sobre.html');">Sobre</button>
+      </div>
+    </div>
+    <footer><div>Uma iniciativa Didox Business & Technology</div></footer>
+    <script src="HTML/js/zepto.js"></script>
+    <script type="text/javascript" src="https://rawgit.com/Didox/torne-se/master/data/data.js"></script>
+    <script src="HTML/js/index.js"></script>
+    <script>app.updateApp();</script>
+    <script>app.messageForUser();</script>
+  </body>
+</html>
