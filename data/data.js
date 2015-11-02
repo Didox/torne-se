@@ -1,6 +1,6 @@
 var version = {
-  v: '1',
-  message: 'Atualizar'
+  v: '2',
+  message: 'A nova versão do app está disponível para download'
 }
 
 var aviso = {
