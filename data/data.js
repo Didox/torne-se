@@ -9,7 +9,7 @@ var aviso = {
 
 var data = [
   {
-    titulo: 'Aula 8 - Funções recursivas e constantes',
+    titulo: 'Aula 9 - Funções recursivas e constantes',
     descricao: 'Nesta aula você irá aprender o que é uma variável constante e como aplicar em um programa, também irá aprender o que é funções recursivas, como utiliza-las e como aplicar em um programa.',
     videoYoutube: 'https://www.youtube.com/watch?v=NYGGaTd_xZk'
   },
