@@ -1,3 +1,8 @@
+var version = {
+	v = '1',
+	message = 'Atualizar'
+}
+
 var data = [
 	{
 		titulo: 'Aula 1',
