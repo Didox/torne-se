@@ -4,7 +4,7 @@ var version = {
 }
 
 var aviso = {
-  message: 'você já marcou sua aula particular hoje? aproveite: (055 11) 976144154'
+  message: ''
 }
 
 var data = [
