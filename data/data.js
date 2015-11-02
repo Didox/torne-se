@@ -1,10 +1,10 @@
 var version = {
-  v: '2',
+  v: '1',
   message: 'Atualizar'
 }
 
 var aviso = {
-  message: 'Olá usuário já marcou sua aula particular hoje? não perca tempo'
+  message: ''
 }
 
 var data = [
