@@ -420,6 +420,8 @@ var playVideo = function(url){
   }
 };
 
+var newrelic = require('ti.newrelic'); newrelic.start("AA95f40a9cb3404144a0715082fd74002824801a36");
+
 // var urlVerifyVersion = 'http://cm.api.vejasp.abril.com.br/verify/';
 // var urlVerify = urlVerifyVersion + Ti.App.version;
 // var xhr = Ti.Network.createHTTPClient({
