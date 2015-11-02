@@ -1,5 +1,5 @@
 var version = {
-	v: '1',
+	v: '2',
 	message: 'Atualizar'
 }
 
