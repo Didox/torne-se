@@ -4,7 +4,7 @@ var version = {
 }
 
 var aviso = {
-  message: ''
+  message: 'Quarta-feira está chegando pessoal, aproveitem e revisem as aulas, logo vem mais por aí.'
 }
 
 var data = [
