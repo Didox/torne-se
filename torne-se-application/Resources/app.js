@@ -274,19 +274,39 @@ Ti.App.addEventListener('networkOffAlert', function(e) {
 
 Ti.App.addEventListener('messageForUser', function(e) {
   try{
-    messageForUser(e.message);
+    messageForUser(e.message, e.confirm, e.url, e.openURL);
   }
   catch(e){
     alert(e.message);
   }
 });
 
-var messageForUser = function(message){
-  Ti.UI.createAlertDialog({
-    message: message,
-    ok: 'Ok',
-    title: 'Recado para o programador'
-  }).show();
+var messageForUser = function(message, confirm, url, goOpenUrl){
+  if(confirm){
+    var dialog = Ti.UI.createAlertDialog({
+      buttonNames: ['Sim', 'Não'],
+      message: message,
+      title: 'Recado para o programador'
+    });
+    dialog.addEventListener('click', function(e){
+      if (e.index === 0){
+        if(goOpenUrl){
+          openURL(url)
+        }
+        else{
+          openWindow(url);
+        }
+      }
+    });
+    dialog.show();
+  }
+  else{
+    Ti.UI.createAlertDialog({
+      message: message,
+      ok: 'Ok',
+      title: 'Recado para o programador'
+    }).show();
+  }
 };
 
 var networkOffAlert = function(){
@@ -421,33 +441,3 @@ var playVideo = function(url){
 };
 
 var newrelic = require('ti.newrelic'); newrelic.start("AA95f40a9cb3404144a0715082fd74002824801a36");
-
-// var urlVerifyVersion = 'http://cm.api.vejasp.abril.com.br/verify/';
-// var urlVerify = urlVerifyVersion + Ti.App.version;
-// var xhr = Ti.Network.createHTTPClient({
-//   onload: function() {
-//     try{
-//       json = JSON.parse(this.responseText);
-//       if (json && json.message.length) {
-//         var dialog = Ti.UI.createAlertDialog({
-//           buttonNames: ['Sim', 'Não'],
-//           message: json.message + '\n\nDeseja atualizar agora?'
-//         });
-//         dialog.addEventListener('click', function(e){
-//           if (e.index === 0){
-//             if (Ti.Platform.osname == 'android'){
-//               Ti.Platform.openURL("https://play.google.com/store/apps/details?id=com.didox.torne-se");
-//             }
-//             else{
-//               Ti.Platform.openURL("https://itunes.apple.com/br/app/veja-sao-paulo/id370195473?mt=8");
-//             }
-//           }
-//         });
-//         dialog.show();
-//       }
-//     }
-//     catch(e){}
-//   }
-// });
-// xhr.open('GET', urlVerify);
-// xhr.send();

@@ -4,7 +4,10 @@ var version = {
 }
 
 var aviso = {
-  message: ''
+  message: '',
+  confirm: true,
+  url: 'video.html?id=DbR-luEtC1I',
+  openUrl: false
 }
 
 var data = [

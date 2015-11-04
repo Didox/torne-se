@@ -27,8 +27,9 @@ app.getYoutubeImagem = function(youtube_url){
 };
 
 app.getHtmlVideo = function(youtube_url) {
+  app.showLoading()
   var video = app.getIdYoutubeImagem(youtube_url);
-  return "<iframe width='98%' height='300px' src='https://www.youtube.com/embed/"+video+"' frameborder='0' allowfullscreen></iframe>";
+  return "<iframe width='98%' onload='app.hideLoading()' height='300px' src='https://www.youtube.com/embed/"+video+"' frameborder='0' allowfullscreen></iframe>";
 };
 
 app.getIdYoutubeImagem = function(youtube_url){
@@ -56,9 +57,11 @@ app.replaceDoisPontos = function(){
 };
 
 app.openInternalLink = function(url) {
-  url = url.replace(/:/g,'%3A');
   //window.location = url;
+  app.showLoading();
+  url = url.replace(/:/g,'%3A');
   app.openWindow(url);
+  app.hideLoading();
 };
 
 app.backWindow = function() {
@@ -71,9 +74,11 @@ app.showLoading = function(){
 };
 
 app.hideLoading = function(moveTop){
-  moveTop = moveTop == undefined ? true : false;
-  $(".carregando").hide();
-  if(moveTop) app.scrollTop(0);
+  setTimeout(function(){
+    moveTop = moveTop == undefined ? true : false;
+    $(".carregando").hide();
+    if(moveTop) app.scrollTop(0);
+  }, 500);
 };
 
 app.notEmpty = function(str) {
@@ -194,7 +199,12 @@ app.messageForUser = function(){
     if(aviso){
       if(app.notEmpty(aviso.message)){
         if(Ti !== undefined){
-          Ti.App.fireEvent('messageForUser',{message: aviso.message});
+          Ti.App.fireEvent('messageForUser',{
+            message: aviso.message,
+            confirm: aviso.confirm,
+            url: aviso.url,
+            openUrl: aviso.openUrl
+          });
         }
       }
     }
@@ -278,7 +288,8 @@ app.updateApp = function(){
     if(version){
       if(app.appVersion < parseInt(version.v)){
         if (app.isAndroid()){
-          app.openUrlMensagem("https://github.com/Didox/torne-se/blob/master/app_published/android/Torne-se%20um%20programador.apk?raw=true", version.message + '\n\nDeseja atualizar agora?');
+          // app.openUrlMensagem("https://github.com/Didox/torne-se/blob/master/app_published/android/Torne-se%20um%20programador.apk?raw=true", version.message + '\n\nDeseja atualizar agora?');
+          app.openUrlMensagem("https://play.google.com/store/apps/details?id=com.didox.programador", version.message + '\n\nDeseja atualizar agora?');
         }
         else{
           app.openUrlMensagem("https://itunes.apple.com/br/app/torne-se-um-programador/id370195473?mt=8", version.message + '\n\nDeseja atualizar agora?');
@@ -288,3 +299,10 @@ app.updateApp = function(){
   }
   catch(e){}
 }
+
+app.showLoading();
+
+$(document).ready(function(){
+  app.hideLoading();
+});
+

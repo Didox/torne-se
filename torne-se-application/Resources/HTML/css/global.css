@@ -153,6 +153,12 @@ footer{position:fixed;bottom:0;z-index:10;float:left;padding:4px;width:100%;heig
 footer div{color:#fff;font-size:10px;float:right;margin-right:10px}
 
 
+p.carregando{
+  margin-top: 10px;
+  text-indent: -99999px;
+  background: #fff url('../images/spinner.gif') no-repeat center;
+}
+
 
 
 
