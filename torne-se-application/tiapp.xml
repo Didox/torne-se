@@ -12,7 +12,7 @@
   <property name="acs-push-type" type="string">gcm</property>
   <id>com.didox.programador</id>
   <name>Torne-se um programador</name>
-  <version>2</version>
+  <version>1</version>
   <publisher>Torne-se um programador</publisher>
   <url>https://www.facebook.com/Projeto-Torne-se-um-programador-1588864738032373</url>
   <description>not specified</description>
