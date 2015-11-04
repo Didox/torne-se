@@ -29,7 +29,7 @@ app.getYoutubeImagem = function(youtube_url){
 app.getHtmlVideo = function(youtube_url) {
   app.showLoading()
   var video = app.getIdYoutubeImagem(youtube_url);
-  return "<iframe width='98%' onload='app.hideLoading()' height='300px' src='https://www.youtube.com/embed/"+video+"' frameborder='0' allowfullscreen></iframe>";
+  return "<iframe width='98%' onload='setTimeout(function(){app.hideLoading()}, 1500);' height='300px' src='https://www.youtube.com/embed/"+video+"' frameborder='0' allowfullscreen></iframe>";
 };
 
 app.getIdYoutubeImagem = function(youtube_url){
@@ -67,18 +67,6 @@ app.openInternalLink = function(url) {
 app.backWindow = function() {
   app.showLoading();
   app.closeWindow();
-};
-
-app.showLoading = function(){
-  $(".carregando").show();
-};
-
-app.hideLoading = function(moveTop){
-  setTimeout(function(){
-    moveTop = moveTop == undefined ? true : false;
-    $(".carregando").hide();
-    if(moveTop) app.scrollTop(0);
-  }, 500);
 };
 
 app.notEmpty = function(str) {
@@ -299,10 +287,4 @@ app.updateApp = function(){
   }
   catch(e){}
 }
-
-app.showLoading();
-
-$(document).ready(function(){
-  app.hideLoading();
-});
 
