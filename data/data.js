@@ -4,7 +4,7 @@ var version = {
 }
 
 var aviso = {
-  message: 'Olá pessoal, nova aula disponível, acesse a área de videos e clique em Aula 10 - Programação funcional'
+  message: ''
 }
 
 var data = [
