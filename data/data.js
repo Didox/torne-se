@@ -4,10 +4,15 @@ var version = {
 }
 
 var aviso = {
-  message: ''
+  message: 'Olá pessoal, nova aula disponível, acesse a área de videos e clique em Aula 10 - Programação funcional'
 }
 
 var data = [
+  {
+    titulo: 'Aula 10 - Programação funcional',
+    descricao: 'Nesta aula você aprenderá o que é programação funcional, como escrever um código mais organizado e simples utilizando funções, e separá-los em arquivos, deixando em contextos diferentes.',
+    videoYoutube: 'https://www.youtube.com/watch?v=DbR-luEtC1I'
+  },
   {
     titulo: 'Aula 9 - Funções recursivas e constantes',
     descricao: 'Nesta aula você irá aprender o que é uma variável constante e como aplicar em um programa, também irá aprender o que é funções recursivas, como utiliza-las e como aplicar em um programa.',
