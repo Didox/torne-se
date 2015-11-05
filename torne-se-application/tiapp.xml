@@ -12,7 +12,7 @@
   <property name="acs-push-type" type="string">gcm</property>
   <id>com.didox.programador</id>
   <name>Torne-se um programador</name>
-  <version>2</version>
+  <version>22</version>
   <publisher>Torne-se um programador</publisher>
   <url>https://www.facebook.com/Projeto-Torne-se-um-programador-1588864738032373</url>
   <description>not specified</description>
@@ -38,7 +38,7 @@
   <android 
     xmlns:android="http://schemas.android.com/apk/res/android">
     <manifest android:installLocation="preferExternal"/>
-    <manifest android:versionCode="2" android:versionName="5.0" package="com.didox.programador">
+    <manifest android:versionCode="22" android:versionName="5.0" package="com.didox.programador">
       <activity android:configChanges="keyboardHidden|orientation" android:label="instafire" android:name=".InstafireActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Titanium">
         <intent-filter>
           <action android:name="android.intent.action.MAIN"/>
