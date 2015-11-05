@@ -4,10 +4,10 @@ var version = {
 }
 
 var aviso = {
-  message: 'Olá saiu uma nova versão com melhorias\nQuer fazer o download agora?',
+  message: '',
   confirm: true,
-  url: 'https://github.com/Didox/torne-se/blob/master/app_published/android/Torne-se%20um%20programador.apk?raw=true',
-  openUrl: true
+  url: 'video.html?id=DbR-luEtC1I',
+  openUrl: false
 }
 
 var data = [
