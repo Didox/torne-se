@@ -81,7 +81,7 @@ body{
 }
 img{
   background: url('../images/spinner.gif') no-repeat center center;
-  border-radius: 9px 9px 9px 9px
+  border-radius: 9px 9px 9px 9px;
 }
 .separator, .separator-dotted{
   margin:10px 0
