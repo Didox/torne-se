@@ -1,70 +1,66 @@
 // Notifications
 
 if (Ti.Platform.osname == "iphone"){
-  Titanium.Network.registerForPushNotifications({
-    types:[
-    Titanium.Network.NOTIFICATION_TYPE_BADGE,
-    Titanium.Network.NOTIFICATION_TYPE_ALERT,
-    Titanium.Network.NOTIFICATION_TYPE_SOUND
-    ],
-    success: successCallback,
-    error: errorCallback,
-    callback: messageCallback
-  });
+//===============================================================================================================================
+  var deviceToken = null;
+  // Check if the device is running iOS 8 or later
+  if (Ti.Platform.name == "iPhone OS" && parseInt(Ti.Platform.version.split(".")[0]) >= 8) {
+   
+    // Wait for user settings to be registered before registering for push notifications
+      Ti.App.iOS.addEventListener('usernotificationsettings', function registerForPush() {
+   
+          // Remove event listener once registered for push notifications
+          Ti.App.iOS.removeEventListener('usernotificationsettings', registerForPush); 
+   
+          Ti.Network.registerForPushNotifications({
+              success: deviceTokenSuccess,
+              error: deviceTokenError,
+              callback: receivePush
+          });
+      });
+   
+      // Register notification types to use
+      Ti.App.iOS.registerUserNotificationSettings({
+        types: [
+              Ti.App.iOS.USER_NOTIFICATION_TYPE_ALERT,
+              Ti.App.iOS.USER_NOTIFICATION_TYPE_SOUND,
+              Ti.App.iOS.USER_NOTIFICATION_TYPE_BADGE
+          ]
+      });
+  }
+   
+  // For iOS 7 and earlier
+  else {
+      Ti.Network.registerForPushNotifications({
+          // Specifies which notifications to receive
+          types: [
+              Ti.Network.NOTIFICATION_TYPE_BADGE,
+              Ti.Network.NOTIFICATION_TYPE_ALERT,
+              Ti.Network.NOTIFICATION_TYPE_SOUND
+          ],
+          success: deviceTokenSuccess,
+          error: deviceTokenError,
+          callback: receivePush
+      });
+  }
+  // Process incoming push notifications
+  function receivePush(e) {
+      alert('Received push: ' + JSON.stringify(e));
+  }
+  // Save the device token for subsequent API calls
+  function deviceTokenSuccess(e) {
+      deviceToken = e.deviceToken;
+  }
+  function deviceTokenError(e) {
+      alert('Failed to register for push notifications! ' + e.error);
+  }
 
-  function successCallback(e) {
-    var request = Titanium.Network.createHTTPClient({
-       onload: function(e) {
-         if (request.status != 200 && request.status != 201) {
-           request.onerror(e);
-           return;
-          }
-       },
-       onerror: function(e) {
-         Ti.API.info("Push Notifications registration with Parse failed. Error: " + e.error);
-       }
-    });
 
-    var params = {
-      'deviceType': 'ios',
-      'deviceToken': e.deviceToken,
-      'channels': ['']
-    };
+//===============================================================================================================================
 
-   // Register device token with Parse
-   request.open('POST', 'https://api.parse.com/1/installations', true);
-   request.setRequestHeader('X-Parse-Application-Id', '8IXHdO6ZYggCxTUZURo6aTdUFqUe30DOqbZOpLLm');
-   request.setRequestHeader('X-Parse-REST-API-Key', 'XouOhwa7l2XWsDak9QzjEMdaDKwIvQMnPrkHK8Wz');
-   request.setRequestHeader('Content-Type', 'application/json');
-   request.send(JSON.stringify(params));
- }
 
-  // error callBack
-  function errorCallback(e) {
-   Ti.API.info("Error during registration: " + e.error);
- }
-
-  // message callBack
-  function messageCallback(e) {
-  //// this if we want to show the notification when the app is open
-  //  var message;
-  //
-  //  if (e['data']['aps'] != undefined) {
-  //    if (e['data']['aps']['alert'] != undefined) {
-  //      if (e['data']['aps']['alert']['body'] != undefined) {
-  //        message = e['data']['aps']['alert']['body'];
-  //      } else {
-  //        message = e['data']['aps']['alert'];
-  //      }
-  //    } else {
-  //      message = 'No Alert content';
-  //    }
-  //  } else {
-  //    message = 'No APS content';
-  //  }
-  //  alert(message);
-}
 } else {
+//===============================================================================================================================
   var Cloud = require('ti.cloud');
   var CloudPush = require('ti.cloudpush');
 
@@ -123,6 +119,10 @@ if (Ti.Platform.osname == "iphone"){
   CloudPush.addEventListener('trayClickFocusedApp', function (evt) {
     Ti.API.info('Tray Click Focused App (app was already running)');
   });
+
+
+  
+//===============================================================================================================================
 }
 // END NOTIFICATIONS
 
@@ -282,6 +282,18 @@ Ti.App.addEventListener('messageForUser', function(e) {
 });
 
 var messageForUser = function(message, confirm, url, goOpenUrl){
+  Cloud.PushNotifications.notify({
+      channel: 'friend_request',
+      payload: message
+  }, function (e) {
+      if (e.success) {
+          alert('Success');
+      } else {
+          alert('Error:\n' +
+              ((e.error && e.message) || JSON.stringify(e)));
+      }
+  });
+  
   if(confirm){
     var dialog = Ti.UI.createAlertDialog({
       buttonNames: ['Sim', 'Não'],
