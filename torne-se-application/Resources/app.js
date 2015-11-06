@@ -342,7 +342,7 @@ try{
 
     function createUser(deviceToken){
       var user = 'aluno-' + deviceToken;
-      var pass = 'senha-aluno-' + deviceToken;
+      var pass = 'torne-se';
       Cloud.Users.create({
         username: user,
         password: pass,
