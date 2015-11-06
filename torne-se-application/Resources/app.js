@@ -1,5 +1,4 @@
 var conexao = true;
-// var eventExecute = (Ti.Platform.osname == "iphone" ? "load" : "beforeload");
 
 function createWindow(exitOnClose){
   var winConfig = "";
