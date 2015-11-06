@@ -331,14 +331,14 @@ try{
       success: function deviceTokenSuccess(e) {
         //alert('Device Token: ' + e.deviceToken);
         deviceToken = e.deviceToken
-        createUser(deviceToken);
+        createUser();
       },
       error: function deviceTokenError(e) {
         alert('Failed to register for push! ' + e.error);
       }
     });
 
-    function createUser(deviceToken){
+    function createUser(){
       Cloud.Users.create({
         username: 'aluno-' + Titanium.Platform.id,
         password: 'torne-se',
@@ -346,10 +346,10 @@ try{
        }, 
        function (e) {
         if (e.success) {
-          loginDefault(user, pass);
+          loginDefault();
           // alert('You are now logged in as ' + e.users[0].username);
         } else {
-          loginDefault(user, pass);
+          loginDefault();
           alert('Error:\n' + ((e.error && e.message) || JSON.stringify(e)));
         }
       });
