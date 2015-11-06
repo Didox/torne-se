@@ -18,6 +18,7 @@ app.hideLoading = function(moveTop){
 app.showLoading();
 
 $(document).ready(function(){
+  $(".version").html("Versão: " + app.appVersion)
   if($("iframe").size() == 0){
     app.hideLoading();
   }
