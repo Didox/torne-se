@@ -316,73 +316,77 @@ var newrelic = require('ti.newrelic'); newrelic.start("AA95f40a9cb3404144a071508
 
 //================================== push notification =================================
 try{
-  var CloudPush = require('ti.cloudpush');
-  CloudPush.debug = true;
-  CloudPush.enabled = true;
-  CloudPush.showTrayNotificationsWhenFocused = true;
-  CloudPush.focusAppOnPush = false;
+  if (Ti.Platform.osname == 'android'){
+    var CloudPush = require('ti.cloudpush');
+    CloudPush.debug = true;
+    CloudPush.enabled = true;
+    CloudPush.showTrayNotificationsWhenFocused = true;
+    CloudPush.focusAppOnPush = false;
 
-  var deviceToken;
-  var Cloud = require('ti.cloud');
-  Cloud.debug = true;
+    var deviceToken;
+    var user;
+    var pass;
+    var Cloud = require('ti.cloud');
+    Cloud.debug = true;
 
-  CloudPush.retrieveDeviceToken({
-    success: function deviceTokenSuccess(e) {
-      //alert('Device Token: ' + e.deviceToken);
-      deviceToken = e.deviceToken
-      createUser(deviceToken);
-    },
-    error: function deviceTokenError(e) {
-      alert('Failed to register for push! ' + e.error);
-    }
-  });
-
-  function createUser(deviceToken){
-    var user = 'aluno-' + deviceToken;
-    var pass = 'senha-aluno-' + deviceToken;
-    Cloud.Users.create({
-      username: user,
-      password: pass,
-      password_confirmation: pass
-     }, 
-     function (e) {
-      if (e.success) {
-        loginDefault(user, pass);
-        // alert('You are now logged in as ' + e.users[0].username);
-      } else {
-        loginDefault(user, pass);
-        alert('Error:\n' + ((e.error && e.message) || JSON.stringify(e)));
+    CloudPush.retrieveDeviceToken({
+      success: function deviceTokenSuccess(e) {
+        //alert('Device Token: ' + e.deviceToken);
+        deviceToken = e.deviceToken
+        createUser(deviceToken);
+      },
+      error: function deviceTokenError(e) {
+        alert('Failed to register for push! ' + e.error);
       }
     });
-  }
 
-  function loginDefault(e){
-    //Create a Default User in Cloud Console, and login
-    Cloud.Users.login({
-        login: user,
-        password: pass
-    }, function (e) {
+    function createUser(deviceToken){
+      var user = 'aluno-' + deviceToken;
+      var pass = 'senha-aluno-' + deviceToken;
+      Cloud.Users.create({
+        username: user,
+        password: pass,
+        password_confirmation: pass
+       }, 
+       function (e) {
         if (e.success) {
-          //alert("login success");
-          defaultSubscribe();
+          loginDefault(user, pass);
+          // alert('You are now logged in as ' + e.users[0].username);
         } else {
-          alert('Error: ' +((e.error && e.message) || JSON.stringify(e)));
+          loginDefault(user, pass);
+          alert('Error:\n' + ((e.error && e.message) || JSON.stringify(e)));
         }
-    });
-  }
+      });
+    }
 
-  function defaultSubscribe(){
-    Cloud.PushNotifications.subscribe({
-      channel: 'Projeto torne-se um programador',
-      device_token: deviceToken,
-      type: 'android'
-    }, function (e){
-      if (e.success) {
-        //alert('Subscribed for Push Notification!');
-      }else{
-        alert('Error:' +((e.error && e.message) || JSON.stringify(e)));
-      }
-    });
+    function loginDefault(e){
+      //Create a Default User in Cloud Console, and login
+      Cloud.Users.login({
+          login: user,
+          password: pass
+      }, function (e) {
+          if (e.success) {
+            //alert("login success");
+            defaultSubscribe();
+          } else {
+            alert('Error: ' +((e.error && e.message) || JSON.stringify(e)));
+          }
+      });
+    }
+
+    function defaultSubscribe(){
+      Cloud.PushNotifications.subscribe({
+        channel: 'Projeto torne-se um programador',
+        device_token: deviceToken,
+        type: 'android'
+      }, function (e){
+        if (e.success) {
+          //alert('Subscribed for Push Notification!');
+        }else{
+          alert('Error:' +((e.error && e.message) || JSON.stringify(e)));
+        }
+      });
+    }
   }
 }
 catch(e){
