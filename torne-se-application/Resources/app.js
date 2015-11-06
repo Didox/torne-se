@@ -341,7 +341,7 @@ try{
     });
 
     function createUser(deviceToken){
-      var user = 'aluno-' + deviceToken;
+      var user = 'aluno-' + Titanium.Platform.id;
       var pass = 'torne-se';
       Cloud.Users.create({
         username: user,
