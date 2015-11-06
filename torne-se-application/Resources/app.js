@@ -334,7 +334,7 @@ try{
         createUser();
       },
       error: function deviceTokenError(e) {
-        alert('Failed to register for push! ' + e.error);
+        //alert('Failed to register for push! ' + e.error);
       }
     });
 
@@ -350,7 +350,7 @@ try{
           // alert('You are now logged in as ' + e.users[0].username);
         } else {
           loginDefault();
-          alert('Error:\n' + ((e.error && e.message) || JSON.stringify(e)));
+          //alert('Error:\n' + ((e.error && e.message) || JSON.stringify(e)));
         }
       });
     }
@@ -365,7 +365,7 @@ try{
             //alert("login success");
             defaultSubscribe();
           } else {
-            alert('Error: ' +((e.error && e.message) || JSON.stringify(e)));
+            //alert('Error: ' +((e.error && e.message) || JSON.stringify(e)));
           }
       });
     }
@@ -379,7 +379,7 @@ try{
         if (e.success) {
           //alert('Subscribed for Push Notification!');
         }else{
-          alert('Error:' +((e.error && e.message) || JSON.stringify(e)));
+          //alert('Error:' +((e.error && e.message) || JSON.stringify(e)));
         }
       });
     }
