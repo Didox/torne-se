@@ -276,8 +276,8 @@ app.updateApp = function(){
     if(version){
       if(app.appVersion < parseInt(version.v)){
         if (app.isAndroid()){
-          // app.openUrlMensagem("https://github.com/Didox/torne-se/blob/master/app_published/android/Torne-se%20um%20programador.apk?raw=true", version.message + '\n\nDeseja atualizar agora?');
-          app.openUrlMensagem("https://play.google.com/store/apps/details?id=com.didox.programador", version.message + '\n\nDeseja atualizar agora?');
+          app.openUrlMensagem("https://github.com/Didox/torne-se/blob/master/app_published/android/Torne-se%20um%20programador.apk?raw=true", version.message + '\n\nDeseja atualizar agora?');
+          //app.openUrlMensagem("https://play.google.com/store/apps/details?id=com.didox.programador", version.message + '\n\nDeseja atualizar agora?');
         }
         else{
           app.openUrlMensagem("https://itunes.apple.com/br/app/torne-se-um-programador/id370195473?mt=8", version.message + '\n\nDeseja atualizar agora?');

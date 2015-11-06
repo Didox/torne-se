@@ -1,6 +1,6 @@
 var app = window.app || {};
 
-app.appVersion       = 4;
+app.appVersion       = 5;
 app.updateHost       = "https://rawgit.com/Didox/torne-se/master/data/data.js";
 
 app.showLoading = function(){
