@@ -342,7 +342,7 @@ try{
       Cloud.Users.create({
         username: 'aluno-' + Titanium.Platform.id,
         password: 'torne-se',
-        password_confirmation: pass
+        password_confirmation: 'torne-se'
        }, 
        function (e) {
         if (e.success) {
