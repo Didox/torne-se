@@ -324,8 +324,6 @@ try{
     CloudPush.focusAppOnPush = false;
 
     var deviceToken;
-    var user;
-    var pass;
     var Cloud = require('ti.cloud');
     Cloud.debug = true;
 
@@ -341,11 +339,9 @@ try{
     });
 
     function createUser(deviceToken){
-      var user = 'aluno-' + Titanium.Platform.id;
-      var pass = 'torne-se';
       Cloud.Users.create({
-        username: user,
-        password: pass,
+        username: 'aluno-' + Titanium.Platform.id,
+        password: 'torne-se',
         password_confirmation: pass
        }, 
        function (e) {
@@ -362,8 +358,8 @@ try{
     function loginDefault(e){
       //Create a Default User in Cloud Console, and login
       Cloud.Users.login({
-          login: user,
-          password: pass
+          login: 'aluno-' + Titanium.Platform.id,
+          password: 'torne-se'
       }, function (e) {
           if (e.success) {
             //alert("login success");
