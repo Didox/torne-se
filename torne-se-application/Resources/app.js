@@ -8,15 +8,40 @@ var win = Ti.UI.createWindow({
 
 
 var CloudPush = require('ti.cloudpush');
-        CloudPush.debug = true;
-        CloudPush.enabled = true;
-        CloudPush.showTrayNotificationsWhenFocused = true;
-        CloudPush.focusAppOnPush = false;
+CloudPush.debug = true;
+CloudPush.enabled = true;
+CloudPush.showTrayNotificationsWhenFocused = true;
+CloudPush.focusAppOnPush = false;
 
-    var deviceToken;
- 
-    var Cloud = require('ti.cloud');
-    Cloud.debug = true;
+var deviceToken;
+var Cloud = require('ti.cloud');
+Cloud.debug = true;
+
+try{
+  Cloud.Users.create({
+      username: 'didox',
+      password: 'didox',
+      password_confirmation: 'didox'
+   }, function (e) {
+      if (e.success) {
+          alert('You are now logged in as ' + e.users[0].username);
+      } else {
+          alert('Error:\n' + ((e.error && e.message) || JSON.stringify(e)));
+      }
+  });
+
+  Cloud.Posts.create({
+      content: 'Calling ArrowDB from Titanium'
+  }, function (e) {
+      if (e.success) {
+          alert('Post succeeded!');
+      } else {
+          alert('Error:\n' + ((e.error && e.message) || JSON.stringify(e)));
+      }
+  });
+}catch(e){
+  alert(e.message)
+}
 
 
 var submit = Ti.UI.createButton({
@@ -46,8 +71,8 @@ submit.addEventListener('click', function(e) {
    function loginDefault(e){
     //Create a Default User in Cloud Console, and login
     Cloud.Users.login({
-        login: 'push123',
-        password: 'push123'
+        login: 'didox',
+        password: 'didox'
     }, function (e) {
         if (e.success) {
           alert("login success");
