@@ -79,8 +79,8 @@ var loadAndSetMoreVideo = function(index){
 var loadVideos = function(find,indexVideos){
   if($("#videos").size() > 0){
     setTimeout(function(){
+      var html = "";
       if(find){
-        var html = "";
         html += "<li>";
         html += "  <div>";
         html += "   <input type='text' id='find' style='border:2px solid #337ab7;height: 17px;border-radius: 4px;color: #265a88;padding: 3px;'><a href=\"#\" onclick=\"findAula();\" style=\"background-color: #337ab7;width: 100px;height: 18px;border-radius: 4px;padding: 6px;margin-left: 2px;color: #fff;font-size: 12px;\">Buscar</a>";
@@ -98,7 +98,13 @@ var loadVideos = function(find,indexVideos){
         html += "  </div>";
         html += "</li>"
       }
-      $("#videos").html(html);
+
+      if(indexVideos == 1){
+        $("#videos").html(html);
+      }
+      else{
+        $("#videos").append(html);
+      }
 
       if(indexVideos != undefined && indexVideos != 0){
         var html = "";
