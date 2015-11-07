@@ -1,5 +1,3 @@
-
-//================================== push notification =================================
 try{
   if (Ti.Platform.osname == 'android'){
     var CloudPush = require('ti.cloudpush');
@@ -76,4 +74,3 @@ try{
 catch(e){
   alert('Error ao criar notification: ' + e.message);
 }
-//================================== push notification =================================
