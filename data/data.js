@@ -128,7 +128,6 @@ var loadVideos = function(find,indexVideos){
       }
 
       if(indexVideos != undefined && indexVideos != 0){
-        var html = "";
         html += "<li id='loadMore'>";
         html += "  <button type=\"button\" onclick=\"loadMore('videos" + indexVideos + ".js');\">Carregar mais</button>";
         html += "</li>"
