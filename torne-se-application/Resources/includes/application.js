@@ -3,7 +3,7 @@ application.win = utils.createWindow(true);
 
 application.webview = Ti.UI.createWebView({
   title: 'Torne-se um programador',
-  url: '/index.html',
+  url: (Ti.Platform.osname === "iphone" ? 'HTML/index.html' : '../HTML/index.html' ),
   willHandleTouches:false,
   enableZoomControls:false,
   backgroundColor: '#333'

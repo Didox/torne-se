@@ -131,7 +131,7 @@ utils.openWindow = function(url){
   try{
     var vidWin = utils.createWindow(false);
     vidWin.addEventListener('android:back',function(e){ vidWin.close(); });
-    var urlWebView = (Ti.Platform.osname === "iphone" ? 'blank.html' : url); // fix bug iphone
+    var urlWebView = (Ti.Platform.osname === "iphone" ? 'HTML/blank.html' : '../HTML/' + url); // fix bug iphone
     var webviewInternal = Ti.UI.createWebView({
       title: 'Torne-se um programador',
       url: urlWebView,
