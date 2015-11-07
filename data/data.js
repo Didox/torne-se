@@ -4,8 +4,8 @@ var version = {
 }
 
 var aviso = {
-  message: 'Nova aula disponível. Aula 10: programação funcional\nDeseja ver agora?',
-  confirm: true,
+  message: 'Quarta-feira tem nova aula por aí, aproveitem o final de semana e revisem as aulas anteriores',
+  confirm: false,
   url: 'video.html?id=DbR-luEtC1I',
   openUrl: false
 }
