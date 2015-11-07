@@ -55,6 +55,6 @@ $(document).ready(function(){
 var loadMore = function(){
   $("#loadMore").html("<p class=\"carregando\">Carregando</p>");
   var s = document.createElement('script');
-  s.setAttribute('src','file:///Users/didox/projects/torne-se/data/videos2.js');
+  s.setAttribute('src','https://rawgit.com/Didox/torne-se/master/data/videos2.js');
   document.head.appendChild(s);
 }

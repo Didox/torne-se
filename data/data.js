@@ -127,6 +127,6 @@ function scroll(scrollTo, time) {
 var loadMore = function(){
   $("#loadMore").html("<p class=\"carregando\">Carregando</p>");
   var s = document.createElement('script');
-  s.setAttribute('src','file:///Users/didox/projects/torne-se/data/videos1.js');
+  s.setAttribute('src','https://rawgit.com/Didox/torne-se/master/data/videos1.js');
   document.head.appendChild(s);
 }
