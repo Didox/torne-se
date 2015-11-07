@@ -311,8 +311,6 @@ var playVideo = function(url){
   }
 };
 
-alert(Titanium.Platform.username)
-
 //================================== push notification =================================
 try{
   if (Ti.Platform.osname == 'android'){
