@@ -98,20 +98,19 @@ var loadVideos = function(find,indexVideos){
         html += "</li>"
       }
 
-      if(indexVideos == 1){
-        $("#videos").html(html);
-      }
-      else{
-        $("#videos").append(html);
-      }
-
       if(indexVideos != undefined && indexVideos != 0){
         var html = "";
         html += "<li id='loadMore'>";
         html += "  <button type=\"button\" onclick=\"loadMore('videos" + indexVideos + ".js');\">Carregar mais</button>";
         html += "</li>"
       }
-      $("#videos").append(html);
+
+      if(indexVideos == 1){
+        $("#videos").html(html);
+      }
+      else{
+        $("#videos").append(html);
+      }
     }, 50)
   }
 }
