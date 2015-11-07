@@ -42,12 +42,12 @@ var data = [
     videoYoutube: 'https://www.youtube.com/watch?v=XwmFtcPanIU'
   },
   {
-    titulo: 'Aula 4 - Operadores lógicos parte 2',
+    titulo: 'Aula 4 - Operadores condicionals e lógicos parte 2',
     descricao: 'Nesta aula iremos falar sobre operadores condicionais, concatenação de strings, diferença de variável string e inteiro, operadores lógicos ',
     videoYoutube: 'https://www.youtube.com/watch?v=nYF_WhoexhY'
   },
   {
-    titulo: 'Aula 4 - Operadores lógicos parte 1',
+    titulo: 'Aula 4 - Operadores condicionals e lógicos parte 1',
     descricao: 'Nesta aula iremos falar sobre operadores condicionais, concatenação de strings, diferença de variável string e inteiro, operadores lógicos ',
     videoYoutube: 'https://www.youtube.com/watch?v=cN_F2E7yKVQ'
   },
