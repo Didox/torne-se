@@ -36,34 +36,97 @@ var data = [
     descricao: 'Nesta aula você irá aprender como utilizar o Array (coleção de espaços de memória), verá na prática a sua utilização e criará junto comigo um programa para calcular a média de alunos. ',
     videoYoutube: 'https://www.youtube.com/watch?v=e3r9Q9L0-sU'
   },
-  {
-    titulo: 'Aula 5 - Looping',
-    descricao: 'Nesta aula ensino como utilizar a estrutura de repetição (lopping) e a diferença de um programa utilizando repetição e não usando repetição. ',
-    videoYoutube: 'https://www.youtube.com/watch?v=XwmFtcPanIU'
-  },
-  {
-    titulo: 'Aula 4 - Operadores lógicos parte 2',
-    descricao: 'Nesta aula iremos falar sobre operadores condicionais, concatenação de strings, diferença de variável string e inteiro, operadores lógicos ',
-    videoYoutube: 'https://www.youtube.com/watch?v=nYF_WhoexhY'
-  },
-  {
-    titulo: 'Aula 4 - Operadores lógicos parte 1',
-    descricao: 'Nesta aula iremos falar sobre operadores condicionais, concatenação de strings, diferença de variável string e inteiro, operadores lógicos ',
-    videoYoutube: 'https://www.youtube.com/watch?v=cN_F2E7yKVQ'
-  },
-  {
-    titulo: 'Aula 3 - Operadores matemáticos',
-    descricao: 'Nesta aula iremos aprender como utilizar a lógica de programação para resolver expressões numéricas, utilizando os operadores matemáticos. ',
-    videoYoutube: 'https://www.youtube.com/watch?v=z-_vVAyJLrY'
-  },
-  {
-    titulo: 'Aula 2 - Variáveis',
-    descricao: 'Este vídeo mostra o que é uma variável, para que serve uma variável e como utilizar uma variável em um código fonte ',
-    videoYoutube: 'https://www.youtube.com/watch?v=5_ak7LNFyWw'
-  },
-  {
-    titulo: 'Aula 1 - Conceitos básicos',
-    descricao: 'Aula 1 que fala sobre os conceitos básicos de como ser um programador',
-    videoYoutube: 'https://www.youtube.com/watch?v=oHJzyf3EwWU'
-  },
 ]
+
+$(document).ready(function(){
+  setTimeout(function(){
+    if($("#videos").size() > 0){
+      var html = "";
+      html += "<li>";
+      html += "  <div>";
+      html += "   <input type='text' id='find' style='border:2px solid #337ab7;height: 17px;border-radius: 4px;color: #265a88;padding: 3px;'><a href=\"#\" onclick=\"findAula();\" style=\"background-color: #337ab7;width: 100px;height: 18px;border-radius: 4px;padding: 6px;margin-left: 2px;color: #fff;font-size: 12px;\">Buscar</a>";
+      html += "  </div>";
+      html += "</li>";
+
+      for(i=0;i<data.length; i++){
+        html += "<li>";
+        html += "  <div class='video'>";
+        html += "    <a href=\"javascript:app.openInternalLink('video.html?id=" + app.getIdYoutubeImagem(data[i].videoYoutube) + "');\">";
+        html += "      <img src='" + app.getYoutubeImagem(data[i].videoYoutube) + "' style='width: 200px;height: 150px;'>";
+        html += "      <p>" + data[i].titulo + "</p>";
+        html += "    </a>";
+        html += "  </div>";
+        html += "</li>"
+      }
+      $("#videos").html(html);
+
+
+      var html = "";
+      html += "<li id='loadMore'>";
+      html += "  <button type=\"button\" onclick=\"loadMore();\">Carregar mais</button>";
+      html += "</li>"
+      $("#videos").append(html);
+    }
+  }, 50)
+});
+
+var findAula = function(){
+  $("#videos li div p").each(function(){
+    var text = accentsTidy($(this).text().toLowerCase());
+    var findText = accentsTidy($('#find').val().toLowerCase());
+    if(findText != ""){
+      if(text.indexOf(findText) != -1){
+        itemFound = this;
+        $(this).css("background-color", "#FFFFE0");
+        var top = $(this).offset().top - 100;
+        scroll(top, 100);
+      }
+      else{
+        $(this).css("background-color", "#fff");
+      }
+    }
+  });
+}
+
+accentsTidy = function(s){
+    var r=s.toLowerCase();
+    r = r.replace(new RegExp(/\s/g),"");
+    r = r.replace(new RegExp(/[àáâãäå]/g),"a");
+    r = r.replace(new RegExp(/æ/g),"ae");
+    r = r.replace(new RegExp(/ç/g),"c");
+    r = r.replace(new RegExp(/[èéêë]/g),"e");
+    r = r.replace(new RegExp(/[ìíîï]/g),"i");
+    r = r.replace(new RegExp(/ñ/g),"n");                
+    r = r.replace(new RegExp(/[òóôõö]/g),"o");
+    r = r.replace(new RegExp(/œ/g),"oe");
+    r = r.replace(new RegExp(/[ùúûü]/g),"u");
+    r = r.replace(new RegExp(/[ýÿ]/g),"y");
+    r = r.replace(new RegExp(/\W/g),"");
+    return r;
+};
+
+function scroll(scrollTo, time) {
+  var scrollFrom = parseInt(document.body.scrollTop),
+    i = 0,
+    runEvery = 5; // run every 5ms
+
+  scrollTo = parseInt(scrollTo);
+  time /= runEvery;
+
+  var interval = setInterval(function () {
+    i++;
+
+    document.body.scrollTop = (scrollTo - scrollFrom) / time * i + scrollFrom;
+
+    if (i >= time) {
+      clearInterval(interval);
+    }
+  }, runEvery);
+}
+
+var loadMore = function(){
+  $("#loadMore").html("<p class=\"carregando\">Carregando</p>");
+  var s = document.createElement('script');
+  s.setAttribute('src','file:///Users/didox/projects/torne-se/data/videos1.js');
+  document.head.appendChild(s);
+}
