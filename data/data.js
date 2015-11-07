@@ -72,9 +72,10 @@ $(document).ready(function(){
 
 
 // ====================================== Helpers ====================================================
-var id = app.getParameterByName("id");
+var id = 0;
 var videoFound = false;
 var loadVideo = function(){
+  id = app.getParameterByName("id");
   if($("#video_container").size() > 0){
     setTimeout(function(){
       setVideo();
