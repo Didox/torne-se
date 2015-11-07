@@ -144,12 +144,13 @@ var loadVideos = function(find,indexVideos){
 }
 
 var findAula = function(){
+  var itemFound = false
   $("#videos li div p").each(function(){
     var text = accentsTidy($(this).text().toLowerCase());
     var findText = accentsTidy($('#find').val().toLowerCase());
     if(findText != ""){
       if(text.indexOf(findText) != -1){
-        itemFound = this;
+        itemFound = true;
         $(this).css("background-color", "#FFFFE0");
         var top = $(this).offset().top - 200;
         scroll(top, 200);
@@ -159,6 +160,10 @@ var findAula = function(){
       }
     }
   });
+
+  if(!itemFound){
+    $('#find').val("Não encontrado");
+  }
 }
 
 accentsTidy = function(s){
