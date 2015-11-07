@@ -6,7 +6,7 @@ application.webview = Ti.UI.createWebView({
   url: (Ti.Platform.osname === "iphone" ? 'HTML/index.html' : '../HTML/index.html' ),
   willHandleTouches:false,
   enableZoomControls:false,
-  backgroundColor: '#333'
+  backgroundColor: '#fff'
 });
 
 application.win.add(application.webview);

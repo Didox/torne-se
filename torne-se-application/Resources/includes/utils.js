@@ -137,7 +137,7 @@ utils.openWindow = function(url){
       url: urlWebView,
       willHandleTouches:false,
       enableZoomControls:false,
-      backgroundColor: '#333'
+      backgroundColor: '#fff'
     });
 
     webviewInternal.addEventListener('load', function() {
