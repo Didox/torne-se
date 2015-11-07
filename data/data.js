@@ -50,7 +50,6 @@ var loadVideo = function(){
       var id = app.getParameterByName("id");
       setVideo();
       loadAndSetMoreVideo(1);
-
     }, 50)
   }
 }
