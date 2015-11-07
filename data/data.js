@@ -151,8 +151,8 @@ var findAula = function(){
       if(text.indexOf(findText) != -1){
         itemFound = this;
         $(this).css("background-color", "#FFFFE0");
-        var top = $(this).offset().top - 100;
-        scroll(top, 100);
+        var top = $(this).offset().top - 200;
+        scroll(top, 200);
       }
       else{
         $(this).css("background-color", "#fff");
@@ -179,18 +179,12 @@ accentsTidy = function(s){
 };
 
 function scroll(scrollTo, time) {
-  var scrollFrom = parseInt(document.body.scrollTop),
-    i = 0,
-    runEvery = 5; // run every 5ms
-
+  var scrollFrom = parseInt(document.body.scrollTop), i = 0, runEvery = 5;
   scrollTo = parseInt(scrollTo);
   time /= runEvery;
-
   var interval = setInterval(function () {
     i++;
-
     document.body.scrollTop = (scrollTo - scrollFrom) / time * i + scrollFrom;
-
     if (i >= time) {
       clearInterval(interval);
     }
