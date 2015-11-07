@@ -39,14 +39,54 @@ var data = [
 ]
 
 $(document).ready(function(){
-  setTimeout(function(){
-    if($("#videos").size() > 0){
-      var html = "";
-      html += "<li>";
-      html += "  <div>";
-      html += "   <input type='text' id='find' style='border:2px solid #337ab7;height: 17px;border-radius: 4px;color: #265a88;padding: 3px;'><a href=\"#\" onclick=\"findAula();\" style=\"background-color: #337ab7;width: 100px;height: 18px;border-radius: 4px;padding: 6px;margin-left: 2px;color: #fff;font-size: 12px;\">Buscar</a>";
-      html += "  </div>";
-      html += "</li>";
+  loadVideos(true, 1);
+  loadVideo();
+});
+
+var videoFound = false;
+var loadVideo = function(){
+  if($("#video_container").size() > 0){
+    setTimeout(function(){
+      var id = app.getParameterByName("id");
+      setVideo();
+      loadAndSetMoreVideo(1);
+
+    }, 50)
+  }
+}
+
+var setVideo = function(){
+  for(i=0;i<data.length; i++){
+    if(data[i].videoYoutube.indexOf(id) != -1){
+      videoFound = true
+      $("#titulo").html(data[i].titulo);
+      $("#descricao").html(data[i].descricao);
+      $("#video").html(app.getHtmlVideo(data[i].videoYoutube));
+      break;
+    }
+  }
+}
+
+var loadAndSetMoreVideo = function(index){
+  if(!videoFound){
+      loadMore('videos' + index + '.js', function(){
+        setVideo();
+        loadAndSetMoreVideo(index + 1);
+      });
+    }
+}
+
+var loadVideos = function(find,indexVideos){
+  if($("#videos").size() > 0){
+    setTimeout(function(){
+      if(find){
+        var html = "";
+        html += "<li>";
+        html += "  <div>";
+        html += "   <input type='text' id='find' style='border:2px solid #337ab7;height: 17px;border-radius: 4px;color: #265a88;padding: 3px;'><a href=\"#\" onclick=\"findAula();\" style=\"background-color: #337ab7;width: 100px;height: 18px;border-radius: 4px;padding: 6px;margin-left: 2px;color: #fff;font-size: 12px;\">Buscar</a>";
+        html += "  </div>";
+        html += "</li>";
+      }
 
       for(i=0;i<data.length; i++){
         html += "<li>";
@@ -60,15 +100,16 @@ $(document).ready(function(){
       }
       $("#videos").html(html);
 
-
-      var html = "";
-      html += "<li id='loadMore'>";
-      html += "  <button type=\"button\" onclick=\"loadMore();\">Carregar mais</button>";
-      html += "</li>"
+      if(indexVideos != undefined && indexVideos != 0){
+        var html = "";
+        html += "<li id='loadMore'>";
+        html += "  <button type=\"button\" onclick=\"loadMore('videos" + indexVideos + ".js');\">Carregar mais</button>";
+        html += "</li>"
+      }
       $("#videos").append(html);
-    }
-  }, 50)
-});
+    }, 50)
+  }
+}
 
 var findAula = function(){
   $("#videos li div p").each(function(){
@@ -124,9 +165,10 @@ function scroll(scrollTo, time) {
   }, runEvery);
 }
 
-var loadMore = function(){
+var loadMore = function(file, callback){
   $("#loadMore").html("<p class=\"carregando\">Carregando</p>");
   var s = document.createElement('script');
-  s.setAttribute('src','https://rawgit.com/Didox/torne-se/master/data/videos1.js');
+  s.onload = callback;
+  s.setAttribute('src','https://rawgit.com/Didox/torne-se/master/data/' + file);
   document.head.appendChild(s);
 }
