@@ -311,7 +311,7 @@ var playVideo = function(url){
   }
 };
 
-var newrelic = require('ti.newrelic'); newrelic.start("AA95f40a9cb3404144a0715082fd74002824801a36");
+alert(Titanium.Platform.username)
 
 //================================== push notification =================================
 try{
