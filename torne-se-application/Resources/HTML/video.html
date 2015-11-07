@@ -29,16 +29,5 @@
     <script type="text/javascript" src="https://rawgit.com/Didox/torne-se/master/data/data.js"></script>
     <script src="js/index.js"></script>
     <script src="js/fastclick.js"></script>
-    <script type="text/javascript">
-      var id = app.getParameterByName("id");
-      for(i=0;i<data.length; i++){
-        if(data[i].videoYoutube.indexOf(id) != -1){
-          $("#titulo").html(data[i].titulo);
-          $("#descricao").html(data[i].descricao);
-          $("#video").html(app.getHtmlVideo(data[i].videoYoutube));
-          break;
-        }
-      }
-    </script>
   </body>
 </html>
