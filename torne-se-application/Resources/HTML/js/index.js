@@ -29,7 +29,7 @@ app.getYoutubeImagem = function(youtube_url){
 app.getHtmlVideo = function(youtube_url) {
   app.showLoading()
   var video = app.getIdYoutubeImagem(youtube_url);
-  return "<iframe width='98%' onload='setTimeout(function(){app.hideLoading()}, 500);' height='300px' src='https://www.youtube.com/embed/"+video+"' frameborder='0' allowfullscreen></iframe>";
+  return "<iframe width='98%' onload='app.hideLoading()' height='300px' src='https://www.youtube.com/embed/"+video+"' frameborder='0' allowfullscreen></iframe>";
 };
 
 app.getIdYoutubeImagem = function(youtube_url){
