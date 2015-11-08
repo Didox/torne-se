@@ -77,10 +77,8 @@ var videoFound = false;
 var loadVideo = function(){
   id = app.getParameterByName("id");
   if($("#video_container").size() > 0){
-    setTimeout(function(){
-      setVideo();
-      loadAndSetMoreVideo(1);
-    }, 50)
+    setVideo();
+    loadAndSetMoreVideo(1);
   }
 }
 
@@ -107,45 +105,44 @@ var loadAndSetMoreVideo = function(index){
 
 var loadVideos = function(find,indexVideos){
   if($("#videos").size() > 0){
-    setTimeout(function(){
-      var html = "";
-      if(find){
-        html += "<li>";
-        html += "  <div>";
-        html += "   <input type='text' id='find' class=\"inputFind\" style='border:2px solid #337ab7;height: 17px;border-radius: 4px;color: #265a88;padding: 3px;'><a href=\"#\" class=\"miniBtn\" onclick=\"findAula();\" style=\"background-color: #265a88;width: 100px;height: 18px;border-radius: 4px;padding: 6px;margin-left: 2px;color: #fff;font-size: 12px;\">Buscar</a>";
-        html += "  </div>";
-        html += "</li>";
-      }
+    var html = "";
+    if(find){
+      html += "<li>";
+      html += "  <div>";
+      html += "   <input type='text' id='find' class=\"inputFind\" style='border:2px solid #337ab7;height: 17px;border-radius: 4px;color: #265a88;padding: 3px;'><a href=\"#\" class=\"miniBtn\" onclick=\"findAula();\" style=\"background-color: #265a88;width: 100px;height: 18px;border-radius: 4px;padding: 6px;margin-left: 2px;color: #fff;font-size: 12px;\">Buscar</a>";
+      html += "  </div>";
+      html += "</li>";
+    }
 
-      for(i=0;i<data.length; i++){
-        html += "<li>";
-        html += "  <div class='video'>";
-        html += "    <a href=\"javascript:app.openInternalLink('video.html?id=" + app.getIdYoutubeImagem(data[i].videoYoutube) + "');\">";
-        html += "      <img src='" + app.getYoutubeImagem(data[i].videoYoutube) + "' style='width: 200px;height: 150px;'>";
-        html += "      <p>" + data[i].titulo + "</p>";
-        html += "    </a>";
-        html += "  </div>";
-        html += "</li>"
-      }
+    for(i=0;i<data.length; i++){
+      html += "<li>";
+      html += "  <div class='video'>";
+      html += "    <a href=\"javascript:app.openInternalLink('video.html?id=" + app.getIdYoutubeImagem(data[i].videoYoutube) + "');\">";
+      html += "      <img src='" + app.getYoutubeImagem(data[i].videoYoutube) + "' style='width: 200px;height: 150px;'>";
+      html += "      <p>" + data[i].titulo + "</p>";
+      html += "    </a>";
+      html += "  </div>";
+      html += "</li>"
+    }
 
-      if(indexVideos != undefined && indexVideos != 0){
-        html += "<li id='loadMore'>";
-        html += "  <button type=\"button\" onclick=\"loadMore('videos" + indexVideos + ".js');\">Carregar mais</button>";
-        html += "</li>"
-      }
+    if(indexVideos != undefined && indexVideos != 0){
+      html += "<li id='loadMore'>";
+      html += "  <button type=\"button\" onclick=\"loadMore('videos" + indexVideos + ".js');\">Carregar mais</button>";
+      html += "</li>"
+    }
 
-      if(indexVideos == 1){
-        $("#videos").html(html);
-      }
-      else{
-        $("#videos").append(html);
-      }
-    }, 50)
+    if(indexVideos == 1){
+      $("#videos").html(html);
+    }
+    else{
+      $("#videos").append(html);
+    }
   }
 }
 
+var itemFound;
 var findAula = function(stop){
-  var itemFound = false
+  itemFound = false
   $("#videos li div p").each(function(){
     var text = accentsTidy($(this).text().toLowerCase());
     var findText = accentsTidy($('#find').val().toLowerCase());
@@ -163,10 +160,8 @@ var findAula = function(stop){
   });
 
   if(!itemFound){
-    if(stop == 'undefined'){
-      loadMore('videos1.js',functional(){
-        findAula(true);
-      });
+    if(stop == undefined){
+      loadForFind(1)
     }else{    
       $('#find').val("Não encontrado");
       $('#find').click(function(){
@@ -178,7 +173,16 @@ var findAula = function(stop){
   }
 }
 
-accentsTidy = function(s){
+var loadForFind = function(index){
+  loadMore('videos' + index + '.js',function(){
+    findAula(true);
+    if(!itemFound){
+      loadForFind(index + 1)
+    }
+  });
+}
+
+var accentsTidy = function(s){
     var r=s.toLowerCase();
     r = r.replace(new RegExp(/\s/g),"");
     r = r.replace(new RegExp(/[àáâãäå]/g),"a");
