@@ -176,7 +176,10 @@ var findAula = function(stop){
 var jsLoad=[];
 var loadForFind = function(index){
   var js = 'videos' + index + '.js';
-  if(jsLoad.indexOf(js) != -1){ return; }
+  if(jsLoad.indexOf(js) != -1){
+    findAula(true);
+    return; 
+  }
   jsLoad.push(js)
   loadMore(js,function(){
     findAula(true);
