@@ -4,3 +4,5 @@ tmp
 .DS_Store
 .project
 build
+node_modules/
+plugins/

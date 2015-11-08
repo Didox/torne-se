@@ -2,5 +2,12 @@ App torne-se um programador
 
 Maneira de ficar mais próximo dos meus alunos
 
+Para rodar o projeto usar:
+
+npm install
+
+./node_modules/titanium/bin/titanium build
+
+
 ----------------------------------
 Torne-se um programador Copyright (c) Didox Business & Technology.
