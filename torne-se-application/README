@@ -8,6 +8,9 @@ npm install
 
 ./node_modules/titanium/bin/titanium build
 
+ou 
+
+./run.sh
 
 ----------------------------------
 Torne-se um programador Copyright (c) Didox Business & Technology.

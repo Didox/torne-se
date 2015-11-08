@@ -59,8 +59,8 @@
             <activity android:configChanges="keyboardHidden|orientation"
                 android:name="ti.modules.titanium.ui.android.TiPreferencesActivity" android:screenOrientation="portrait"/>
             <service android:exported="false" android:name="org.appcelerator.titanium.analytics.TiAnalyticsService"/>
-            <uses-sdk android:maxSdkVersion="21"
-                android:minSdkVersion="16" android:targetSdkVersion="21"/>
+            <!--uses-sdk android:maxSdkVersion="21"
+                android:minSdkVersion="16" android:targetSdkVersion="21"/-->
         </manifest>
     </android>
     <ios>
