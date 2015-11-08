@@ -164,6 +164,11 @@ var findAula = function(){
 
   if(!itemFound){
     $('#find').val("Não encontrado");
+    $('#find').click(function(){
+      if($(this).val() == "Não encontrado"){
+        $(this).val("");
+      }
+    });
   }
 }
 
