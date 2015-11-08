@@ -173,8 +173,12 @@ var findAula = function(stop){
   }
 }
 
+var jsLoad=[];
 var loadForFind = function(index){
-  loadMore('videos' + index + '.js',function(){
+  var js = 'videos' + index + '.js';
+  if(jsLoad.indexOf(js) != -1){ return; }
+  jsLoad.push(js)
+  loadMore(js,function(){
     findAula(true);
     if(!itemFound){
       loadForFind(index + 1)
