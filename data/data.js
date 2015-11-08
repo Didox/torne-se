@@ -1,6 +1,6 @@
 var version = {
   v: '5',
-  message: 'Nova versão do aplicativo completo para download, com este você terá notificações de novas aulas.'
+  message: 'Nova versão do aplicativo para download, instale pela loja ou faça o download pelo meu github'
 }
 
 var aviso = {
