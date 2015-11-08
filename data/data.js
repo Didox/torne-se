@@ -1,6 +1,6 @@
 var version = {
   v: '5',
-  message: 'Nova versão do aplicativo para download, instale pela loja ou faça o download pelo http://github.com/Didox/torne-se/app_publish/android'
+  message: 'Nova versão do aplicativo para download, instale pela loja ou faça o download pelo https://github.com/Didox/torne-se/tree/master/app_published/android'
 }
 
 var aviso = {
