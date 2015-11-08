@@ -1,6 +1,6 @@
 var version = {
   v: '5',
-  message: 'Nova versão do aplicativo completo para download, com este você terá notificações de novas aulas.'
+  message: 'Nova versão do aplicativo para download, instale pela loja ou faça o download pelo https://github.com/Didox/torne-se/tree/master/app_published/android'
 }
 
 var aviso = {
@@ -42,12 +42,12 @@ var data = [
     videoYoutube: 'https://www.youtube.com/watch?v=XwmFtcPanIU'
   },
   {
-    titulo: 'Aula 4 - Operadores condicionals e lógicos parte 2',
+    titulo: 'Aula 4 - Operadores condicionais e lógicos parte 2',
     descricao: 'Nesta aula iremos falar sobre operadores condicionais, concatenação de strings, diferença de variável string e inteiro, operadores lógicos ',
     videoYoutube: 'https://www.youtube.com/watch?v=nYF_WhoexhY'
   },
   {
-    titulo: 'Aula 4 - Operadores condicionals e lógicos parte 1',
+    titulo: 'Aula 4 - Operadores condicionais e lógicos parte 1',
     descricao: 'Nesta aula iremos falar sobre operadores condicionais, concatenação de strings, diferença de variável string e inteiro, operadores lógicos ',
     videoYoutube: 'https://www.youtube.com/watch?v=cN_F2E7yKVQ'
   },
