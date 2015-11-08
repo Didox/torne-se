@@ -28,7 +28,7 @@ var data = [
   },
   {
     titulo: 'Aula 7 - Hash',
-    descricao: 'Nesta aula você irá aprender a utilizar Hash, ou seja uma forma estrutura para organizar suas variáveis como um objeto ',
+    descricao: 'Nesta aula você irá aprender a utilizar Hash, ou seja uma forma estruturada para organizar suas variáveis como um objeto ',
     videoYoutube: 'https://www.youtube.com/watch?v=SCL93-7zWWw'
   },
   {
@@ -67,9 +67,6 @@ $(document).ready(function(){
   loadVideos(true, 1);
   loadVideo();
 });
-
-
-
 
 // ====================================== Helpers ====================================================
 var id = 0;
@@ -173,8 +170,15 @@ var findAula = function(stop){
   }
 }
 
+var jsLoad=[];
 var loadForFind = function(index){
-  loadMore('videos' + index + '.js',function(){
+  var js = 'videos' + index + '.js';
+  if(jsLoad.indexOf(js) != -1){
+    findAula(true);
+    return; 
+  }
+  jsLoad.push(js);
+  loadMore(js,function(){
     findAula(true);
     if(!itemFound){
       loadForFind(index + 1)
