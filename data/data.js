@@ -4,7 +4,7 @@ var version = {
 }
 
 var aviso = {
-  message: 'Quarta-feira tem nova aula por aí, aproveitem o final de semana e revisem as aulas anteriores',
+  message: '',
   confirm: false,
   url: 'video.html?id=DbR-luEtC1I',
   openUrl: false
