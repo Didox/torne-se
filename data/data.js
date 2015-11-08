@@ -68,9 +68,6 @@ $(document).ready(function(){
   loadVideo();
 });
 
-
-
-
 // ====================================== Helpers ====================================================
 var id = 0;
 var videoFound = false;
@@ -180,7 +177,7 @@ var loadForFind = function(index){
     findAula(true);
     return; 
   }
-  jsLoad.push(js)
+  jsLoad.push(js);
   loadMore(js,function(){
     findAula(true);
     if(!itemFound){
