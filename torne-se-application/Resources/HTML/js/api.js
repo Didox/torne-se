@@ -1,6 +1,6 @@
 var app = window.app || {};
 
-app.appVersion       = 6;
+app.appVersion       = 7;
 
 app.showLoading = function(){
   $(".carregando").show();
@@ -18,7 +18,7 @@ app.showLoading();
 
 $(document).ready(function(){
   $(".version").html("Versão: " + app.appVersion)
-  if($("iframe").size() == 0){
+  if(document.location.href.indexOf("video.html") == -1){
     app.hideLoading();
   }
 });
