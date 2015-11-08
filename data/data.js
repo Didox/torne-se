@@ -144,7 +144,7 @@ var loadVideos = function(find,indexVideos){
   }
 }
 
-var findAula = function(){
+var findAula = function(stop){
   var itemFound = false
   $("#videos li div p").each(function(){
     var text = accentsTidy($(this).text().toLowerCase());
@@ -163,12 +163,18 @@ var findAula = function(){
   });
 
   if(!itemFound){
-    $('#find').val("Não encontrado");
-    $('#find').click(function(){
-      if($(this).val() == "Não encontrado"){
-        $(this).val("");
-      }
-    });
+    if(stop == 'undefined'){
+      loadMore('videos1.js',functional(){
+        findAula(true);
+      });
+    }else{    
+      $('#find').val("Não encontrado");
+      $('#find').click(function(){
+        if($(this).val() == "Não encontrado"){
+          $(this).val("");
+        }
+      });
+    }
   }
 }
 
