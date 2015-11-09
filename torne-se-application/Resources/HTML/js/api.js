@@ -1,6 +1,6 @@
 var app = window.app || {};
 
-app.appVersion       = 7;
+app.appVersion       = 8;
 
 app.showLoading = function(){
   $(".carregando").show();
