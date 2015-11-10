@@ -4,7 +4,7 @@ var version = {
 }
 
 var aviso = {
-  message: 'Fiquem ligados, nova aula amanhã, tema: Orientação a objetos',
+  message: '',
   confirm: false,
   url: 'video.html?id=DbR-luEtC1I',
   openUrl: false
