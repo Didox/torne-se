@@ -3,10 +3,8 @@ var version = {
   message: 'Nova versão do aplicativo para download, instale pela loja ou faça o download pelo https://github.com/Didox/torne-se/tree/master/app_published/android'
 }
 
-//message: 'Aula nova disponível\nTema: Orientação a Objetos\nDeseja ver agora?',
-
 var aviso = {
-  message: '',
+  message: 'Aula nova disponível\nTema: Orientação a Objetos\nDeseja ver agora?',
   confirm: true,
   url: 'video.html?id=K7VMgGX9vIY',
   openUrl: false
