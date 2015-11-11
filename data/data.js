@@ -4,7 +4,7 @@ var version = {
 }
 
 var aviso = {
-  message: 'Aula nova disponível\nTema: Orientação a Objetos\nDeseja ver agora?',
+  message: '',
   confirm: true,
   url: 'video.html?id=K7VMgGX9vIY',
   openUrl: false
