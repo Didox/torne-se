@@ -3,12 +3,6 @@ application.win.addEventListener('android:back',function(e){
   Titanium.Android.currentActivity.finish();
 });
 
-if (Ti.Platform.osname == 'android'){
-  Ti.Gesture.addEventListener('orientationchange', function(e) {
-    Ti.Android.currentActivity.setRequestedOrientation(Ti.Android.SCREEN_ORIENTATION_PORTRAIT);
-  });
-}
-
 application.webview.addEventListener('load', function() {
   var url = application.webview.getUrl();
   if(url.indexOf("http://") != -1){

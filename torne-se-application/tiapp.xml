@@ -8,7 +8,6 @@
     <property name="acs-oauth-secret-development" type="string">aZIqWZBldaveEWzcRESzpKaI5KoPgDhF</property>
     <id>com.didox.programador</id>
     <name>Torne-se um programador</name>
-    <version>30</version>
     <publisher>Torne-se um programador</publisher>
     <url>https://www.facebook.com/Projeto-Torne-se-um-programador-1588864738032373</url>
     <description>not specified</description>
@@ -23,20 +22,10 @@
     <analytics>true</analytics>
     <guid>97df5999-4766-464a-9ddd-1397ac4d9f26</guid>
     <property name="ti.ui.defaultunit" type="string">system</property>
-    <iphone>
-        <orientations device="iphone">
-            <orientation>Ti.UI.PORTRAIT</orientation>
-        </orientations>
-        <orientations device="ipad">
-            <orientation>Ti.UI.PORTRAIT</orientation>
-        </orientations>
-    </iphone>
+    <iphone></iphone>
     <android xmlns:android="http://schemas.android.com/apk/res/android">
         <manifest android:installLocation="preferExternal"/>
-        <manifest android:versionCode="30" android:versionName="8.0" package="com.didox.programador">
-            <!--uses-sdk android:maxSdkVersion="21"
-                android:minSdkVersion="16" android:targetSdkVersion="21"/-->
-        </manifest>
+        <manifest android:versionCode="31" android:versionName="8.1" package="com.didox.programador"></manifest>
     </android>
     <ios>
         <plist>
