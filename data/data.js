@@ -5,12 +5,17 @@ var version = {
 
 var aviso = {
   message: '',
-  confirm: false,
-  url: 'video.html?id=DbR-luEtC1I',
+  confirm: true,
+  url: 'video.html?id=K7VMgGX9vIY',
   openUrl: false
 }
 
 var data = [
+  {
+    titulo: 'Aula 11 - Orientação a Objetos parte 1',
+    descricao: 'Nesta aula você irá conhecer um dos assuntos que mais fazem diferença entre um bom programador e somente um programador, organizar o seu código utilizando orientação a objetos.',
+    videoYoutube: 'https://www.youtube.com/watch?v=K7VMgGX9vIY'
+  },
   {
     titulo: 'Aula 10 - Programação funcional',
     descricao: 'Nesta aula você aprenderá o que é programação funcional, como escrever um código mais organizado e simples utilizando funções, e separá-los em arquivos, deixando em contextos diferentes.',
@@ -55,11 +60,6 @@ var data = [
     titulo: 'Aula 3 - Operadores matemáticos',
     descricao: 'Nesta aula iremos aprender como utilizar a lógica de programação para resolver expressões numéricas, utilizando os operadores matemáticos. ',
     videoYoutube: 'https://www.youtube.com/watch?v=z-_vVAyJLrY'
-  },
-  {
-    titulo: 'Aula 2 - Variáveis',
-    descricao: 'Este vídeo mostra o que é uma variável, para que serve uma variável e como utilizar uma variável em um código fonte ',
-    videoYoutube: 'https://www.youtube.com/watch?v=5_ak7LNFyWw'
   },
 ]
 
