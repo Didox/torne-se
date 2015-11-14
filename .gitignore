@@ -1,2 +1,3 @@
 .git
 .git/*
+newrelic_agent.log
