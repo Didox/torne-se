@@ -10,5 +10,8 @@ router.get('/aula', AulasController.aula);
 router.get('/aulas', AulasController.index);
 
 router.get('/sobre', SobreController.index);
+router.get('/sobre/alunos', SobreController.alunos);
+router.get('/sobre/empresas', SobreController.empresas);
+router.get('/sobre/objetivo', SobreController.objetivo);
 
 module.exports = router;
