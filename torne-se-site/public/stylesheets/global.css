@@ -54,7 +54,7 @@ a{
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   -webkit-touch-callout: none;
 }
-.donate { display: block; margin-top: 20px; }
+.pague { display: block; margin-top: 20px; }
 
 img.image-tornese{ width: 100%; }
 .video img { width: 200px; }
