@@ -1,3 +1,7 @@
+if(document.location.href.match(/www/) == null){
+  window.location.href = 'http://www.torneseumprogramador.com.br'
+}
+
 var app = window.app || {};
 app.showLoading = function(){
   $(".carregando").show();
