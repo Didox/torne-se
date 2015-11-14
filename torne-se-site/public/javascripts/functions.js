@@ -17,6 +17,11 @@ $(document).ready(function(){
   if(! document.location.href.match(/(aula\?)|(alunos)|(empresas)|(objetivo)/)){
     app.hideLoading();
   }
+  else{
+    setTimeout(function(){
+      app.hideLoading();
+    }, 1000);
+  }
 });
 
 app.openInternalLink = function(url){
