@@ -14,7 +14,7 @@ app.hideLoading = function(moveTop){
 app.showLoading();
 
 $(document).ready(function(){
-  if(! document.location.href.match(/(aula\?)|(alunos)|(empresas)/)){
+  if(! document.location.href.match(/(aula\?)|(alunos)|(empresas)|(objetivo)/)){
     app.hideLoading();
   }
 });
