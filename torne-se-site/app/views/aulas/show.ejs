@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('../shared/head', { title: "Projeto torne-se um programador - aulas" }) %>
+  </head>
+  <body class="home">
+    <%- include('../shared/header') %>
+    <div class="containar">
+      <br>
+      <div class="buttons">
+        <a class="button" href="/aulas" >Voltar</a>
+      </div>
+      <br>
+      <div>
+        <div id="video_container">
+          <p id="titulo"></p>
+          <p id="descricao"></p>
+          <div id="video"></div>
+        </div>
+      </div>
+    </div>
+    <script src="/javascripts/zepto.js"></script>
+    <script src="/javascripts/functions.js"></script>
+    <script type="text/javascript" src="https://rawgit.com/Didox/torne-se/master/data/data.js"></script>
+  </body>
+</html>
