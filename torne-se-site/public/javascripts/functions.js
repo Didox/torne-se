@@ -21,6 +21,11 @@ $(document).ready(function(){
   if(! document.location.href.match(/(aula\?)|(alunos)|(empresas)|(objetivo)/)){
     app.hideLoading();
   }
+
+  if(app.isIphone()){
+    $("#linkTokePag").attr("href", "https://itunes.apple.com/br/app/itau-tokpag/id724817389?mt=8");
+    $("#linkItauApp").attr("href", "https://itunes.apple.com/br/app/itau-30-horas/id474505665?mt=8");
+  }
 });
 
 app.openInternalLink = function(url){
@@ -87,6 +92,14 @@ var findAula = function(stop){
     });
   }
 }
+
+app.isAndroid = function() {
+  return navigator.userAgent.match(/Android/i);
+};
+
+app.isIphone = function() {
+  return navigator.userAgent.match(/iPhone/i);
+};
 
 var accentsTidy = function(s){
   var r=s.toLowerCase();
