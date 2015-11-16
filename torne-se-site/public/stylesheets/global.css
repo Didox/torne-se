@@ -176,8 +176,14 @@ div.containar #videos .video{
   background-color: #265a88;width: 100px;height: 18px;border-radius: 4px;padding: 6px;margin-left: 2px;color: #fff;font-size: 12px;
 }
 
-div.containar #videos li{
+div.containar #videos li, div.containar #vagas li{
   border-top: 1px solid #bde2ff;
+}
+div.containar #vagas li div.vaga{
+  margin: auto;
+  width: 400px;
+  padding: 10px;
+  text-align: left; 
 }
 footer{position:fixed;bottom:0;z-index:10;float:left;padding:4px;width:100%;height:20px;background:#405e99;-webkit-backface-visibility:hidden;box-sizing: border-box;-webkit-box-sizing: border-box}
 footer div{color:#fff;font-size:10px;float:right;margin-right:10px}
