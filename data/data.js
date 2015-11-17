@@ -4,8 +4,8 @@ var version = {
 }
 
 var aviso = {
-  message: '',
-  confirm: true,
+  message: 'Para receber as aulas também por email cadastre-se no site\nhttp://torneseumprogramador.com.br',
+  confirm: false,
   url: 'video.html?id=K7VMgGX9vIY',
   openUrl: false
 }
