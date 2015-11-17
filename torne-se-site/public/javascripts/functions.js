@@ -77,7 +77,7 @@ app.saveMail = function(){
   }
 
   if(email.val() == ""){
-    email.val("Nome obrigatório");
+    email.val("Email obrigatório");
     setTimeout(function(){
       email.val("");
     }, 800);
@@ -124,11 +124,9 @@ var findAula = function(stop){
 
   if(!itemFound){
     $('#find').val("Não encontrado");
-    $('#find').click(function(){
-      if($(this).val() == "Não encontrado"){
-        $(this).val("");
-      }
-    });
+    setTimeout(function(){
+      $('#find').val("");
+    }, 800);
   }
 }
 
