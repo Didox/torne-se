@@ -161,11 +161,9 @@ var findAula = function(stop){
       loadForFind(1)
     }else{    
       $('#find').val("Não encontrado");
-      $('#find').click(function(){
-        if($(this).val() == "Não encontrado"){
-          $(this).val("");
-        }
-      });
+      setTimeout(function(){
+        $('#find').val("");
+      }, 800);
     }
   }
 }
