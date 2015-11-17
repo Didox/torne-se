@@ -64,6 +64,45 @@ app.getIdYoutubeImagem = function(youtube_url){
   return id_video;
 };
 
+app.saveMail = function(){
+  var nome = $("#nome");
+  var email = $("#email");
+
+  if(nome.val() == ""){
+    nome.val("Nome obrigatório");
+    setTimeout(function(){
+      nome.val("");
+    }, 800);
+    return;
+  }
+
+  if(email.val() == ""){
+    email.val("Nome obrigatório");
+    setTimeout(function(){
+      email.val("");
+    }, 800);
+    return;
+  }
+
+  if(email.val().match(/\@.*?\./) == null){
+    email.val("Email inválido");
+    setTimeout(function(){
+      email.val("");
+    }, 800);
+    return;
+  }
+
+  key_email = email.val().replace(/\@|\.|#|,|\]|\[|\$/g, "")
+  var myFirebaseRef = new Firebase("https://scorching-fire-3573.firebaseio.com/emails").child(key_email);
+  myFirebaseRef.set({ email: email.val(), nome: nome.val() });
+
+  nome.val("Registrado");
+  email.val("Registrado");
+  setTimeout(function(){
+    nome.val("");
+    email.val("");
+  }, 800);
+}
 
 var findAula = function(stop){
   itemFound = false

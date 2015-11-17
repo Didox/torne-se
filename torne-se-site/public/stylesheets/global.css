@@ -56,6 +56,16 @@ a{
 }
 .pague { display: block; margin-top: 20px; }
 
+#email_container .nom{ margin-bottom: 2px; }
+#email_container .btn{ margin-top: 5px; }
+#email_container .btn a{ 
+  padding-left: 70px;
+  padding-right: 70px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+#email_container input{ border:1px solid #337ab7;height: 17px;border-radius: 4px;color: #265a88;padding: 3px; }
+
 img.image-tornese{ width: 100%; }
 .video img { width: 200px; }
 .inputFind{ border:2px solid #337ab7;height: 17px;border-radius: 4px;color: #265a88;padding: 3px; }
