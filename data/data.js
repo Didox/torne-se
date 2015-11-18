@@ -14,7 +14,7 @@ var data = [
   {
     titulo: 'Aula 11 - Orientação a Objetos parte 2',
     descricao: 'Esta aula você verá métodos staticos, construtores, constantes, singleton e mais alguns conceitos para orientação a objetos, ou seja uma forma mais organizada de programar.',
-    videoYoutube: 'https://www.youtube.com/watch?v=K7VMgGX9vIY'
+    videoYoutube: 'https://www.youtube.com/watch?v=JH3dISDHjc0'
   },
   {
     titulo: 'Aula 11 - Orientação a Objetos parte 1',
