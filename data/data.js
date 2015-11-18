@@ -4,13 +4,18 @@ var version = {
 }
 
 var aviso = {
-  message: '',
-  confirm: false,
-  url: 'video.html?id=K7VMgGX9vIY',
+  message: 'Nova aula disponível deseja assistir agora?',
+  confirm: true,
+  url: 'video.html?id=JH3dISDHjc0',
   openUrl: false
 }
 
 var data = [
+  {
+    titulo: 'Aula 11 - Orientação a Objetos parte 2',
+    descricao: 'Esta aula você verá métodos staticos, construtores, constantes, singleton e mais alguns conceitos para orientação a objetos, ou seja uma forma mais organizada de programar.',
+    videoYoutube: 'https://www.youtube.com/watch?v=K7VMgGX9vIY'
+  },
   {
     titulo: 'Aula 11 - Orientação a Objetos parte 1',
     descricao: 'Nesta aula você irá conhecer um dos assuntos que mais fazem diferença entre um bom programador e somente um programador, organizar o seu código utilizando orientação a objetos.',
@@ -55,11 +60,6 @@ var data = [
     titulo: 'Aula 4 - Operadores condicionais e lógicos parte 1',
     descricao: 'Nesta aula iremos falar sobre operadores condicionais, concatenação de strings, diferença de variável string e inteiro, operadores lógicos ',
     videoYoutube: 'https://www.youtube.com/watch?v=cN_F2E7yKVQ'
-  },
-  {
-    titulo: 'Aula 3 - Operadores matemáticos',
-    descricao: 'Nesta aula iremos aprender como utilizar a lógica de programação para resolver expressões numéricas, utilizando os operadores matemáticos. ',
-    videoYoutube: 'https://www.youtube.com/watch?v=z-_vVAyJLrY'
   },
 ]
 
