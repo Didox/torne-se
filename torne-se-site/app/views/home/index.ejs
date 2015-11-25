@@ -24,23 +24,9 @@
         <a class="button" href="/vagas">Vagas</a>
         <a class="button" href="/sobre">Sobre</a>
       </div>
-      <br>
-      <div id="email_container">
-        <p>
-          Quer receber aviso de aulas por email? cadastre seu nome e email abaixo:
-        </p>
-        <div class="nom">
-          Nome: <input type="text" id="nome" >
-        </div>
-        <div class="eml">
-          Email: <input type="text" id="email" >
-        </div>
-        <div class="btn">
-          <a href="javascript:void(0)", onclick="app.saveMail();" class="button" value="Salvar">Salvar</a>
-        </div>
-      </div>
-      <%- include('../shared/pague') %>
     </div>
+    <%- include('../shared/form') %>
+    <%- include('../shared/pague') %>
     <script src="https://cdn.firebase.com/js/client/2.3.1/firebase.js"></script>
     <%- include('../shared/footer') %>
   </body>

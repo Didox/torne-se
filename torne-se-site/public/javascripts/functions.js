@@ -26,7 +26,44 @@ $(document).ready(function(){
     $("#linkTokePag").attr("href", "https://itunes.apple.com/br/app/itau-tokpag/id724817389?mt=8");
     $("#linkItauApp").attr("href", "https://itunes.apple.com/br/app/itau-30-horas/id474505665?mt=8");
   }
+
+  app.loadButtonsActions();
+  app.actionFind();
 });
+
+app.actionFind = function(){
+  if(window.location.href.indexOf("aulas") != -1){
+    var textFind = unescape(app.getParameterByName("q").replace("#", ""));
+    if(textFind != ""){
+      $("#lupa a").trigger("click");
+      $("#aula").val(textFind);
+      var esperaData = setInterval(function(){
+        if(data.length > 0){
+          $("#findAula .button").trigger("click");
+          clearInterval(esperaData);
+        }
+      }, 500);
+    }
+  }
+}
+
+app.loadButtonsActions = function(){
+  $("#lupa a").click(function(){
+    $("#nome_site").hide();
+    $("#lupa").hide();
+    $("#findAula").show();
+    $("#aula").focus();
+  });
+
+  $("#findAula .button").click(function(){
+    if(window.location.href.indexOf("aulas") == -1){
+      window.location.href="/aulas?q=" + $("#findAula input").val();
+      return;
+    }
+
+    app.findAulaHeader();
+  });
+}
 
 app.openInternalLink = function(url){
   var id = url.replace('video.html?id=', '');
@@ -72,6 +109,7 @@ app.saveMail = function(){
     nome.val("Nome obrigatório");
     setTimeout(function(){
       nome.val("");
+      nome.focus();
     }, 800);
     return;
   }
@@ -80,6 +118,7 @@ app.saveMail = function(){
     email.val("Email obrigatório");
     setTimeout(function(){
       email.val("");
+      email.focus();
     }, 800);
     return;
   }
@@ -88,6 +127,7 @@ app.saveMail = function(){
     email.val("Email inválido");
     setTimeout(function(){
       email.val("");
+      email.focus();
     }, 800);
     return;
   }
@@ -104,17 +144,19 @@ app.saveMail = function(){
   }, 800);
 }
 
-var findAula = function(stop){
-  itemFound = false
+app.itemFound = false;
+app.findAulaHeader = function(stop){
+  app.itemFound = false
+
   $("#videos li div p").each(function(){
-    var text = accentsTidy($(this).text().toLowerCase());
-    var findText = accentsTidy($('#find').val().toLowerCase());
+    var text = app.accentsTidy($(this).text().toLowerCase());
+    var findText = app.accentsTidy($('#aula').val().toLowerCase());
     if(findText != ""){
       if(text.indexOf(findText) != -1){
-        itemFound = true;
+        app.itemFound = true;
         $(this).css("background-color", "#FFFFE0");
         var top = $(this).offset().top - 200;
-        scroll(top, 200);
+        app.scroll(top, 200);
       }
       else{
         $(this).css("background-color", "#fff");
@@ -122,12 +164,40 @@ var findAula = function(stop){
     }
   });
 
-  if(!itemFound){
-    $('#find').val("Não encontrado");
-    setTimeout(function(){
-      $('#find').val("");
-    }, 800);
+  if(!app.itemFound){
+    if(stop == undefined){
+      app.loadForFindHeader(1)
+    }else{    
+      $('#aula').val("Não encontrado");
+      setTimeout(function(){
+        $('#aula').val("");
+      }, 800);
+    }
   }
+}
+
+app.jsLoad=[];
+app.loadForFindHeader = function(index){
+  var js = 'videos' + index + '.js';
+  if(app.jsLoad.indexOf(js) != -1){
+    app.findAulaHeader(true);
+    return; 
+  }
+  app.jsLoad.push(js);
+  app.loadMore(js,function(){
+    app.findAulaHeader(true);
+    if(!app.itemFound){
+      app.loadForFindHeader(index + 1)
+    }
+  });
+}
+
+app.loadMore = function(file, callback){
+  $("#loadMore").html("<p class=\"carregando\">Carregando</p>");
+  var s = document.createElement('script');
+  s.onload = callback;
+  s.setAttribute('src','https://rawgit.com/Didox/torne-se/master/data/' + file);
+  document.head.appendChild(s);
 }
 
 app.isAndroid = function() {
@@ -138,7 +208,7 @@ app.isIphone = function() {
   return navigator.userAgent.match(/iPhone/i);
 };
 
-var accentsTidy = function(s){
+app.accentsTidy = function(s){
   var r=s.toLowerCase();
   r = r.replace(new RegExp(/\s/g),"");
   r = r.replace(new RegExp(/[àáâãäå]/g),"a");
@@ -156,7 +226,7 @@ var accentsTidy = function(s){
 };
 
 
-var scroll = function(scrollTo, time) {
+app.scroll = function(scrollTo, time) {
   var scrollFrom = parseInt(document.body.scrollTop), i = 0, runEvery = 5;
   scrollTo = parseInt(scrollTo);
   time /= runEvery;
