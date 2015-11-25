@@ -4,13 +4,18 @@ var version = {
 }
 
 var aviso = {
-  message: '',
+  message: 'Aula nova disponível, deseja assistir agora?',
   confirm: true,
-  url: 'video.html?id=JH3dISDHjc0',
+  url: 'video.html?id=_BmpvTMSn0c',
   openUrl: false
 }
 
 var data = [
+  {
+    titulo: 'Aula 11 - Orientação a Objetos parte 3',
+    descricao: 'Nesta aula você aprenderá os outros conceitos envolvidos em orientação a objetos (abstract, final, sealed, partials, singleton, protected, agregação de métodos) que não são utilizados em JavaScript, porém existem e são muito utilizadas em Java, C# e outros.',
+    videoYoutube: 'https://www.youtube.com/watch?v=_BmpvTMSn0c'
+  },
   {
     titulo: 'Aula 11 - Orientação a Objetos parte 2',
     descricao: 'Esta aula você verá métodos staticos, construtores, constantes, singleton e mais alguns conceitos para orientação a objetos, ou seja uma forma mais organizada de programar.',
@@ -55,11 +60,6 @@ var data = [
     titulo: 'Aula 4 - Operadores condicionais e lógicos parte 2',
     descricao: 'Nesta aula iremos falar sobre operadores condicionais, concatenação de strings, diferença de variável string e inteiro, operadores lógicos ',
     videoYoutube: 'https://www.youtube.com/watch?v=nYF_WhoexhY'
-  },
-  {
-    titulo: 'Aula 4 - Operadores condicionais e lógicos parte 1',
-    descricao: 'Nesta aula iremos falar sobre operadores condicionais, concatenação de strings, diferença de variável string e inteiro, operadores lógicos ',
-    videoYoutube: 'https://www.youtube.com/watch?v=cN_F2E7yKVQ'
   },
 ]
 
@@ -215,9 +215,12 @@ function scroll(scrollTo, time) {
 }
 
 var loadMore = function(file, callback){
-  $("#loadMore").html("<p class=\"carregando\">Carregando</p>");
-  var s = document.createElement('script');
-  s.onload = callback;
-  s.setAttribute('src','https://rawgit.com/Didox/torne-se/master/data/' + file);
-  document.head.appendChild(s);
+  try{
+    $("#loadMore").html("<p class=\"carregando\">Carregando</p>");
+    var s = document.createElement('script');
+    s.onload = callback;
+    s.setAttribute('src','https://rawgit.com/Didox/torne-se/master/data/' + file);
+    document.head.appendChild(s);
+  }
+  catch(e){}
 }
