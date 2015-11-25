@@ -1,5 +1,10 @@
 var data = [
   {
+    titulo: 'Aula 4 - Operadores condicionais e lógicos parte 1',
+    descricao: 'Nesta aula iremos falar sobre operadores condicionais, concatenação de strings, diferença de variável string e inteiro, operadores lógicos ',
+    videoYoutube: 'https://www.youtube.com/watch?v=cN_F2E7yKVQ'
+  },
+  {
     titulo: 'Aula 3 - Operadores matemáticos',
     descricao: 'Nesta aula iremos aprender como utilizar a lógica de programação para resolver expressões numéricas, utilizando os operadores matemáticos. ',
     videoYoutube: 'https://www.youtube.com/watch?v=z-_vVAyJLrY'
