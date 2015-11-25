@@ -215,9 +215,12 @@ function scroll(scrollTo, time) {
 }
 
 var loadMore = function(file, callback){
-  $("#loadMore").html("<p class=\"carregando\">Carregando</p>");
-  var s = document.createElement('script');
-  s.onload = callback;
-  s.setAttribute('src','https://rawgit.com/Didox/torne-se/master/data/' + file);
-  document.head.appendChild(s);
+  try{
+    $("#loadMore").html("<p class=\"carregando\">Carregando</p>");
+    var s = document.createElement('script');
+    s.onload = callback;
+    s.setAttribute('src','https://rawgit.com/Didox/torne-se/master/data/' + file);
+    document.head.appendChild(s);
+  }
+  catch(e){}
 }
