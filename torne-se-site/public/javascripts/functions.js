@@ -33,7 +33,11 @@ $(document).ready(function(){
 
 app.actionFind = function(){
   if(window.location.href.indexOf("aulas") != -1){
-    var textFind = unescape(app.getParameterByName("q").replace("#", ""));
+    var textFind = app.getParameterByName("q");
+    if(textFind != "" && textFind != undefined){
+      textFind = unescape(textFind.replace("#", ""));
+    }
+
     if(textFind != ""){
       $("#lupa a").trigger("click");
       $("#aula").val(textFind);
