@@ -34,11 +34,8 @@ $(document).ready(function(){
 app.actionFind = function(){
   if(window.location.href.indexOf("aulas") != -1){
     var textFind = app.getParameterByName("q");
-    if(textFind != "" && textFind != undefined){
+    if(textFind != "" && textFind != undefined && textFind != null){
       textFind = unescape(textFind.replace("#", ""));
-    }
-
-    if(textFind != ""){
       $("#lupa a").trigger("click");
       $("#aula").val(textFind);
       var esperaData = setInterval(function(){
