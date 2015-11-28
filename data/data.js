@@ -103,20 +103,14 @@ var loadAndSetMoreVideo = function(index){
 var loadVideos = function(find,indexVideos){
   if($("#videos").size() > 0){
     var html = "";
-    if(find){
-      html += "<li>";
-      html += "  <div>";
-      html += "   <input type='text' id='find' class=\"inputFind\" style='border:2px solid #337ab7;height: 17px;border-radius: 4px;color: #265a88;padding: 3px;'><a href=\"#\" class=\"miniBtn\" onclick=\"findAula();\" style=\"background-color: #265a88;width: 100px;height: 18px;border-radius: 4px;padding: 6px;margin-left: 2px;color: #fff;font-size: 12px;\">Buscar</a>";
-      html += "  </div>";
-      html += "</li>";
-    }
-
+    
     for(i=0;i<data.length; i++){
       html += "<li>";
       html += "  <div class='video'>";
       html += "    <a href=\"javascript:app.openInternalLink('video.html?id=" + app.getIdYoutubeImagem(data[i].videoYoutube) + "');\">";
       html += "      <img src='" + app.getYoutubeImagem(data[i].videoYoutube) + "' style='width: 200px;height: 150px;'>";
       html += "      <p>" + data[i].titulo + "</p>";
+      html += "      <span style='display:none'>" + data[i].descricao + "</span>";
       html += "    </a>";
       html += "  </div>";
       html += "</li>"
@@ -135,83 +129,6 @@ var loadVideos = function(find,indexVideos){
       $("#videos").append(html);
     }
   }
-}
-
-var itemFound;
-var findAula = function(stop){
-  itemFound = false
-  $("#videos li div p").each(function(){
-    var text = accentsTidy($(this).text().toLowerCase());
-    var findText = accentsTidy($('#find').val().toLowerCase());
-    if(findText != ""){
-      if(text.indexOf(findText) != -1){
-        itemFound = true;
-        $(this).css("background-color", "#FFFFE0");
-        var top = $(this).offset().top - 200;
-        scroll(top, 200);
-      }
-      else{
-        $(this).css("background-color", "#fff");
-      }
-    }
-  });
-
-  if(!itemFound){
-    if(stop == undefined){
-      loadForFind(1)
-    }else{    
-      $('#find').val("Não encontrado");
-      setTimeout(function(){
-        $('#find').val("");
-      }, 800);
-    }
-  }
-}
-
-var jsLoad=[];
-var loadForFind = function(index){
-  var js = 'videos' + index + '.js';
-  if(jsLoad.indexOf(js) != -1){
-    findAula(true);
-    return; 
-  }
-  jsLoad.push(js);
-  loadMore(js,function(){
-    findAula(true);
-    if(!itemFound){
-      loadForFind(index + 1)
-    }
-  });
-}
-
-var accentsTidy = function(s){
-    var r=s.toLowerCase();
-    r = r.replace(new RegExp(/\s/g),"");
-    r = r.replace(new RegExp(/[àáâãäå]/g),"a");
-    r = r.replace(new RegExp(/æ/g),"ae");
-    r = r.replace(new RegExp(/ç/g),"c");
-    r = r.replace(new RegExp(/[èéêë]/g),"e");
-    r = r.replace(new RegExp(/[ìíîï]/g),"i");
-    r = r.replace(new RegExp(/ñ/g),"n");                
-    r = r.replace(new RegExp(/[òóôõö]/g),"o");
-    r = r.replace(new RegExp(/œ/g),"oe");
-    r = r.replace(new RegExp(/[ùúûü]/g),"u");
-    r = r.replace(new RegExp(/[ýÿ]/g),"y");
-    r = r.replace(new RegExp(/\W/g),"");
-    return r;
-};
-
-function scroll(scrollTo, time) {
-  var scrollFrom = parseInt(document.body.scrollTop), i = 0, runEvery = 5;
-  scrollTo = parseInt(scrollTo);
-  time /= runEvery;
-  var interval = setInterval(function () {
-    i++;
-    document.body.scrollTop = (scrollTo - scrollFrom) / time * i + scrollFrom;
-    if (i >= time) {
-      clearInterval(interval);
-    }
-  }, runEvery);
 }
 
 var loadMore = function(file, callback){
