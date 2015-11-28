@@ -78,7 +78,7 @@ a{
 #email_container input{ width: 140px;border:1px solid #337ab7;height: 17px;border-radius: 4px;color: #265a88;padding: 3px; }
 
 img.image-tornese{ width: 100%; }
-img.image-capa { width: 100%; }
+img.image-capa { width: 100%; margin-bottom: -3px; }
 .video img { width: 200px; }
 .inputFind{ border:2px solid #337ab7;height: 17px;border-radius: 4px;color: #265a88;padding: 3px; }
 #video iframe, .fluxo_video{ width:98%; height: 300px }

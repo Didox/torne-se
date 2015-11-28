@@ -184,7 +184,7 @@ app.findAulaHeader = function(stop){
       $('#aula').val("Não encontrado");
       setTimeout(function(){
         $('#aula').val("");
-      }, 800);
+      }, 1200);
     }
   }
 }

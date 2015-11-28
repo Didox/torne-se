@@ -9,17 +9,39 @@
   </head>
   <body class="home">
     <header>
-      <a href="javascript:app.backWindow();" class="logo" >Projeto torne-se um programador</a>
+      <div id="logo">
+        <a href="#" onclick="app.backWindow();">
+          <img src="images/icon.png" width="30" heigth="30">
+        </a>
+      </logo>
+      </div>
+      <div id="nome_site">
+        <a href="#" onclick="app.backWindow();">Projeto torne-se um programador</a>
+      </div>
+      <div id="lupa">
+        <a href="javascript:void(0);">
+          <img src="images/lupa.png" width="30" heigth="30">
+        </a>
+      </div>
+      <div id="findAula">
+        <input type="text" id="aula" placeholder="Procurar aulas">
+        <a href="javascript:void(0);" class="button">Buscar</a>
+      </div>
     </header>
     <div class="load_container">
       <p class="carregando" style="display:none">Carregando</p>
     </div>
-    <div class="containar">
+    <div class="container videos">
       <div class="buttons">
         <button type="button" onclick="app.backWindow();">Voltar</button>
       </div>
       <div>
         <ul id="videos">
+        </ul>
+      </div>
+      <div class="voltarTopo">
+        <a href="#">
+          <img src="images/voltar-topo.png">
         </ul>
       </div>
     </div>

@@ -1,3 +1,8 @@
+$(document).ready(function(){
+  app.loadButtonsActions();
+  app.actionFind();
+});
+
 var app = window.app || {};
 
 app.isAndroid = function() {
@@ -45,6 +50,138 @@ app.fixAndroidCaractere = function(){
     }
   }
 };
+
+app.actionFind = function(){
+  if(window.location.href.indexOf("videos") != -1){
+    var textFind = app.getParameterByName("q");
+    if(app.notEmpty(textFind)){
+      textFind = unescape(textFind.replace("#", ""));
+      $("#lupa a").trigger("click");
+      $("#aula").val(textFind);
+      var esperaData = setInterval(function(){
+        if(data.length > 0){
+          $("#findAula .button").trigger("click");
+          clearInterval(esperaData);
+        }
+      }, 500);
+    }
+  }
+}
+
+app.loadButtonsActions = function(){
+  $("#lupa a").click(function(){
+    $("#nome_site").hide();
+    $("#lupa").hide();
+    $("#findAula").show();
+    $("#aula").focus();
+  });
+
+  $(".cancel-busca").click(function(){
+    $("#nome_site").show();
+    $("#lupa").show();
+    $("#findAula").hide();
+  });
+
+  $("#findAula .button").click(function(){
+    if(window.location.href.indexOf("videos") == -1){
+      app.openInternalLink('videos.html?q=' + $("#findAula input").val());
+      return;
+    }
+
+    app.findAulaHeader();
+  });
+}
+
+app.itemFound = false;
+app.findAulaHeader = function(stop){
+  app.itemFound = false
+
+  $("#videos li div").each(function(){
+    var text = $(this).find("p").text();
+    var fullText = $(this).find("span").text();
+    var findText = $('#aula').val();
+
+    if(app.notEmpty(findText) && app.notEmpty(fullText) && app.notEmpty(text)){
+      text = app.accentsTidy(text.toLowerCase());
+      fullText = app.accentsTidy(fullText.toLowerCase());
+      findText = app.accentsTidy(findText.toLowerCase());
+      if(text.indexOf(findText) != -1 || fullText.indexOf(findText) != -1){
+        if(!app.itemFound){
+          app.itemFound = true;
+          $(this).css("background-color", "#FFFFE0");
+          var top = $(this).offset().top - 200;
+          app.scroll(top, 200);
+        }
+      }
+      else{
+        $(this).css("background-color", "#fff");
+      }
+    }
+  });
+
+  if(!app.itemFound){
+    if(stop == undefined){
+      app.loadForFindHeader(1)
+    }else{    
+      $('#aula').val("Não encontrado");
+      setTimeout(function(){
+        $('#aula').val("");
+      }, 1200);
+    }
+  }
+}
+
+app.jsLoad=[];
+app.loadForFindHeader = function(index){
+  var js = 'videos' + index + '.js';
+  if(app.jsLoad.indexOf(js) != -1){
+    app.findAulaHeader(true);
+    return; 
+  }
+  app.jsLoad.push(js);
+  app.loadMore(js,function(){
+    app.findAulaHeader(true);
+    if(!app.itemFound){
+      app.loadForFindHeader(index + 1)
+    }
+  });
+}
+
+app.loadMore = function(file, callback){
+  $("#loadMore").html("<p class=\"carregando\">Carregando</p>");
+  var s = document.createElement('script');
+  s.onload = callback;
+  s.setAttribute('src','https://rawgit.com/Didox/torne-se/master/data/' + file);
+  document.head.appendChild(s);
+}
+
+app.accentsTidy = function(s){
+  var r=s.toLowerCase();
+  r = r.replace(new RegExp(/[àáâãäå]/g),"a");
+  r = r.replace(new RegExp(/æ/g),"ae");
+  r = r.replace(new RegExp(/ç/g),"c");
+  r = r.replace(new RegExp(/[èéêë]/g),"e");
+  r = r.replace(new RegExp(/[ìíîï]/g),"i");
+  r = r.replace(new RegExp(/ñ/g),"n");                
+  r = r.replace(new RegExp(/[òóôõö]/g),"o");
+  r = r.replace(new RegExp(/œ/g),"oe");
+  r = r.replace(new RegExp(/[ùúûü]/g),"u");
+  r = r.replace(new RegExp(/[ýÿ]/g),"y");
+  return r;
+};
+
+app.scroll = function(scrollTo, time) {
+  var scrollFrom = parseInt(document.body.scrollTop), i = 0, runEvery = 5;
+  scrollTo = parseInt(scrollTo);
+  time /= runEvery;
+  var interval = setInterval(function () {
+    i++;
+    document.body.scrollTop = (scrollTo - scrollFrom) / time * i + scrollFrom;
+    if (i >= time) {
+      clearInterval(interval);
+    }
+  }, runEvery);
+}
 
 app.unfixAndroidCaractere = function(){
   if(app.isAndroid()){
@@ -139,27 +276,6 @@ app.openVideo = function(url) {
 
 app.VideoHtml = null;
 
-app.setupModal = function(slug){
-  $('.abrir-modal').click(function(e){
-    e.preventDefault();
-    app.openModal(this.hash);
-    if(!app.isAndroid() && app.notEmpty(app.VideoHtml)){
-      $(".video-estab").html(app.VideoHtml);
-    }
-    //app.pageviewAnalytics("eventos/"+slug,"Eventos");
-  });
-  $('.modal-close').click(function(e){
-    app.closeModal(this.hash);
-  });
-  $('.folder a.folder-title').click(function(e){
-    e.preventDefault();
-    $(this).parent().toggleClass('folder-open');
-  });
-};
-
-app.moeda = function(n){
-  return String(parseFloat(n).toFixed(2)).replace(/\.(\d\d)$/,',$1');
-};
 
 app.getParameterByName = function(name) {
   var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.href);
@@ -276,7 +392,6 @@ app.updateApp = function(){
     if(version){
       if(parseFloat(app.appVersion) < parseFloat(version.v)){
         if (app.isAndroid()){
-          //app.openUrlMensagem("https://github.com/Didox/torne-se/blob/master/app_published/android/Torne-se%20um%20programador.apk?raw=true", version.message + '\n\nDeseja atualizar agora?');
           app.openUrlMensagem("https://play.google.com/store/apps/details?id=com.didox.programador", version.message + '\n\nDeseja atualizar agora?');
         }
         else{

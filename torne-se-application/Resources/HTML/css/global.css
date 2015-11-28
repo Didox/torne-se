@@ -21,6 +21,13 @@ fieldset, form, label, legend, input, button {
 :focus{
   outline: 0;
 }
+
+/* FONTS */
+@font-face {
+  font-family: "appleberry";
+  src: url(../fonts/appleberry.ttf) format("truetype");
+}
+
 strong{
   font-weight: 700;
 }
@@ -55,16 +62,39 @@ a{
   -webkit-touch-callout: none;
 }
 
-/* FONTS */
-@font-face {
-  font-family: 'Arial';
-  font-style: normal;
-  font-weight: 400;
+img.image-tornese{ width: 100%; }
+img.image-capa { width: 100%; margin-bottom: -3px; }
+.video img { width: 200px; }
+.inputFind{ border:2px solid #337ab7;height: 17px;border-radius: 4px;color: #265a88;padding: 3px; }
+#video iframe, .fluxo_video{ width:98%; height: 300px }
+.fluxo img{ width:300px }
+
+/*Phones Small devices Tablets (≥768px)  Medium devices Desktops (≥992px)  Large devices Desktops (≥1200px)*/
+@media (min-width: 768px) {
+  img.image-tornese { width: 680px; }
+  img.image-capa { width: 680px; }
+  .video img { width: 300px !important; height: auto !important; }
+  .fluxo img{ width:300px }
 }
-@font-face {
-  font-family: 'Arial';
-  font-style: normal;
-  font-weight: 700;
+@media (min-width: 992px) {
+  img.image-tornese { width: 800px; }
+  img.image-capa { width: 680px; }
+  .video img { width: 400px !important; height: auto !important; }
+  .inputFind{ width: 300px; }
+  #video iframe, .fluxo_video{ width:98%; height: 500px }
+  .fluxo img{ width:500px }
+}
+@media (min-width: 1200px) {
+  img.image-tornese { width: 950px; }
+  img.image-capa { width: 680px; }
+  .video img { width: 500px !important; height: auto !important; }
+  .inputFind{ width: 500px; }
+  #video iframe, .fluxo_video{ width:1100px; height: 700px }
+  .fluxo img{ width:800px }
+}
+
+.container.videos .buttons, .container.video .buttons{
+  margin-bottom: 10px;
 }
 
 /* GERAL */
@@ -105,7 +135,7 @@ h2{
   text-align:center
 }
 h3{
-  margin:   10px 0;
+  margin:   10px 20px;
   font:bold 18px 'Arial';
   color:#333
 }
@@ -121,27 +151,36 @@ h3.separator{
 }
 
 /* HEADER */
-body{background-color: #fff;}
-header{position:fixed;top:0;left:0;z-index:10;float:left;padding:10px;width:100%;height:45px;background:#405e99;-webkit-backface-visibility:hidden;box-sizing: border-box;-webkit-box-sizing: border-box}
-header .logo{display: block;margin: auto;width: 330px;font: bold 12px/30px 'Arial';color: #fff;text-align: center;text-transform: uppercase;}
-div.containar{ text-align: center; margin-left: auto;margin-right: auto; display: block;}
-div.containar img{ width: 100%}
-div.containar button{
+body{background-color: #e5e5e5;}
+header{position:fixed;top:0;left:0;z-index:10;float:left;padding:10px;width:100%;height:48px;background:#405e99;-webkit-backface-visibility:hidden;box-sizing: border-box;-webkit-box-sizing: border-box}
+div.container{ 
+  text-align: center; margin-left: auto;margin-right: auto; display: block;
+  background-color: #fff;
+  width: 88%;
+  border-radius: 6px;
+  padding: 10px;
+}
+div.container button, .button{
     background-repeat: repeat-x;
     border-color: #245580;
     background-color: #265a88;
     margin: 5px 0;
     text-shadow: 0 -1px 0 rgba(0,0,0,.2);
-    padding: 10px 16px;
-    font-size: 18px;
+    padding: 8px 10px;
+    font-size: 16px;
     line-height: 1.3333333;
     border-radius: 6px;
-    color: #fff
+    color: #fff;
+    font-family: 'appleberry';
+    font-weight: normal;
 }
-div.containar p{
+div.container .buttons{
+  margin-bottom: 20px;
+}
+div.container p{
   padding: 10px;
 }
-div.containar #videos .video{
+div.container #videos .video{
   padding: 10px;
 }
 
@@ -149,26 +188,88 @@ div.containar #videos .video{
   background-color: #265a88;width: 100px;height: 18px;border-radius: 4px;padding: 6px;margin-left: 2px;color: #fff;font-size: 12px;
 }
 
-.inputFind{
-  border:2px solid #337ab7;height: 17px;border-radius: 4px;color: #265a88;padding: 3px;
+div.container #loadMore{ padding-top: 20px; }
+div.container .voltarTopo{ padding: 15px; }
+div.container .voltarTopo img{ background-image: none; width: 50px; }
+div.container .buttons.aula {
+  padding-bottom: 16px;
+  border-bottom: 1px solid #bde2ff;
 }
-
-div.containar #videos li{
+div.container .buttons.sobre {
+  padding-top: 30px;
   border-top: 1px solid #bde2ff;
+}
+div.container #videos li, div.container #vagas li {
+  border-top: 1px solid #bde2ff;
+}
+div.container #vagas li div.vaga{
+  margin: auto;
+  width: 90%;
+  padding: 10px;
+  text-align: left; 
 }
 footer{position:fixed;bottom:0;z-index:10;float:left;padding:4px;width:100%;height:20px;background:#405e99;-webkit-backface-visibility:hidden;box-sizing: border-box;-webkit-box-sizing: border-box}
 footer div{color:#fff;font-size:10px;float:right;margin-right:10px}
 
-
 p.carregando{
-  margin-top: 10px;
   text-indent: -99999px;
-  background: #fff url('../images/spinner.gif') no-repeat center;
+  background: url('../images/spinner.gif') no-repeat center;
 }
 
 .load_container{ height: 10px; margin-top: 10px; margin-bottom: 5px; }
 
+header #logo{float:left;}
+header #logo img{background-image: none;}
+header #logo a{width: auto; height: auto;}
 
+header #nome_site{float:left; width: 80%}
+header #nome_site a{display: block;margin: auto;width: 252px;font: 18px 'appleberry';color: #fff;text-align: center;text-transform: uppercase;}
+header #findAula{width: 86%}
+header #findAula input{width: 65%;text-align: center; border:1px solid #337ab7;height: 23px;border-radius: 4px;color: #265a88;padding: 3px; font-size: 18px; }
+@media (min-width: 768px) {
+  header #nome_site{width: 90%}
+  header #findAula{width: 90%;}
+  header #findAula input{width: 80%;}
+}
+@media (min-width: 992px) {
+  header #nome_site{width: 90%}
+  header #findAula{width: 90%;}
+  header #findAula input{width: 80%;}
+}
+@media (min-width: 1200px) {
+  header #nome_site{float:left; width: 92%}
+  header #findAula{width: 95%;}
+  header #findAula input{width: 90%;}
+}
+
+.inputFind,.miniBtn{display: none}
+
+header #lupa{float:right;}
+header #lupa img{background-image: none;}
+
+header #findAula{display:none;float:right;}
+
+header #findAula .button{
+  background-repeat: repeat-x;
+  border: 1px solid #fff;
+  background-color: #265a88;
+  margin-left: 1px;
+  text-shadow: none;
+  padding: 6px 12px;
+  font-size: 16px;
+  line-height: 1.3333333;
+  border-radius: 6px;
+  color: #fff;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+}
+
+#logo img { border-radius: 0px; }
+
+.top-image{
+  background-color: #3399cc;
+  border-radius: 6px;
+}
 
 
 
