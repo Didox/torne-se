@@ -25,7 +25,7 @@ fieldset, form, label, legend, input, button {
 /* FONTS */
 @font-face {
   font-family: "appleberry";
-  src: url(/fonts/appleberry.ttf) format("truetype");
+  src: url(/fonts/appleberry.woff) format("truetype");
 }
 
 strong{
