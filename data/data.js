@@ -103,14 +103,7 @@ var loadAndSetMoreVideo = function(index){
 var loadVideos = function(find,indexVideos){
   if($("#videos").size() > 0){
     var html = "";
-    if(find){
-      html += "<li>";
-      html += "  <div>";
-      html += "   <input type='text' id='find' class=\"inputFind\" style='border:2px solid #337ab7;height: 17px;border-radius: 4px;color: #265a88;padding: 3px;'><a href=\"#\" class=\"miniBtn\" onclick=\"findAula();\" style=\"background-color: #265a88;width: 100px;height: 18px;border-radius: 4px;padding: 6px;margin-left: 2px;color: #fff;font-size: 12px;\">Buscar</a>";
-      html += "  </div>";
-      html += "</li>";
-    }
-
+    
     for(i=0;i<data.length; i++){
       html += "<li>";
       html += "  <div class='video'>";
