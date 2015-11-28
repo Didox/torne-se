@@ -97,6 +97,7 @@ app.getYoutubeImagem = function(youtube_url){
 app.getHtmlVideo = function(youtube_url) {
   app.showLoading()
   var video = app.getIdYoutubeImagem(youtube_url);
+  $(".fb-share-button").attr("data-href", "http://www.torneseumprogramador.com.br/aula?id=" + video)
   return "<iframe onload='app.hideLoading()' src='https://www.youtube.com/embed/"+video+"' frameborder='0' allowfullscreen></iframe>";
 };
 

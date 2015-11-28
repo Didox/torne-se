@@ -22,6 +22,10 @@ fieldset, form, label, legend, input, button {
   outline: 0;
 }
 
+.share{
+  padding: 20px;
+}
+
 /* FONTS */
 @font-face {
   font-family: "appleberry";
