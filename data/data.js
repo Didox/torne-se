@@ -110,6 +110,7 @@ var loadVideos = function(find,indexVideos){
       html += "    <a href=\"javascript:app.openInternalLink('video.html?id=" + app.getIdYoutubeImagem(data[i].videoYoutube) + "');\">";
       html += "      <img src='" + app.getYoutubeImagem(data[i].videoYoutube) + "' style='width: 200px;height: 150px;'>";
       html += "      <p>" + data[i].titulo + "</p>";
+      html += "      <span style='display:none'>" + data[i].descricao + "</span>";
       html += "    </a>";
       html += "  </div>";
       html += "</li>"
