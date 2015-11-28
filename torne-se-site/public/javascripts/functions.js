@@ -1,7 +1,3 @@
-// if(document.location.href.match(/www/) == null){
-//   window.location.href = 'http://www.torneseumprogramador.com.br'
-// }
-
 var app = window.app || {};
 app.showLoading = function(){
   $(".carregando").show();
@@ -31,10 +27,18 @@ $(document).ready(function(){
   app.actionFind();
 });
 
+app.notEmpty = function(str) {
+  return str !== undefined && str !== "undefined" && str !== "" && str !== null && str !== 'null';
+};
+
+app.empty = function(str) {
+  return !app.notEmpty(str);
+};
+
 app.actionFind = function(){
   if(window.location.href.indexOf("aulas") != -1){
     var textFind = app.getParameterByName("q");
-    if(textFind != "" && textFind != undefined && textFind != null){
+    if(app.notEmpty(textFind)){
       textFind = unescape(textFind.replace("#", ""));
       $("#lupa a").trigger("click");
       $("#aula").val(textFind);
@@ -149,15 +153,23 @@ app.itemFound = false;
 app.findAulaHeader = function(stop){
   app.itemFound = false
 
-  $("#videos li div p").each(function(){
-    var text = app.accentsTidy($(this).text().toLowerCase());
-    var findText = app.accentsTidy($('#aula').val().toLowerCase());
-    if(findText != ""){
-      if(text.indexOf(findText) != -1){
-        app.itemFound = true;
-        $(this).css("background-color", "#FFFFE0");
-        var top = $(this).offset().top - 200;
-        app.scroll(top, 200);
+  $("#videos li div").each(function(){
+    var text = $(this).find("p").text();
+    var fullText = $(this).find("span").text();
+    var findText = $('#aula').val();
+
+    if(app.notEmpty(findText) && app.notEmpty(fullText) && app.notEmpty(text)){
+      text = app.accentsTidy(text.toLowerCase());
+      fullText = app.accentsTidy(fullText.toLowerCase());
+      findText = app.accentsTidy(findText.toLowerCase());
+
+      if(text.indexOf(findText) != -1 || fullText.indexOf(findText) != -1){
+        if(!app.itemFound){
+          app.itemFound = true;
+          $(this).css("background-color", "#FFFFE0");
+          var top = $(this).offset().top - 200;
+          app.scroll(top, 200);
+        }
       }
       else{
         $(this).css("background-color", "#fff");
@@ -211,7 +223,6 @@ app.isIphone = function() {
 
 app.accentsTidy = function(s){
   var r=s.toLowerCase();
-  r = r.replace(new RegExp(/\s/g),"");
   r = r.replace(new RegExp(/[àáâãäå]/g),"a");
   r = r.replace(new RegExp(/æ/g),"ae");
   r = r.replace(new RegExp(/ç/g),"c");
@@ -222,7 +233,6 @@ app.accentsTidy = function(s){
   r = r.replace(new RegExp(/œ/g),"oe");
   r = r.replace(new RegExp(/[ùúûü]/g),"u");
   r = r.replace(new RegExp(/[ýÿ]/g),"y");
-  r = r.replace(new RegExp(/\W/g),"");
   return r;
 };
 

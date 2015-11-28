@@ -61,7 +61,7 @@ a{
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   -webkit-touch-callout: none;
 }
-.pague { display: block; margin-top: 20px; }
+.pague { display: block; margin-top: 20px; padding-bottom: 20px; }
 
 
 #email_container label{ width: 44px; display: inline-block; }
@@ -94,9 +94,9 @@ img.image-capa { width: 100%; }
 @media (min-width: 992px) {
   img.image-tornese { width: 800px; }
   img.image-capa { width: 680px; }
-  .video img { width: 300px !important; height: auto !important; }
+  .video img { width: 400px !important; height: auto !important; }
   .inputFind{ width: 300px; }
-  #video iframe, .fluxo_video{ width:600px; height: 500px }
+  #video iframe, .fluxo_video{ width:98%; height: 500px }
   .fluxo img{ width:500px }
 }
 @media (min-width: 1200px) {
@@ -206,6 +206,14 @@ div.container #videos .video{
 div.container #loadMore{ padding-top: 20px; }
 div.container .voltarTopo{ padding: 15px; }
 div.container .voltarTopo img{ background-image: none; width: 50px; }
+div.container .buttons.aula {
+  padding-bottom: 16px;
+  border-bottom: 1px solid #bde2ff;
+}
+div.container .buttons.sobre {
+  padding-top: 30px;
+  border-top: 1px solid #bde2ff;
+}
 div.container #videos li, div.container #vagas li {
   border-top: 1px solid #bde2ff;
 }
@@ -232,7 +240,7 @@ header #logo a{width: auto; height: auto;}
 header #nome_site{float:left; width: 80%}
 header #nome_site a{display: block;margin: auto;width: 252px;font: 18px 'appleberry';color: #fff;text-align: center;text-transform: uppercase;}
 header #findAula{width: 86%}
-header #findAula input{width: 65%;text-align: center; border:1px solid #337ab7;height: 17px;border-radius: 4px;color: #265a88;padding: 3px; }
+header #findAula input{width: 65%;text-align: center; border:1px solid #337ab7;height: 23px;border-radius: 4px;color: #265a88;padding: 3px; font-size: 18px; }
 @media (min-width: 768px) {
   header #nome_site{width: 90%}
   header #findAula{width: 90%;}
@@ -244,7 +252,7 @@ header #findAula input{width: 65%;text-align: center; border:1px solid #337ab7;h
   header #findAula input{width: 80%;}
 }
 @media (min-width: 1200px) {
-  header #nome_site{float:left; width: 95%}
+  header #nome_site{float:left; width: 92%}
   header #findAula{width: 95%;}
   header #findAula input{width: 90%;}
 }
@@ -262,12 +270,13 @@ header #findAula .button{
   background-color: #265a88;
   margin-left: 1px;
   text-shadow: none;
-  padding: 5px 12px;
-  font-size: 12px;
+  padding: 6px 12px;
+  font-size: 16px;
   line-height: 1.3333333;
   border-radius: 6px;
   color: #fff;
   text-transform: uppercase;
+  padding-bottom: 5px;
 }
 
 #logo img { border-radius: 0px; }
