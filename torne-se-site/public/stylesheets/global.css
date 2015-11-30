@@ -112,7 +112,6 @@ img.image-capa { width: 100%; margin-bottom: -3px; }
   .fluxo img{ width:800px }
 }
 
-
 /* GERAL */
 body{
   font-family:"Arial";
@@ -240,7 +239,7 @@ header #logo img{background-image: none;}
 header #logo a{width: auto; height: auto;}
 
 header #nome_site{float:left; width: 80%}
-header #nome_site a{display: block;margin: auto;width: 252px;font: 18px 'appleberry';color: #fff;text-align: center;text-transform: uppercase;}
+header #nome_site a{display: block;margin: auto;width: 252px;font: 16px 'appleberry';color: #fff;text-align: center;text-transform: uppercase;}
 header #findAula{width: 86%}
 header #findAula input{width: 65%;text-align: center; border:1px solid #337ab7;height: 23px;border-radius: 4px;color: #265a88;padding: 3px; font-size: 18px; }
 @media (min-width: 768px) {
@@ -287,6 +286,7 @@ header #findAula .button{
   background-color: #3399cc;
   border-radius: 6px;
 }
+
 
 
 
