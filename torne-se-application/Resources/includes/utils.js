@@ -156,63 +156,9 @@ utils.openWindow = function(url){
     utils.webViews.push(webviewInternal);
 
     vidWin.add(webviewInternal);
+    vidWin.add(admob.adMobView);
     vidWin.open();
     utils.currentWindow.push(vidWin);
-  }
-  catch(e){
-    alert(e.message);
-  }
-};
-
-
-utils.playVideo = function(url){
-  try{
-    if(Ti.Platform.osname === "iphone" && url.indexOf("youtube") === -1){
-      var closeButton = Ti.UI.createButton({
-        title:"FECHAR",
-        top:"0dp",
-        right:"10dp",
-        backgroundColor:"#fff",
-        width:"70dp",
-        height:"30dp",
-        borderRadius:"5",
-        color:"#000",
-        opacity:"0.6"
-      });
-      closeButton.font = {fontWeight:"bold"};
-
-      closeButton.addEventListener('click', function() {
-        videoPlayer.hide();
-        videoPlayer.release();
-        videoPlayer = null;
-        vidWin.close();
-      });
-
-      var vidWin = Titanium.UI.createWindow({
-        backgroundColor:'#000',
-        exitOnClose: true,
-        fullscreen: true,
-        modal: true,
-        navBarHidden: true,
-        statusBarHidden: true
-      });
-
-      var videoPlayer = Titanium.Media.createVideoPlayer({
-        url:url,
-        autoplay:true,
-        fullscreen:false,
-        backgroundColor:'#000',
-        mediaControlStyle:Titanium.Media.VIDEO_CONTROL_DEFAULT,
-        scalingMode:Titanium.Media.VIDEO_SCALING_ASPECT_FIT
-      });
-
-      vidWin.add(videoPlayer);
-      vidWin.add(closeButton);
-      vidWin.open();
-    }
-    else{
-      Ti.Platform.openURL(url);
-    }
   }
   catch(e){
     alert(e.message);

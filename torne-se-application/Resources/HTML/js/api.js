@@ -1,6 +1,6 @@
 var app = window.app || {};
 
-app.appVersion       = 9.1;
+app.appVersion       = 9.2;
 
 app.showLoading = function(){
   $(".carregando").show();

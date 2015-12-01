@@ -6,7 +6,7 @@ try{
 
     var code = Admob.isGooglePlayServicesAvailable();
     if (code != Admob.SUCCESS) {
-        alert("Google Play Services is not installed/updated/available");
+        Ti.API.info("Google Play Services is not installed/updated/available");
     }
 
     admob.adMobView = Admob.createView({
@@ -14,15 +14,15 @@ try{
       bottom: 0
     });
 
-    admob.adMobView.addEventListener(Admob.AD_RECEIVED,function(){
-       //alert("ad received");
-       Ti.API.info("ad received");
-    });
+    // admob.adMobView.addEventListener(Admob.AD_RECEIVED,function(){
+    //    //alert("ad received");
+    //    Ti.API.info("ad received");
+    // });
 
-    admob.adMobView.addEventListener(Admob.AD_NOT_RECEIVED,function(){
-        //alert("ad not received");
-        Ti.API.info("ad not received");
-    });
+    // admob.adMobView.addEventListener(Admob.AD_NOT_RECEIVED,function(){
+    //     //alert("ad not received");
+    //     Ti.API.info("ad not received");
+    // });
   }
 }
 catch(e){
