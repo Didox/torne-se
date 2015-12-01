@@ -10,4 +10,5 @@ application.webview = Ti.UI.createWebView({
 });
 
 application.win.add(application.webview);
+application.win.add(admob.adMobView);
 application.win.open();
