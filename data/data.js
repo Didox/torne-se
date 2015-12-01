@@ -1,5 +1,5 @@
 var version = {
-  v: 9,
+  v: 9.2,
   message: 'Nova versão do aplicativo totalmente reformulado para melhorar sua experiência disponível'
 }
 
