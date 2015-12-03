@@ -4,7 +4,7 @@ var version = {
 }
 
 var aviso = {
-  message: 'Nova aula disponível\nTema: Programação Assincrona\nDeseja assistir agora?',
+  message: '',
   confirm: true,
   url: 'video.html?id=WbjNDguEugw',
   openUrl: false
