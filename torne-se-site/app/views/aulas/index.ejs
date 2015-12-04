@@ -5,7 +5,8 @@
   </head>
   <body class="home">
     <%- include('../shared/header', {display_loading: 'block'}) %>
-    <div class="container">
+    <%- include('../shared/adsense') %>
+    <div class="container pague">
       <br>
       <div class="buttons">
         <a class="button" href="/" >Voltar</a>
@@ -16,10 +17,12 @@
       <div class="voltarTopo">
         <a href="#">
           <img src="/imagens/voltar-topo.png">
-        </ul>
+        </a>
       </div>
     </div>
     <%- include('../shared/adsense') %>
+    <%- include('../shared/form') %>
+    <%- include('../shared/pague') %>
     <%- include('../shared/footer') %>
     <script type="text/javascript" src="https://rawgit.com/Didox/torne-se/master/data/data.js"></script>
   </body>
