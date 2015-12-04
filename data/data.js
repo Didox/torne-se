@@ -1,16 +1,21 @@
 var version = {
-  v: 9,
+  v: 9.2,
   message: 'Nova versão do aplicativo totalmente reformulado para melhorar sua experiência disponível'
 }
 
 var aviso = {
   message: '',
   confirm: true,
-  url: 'video.html?id=_BmpvTMSn0c',
+  url: 'video.html?id=WbjNDguEugw',
   openUrl: false
 }
 
 var data = [
+  {
+    titulo: 'Aula 12 - Programação assíncrona',
+    descricao: 'Nesta aula você irá aprender o conceito de programação assíncrona, conhecida também como programação orientado a evento ou a tread. Utilizando os callback do javascript.',
+    videoYoutube: 'https://www.youtube.com/watch?v=WbjNDguEugw'
+  },
   {
     titulo: 'Aula 11 - Orientação a Objetos parte 3',
     descricao: 'Nesta aula você aprenderá os outros conceitos envolvidos em orientação a objetos (abstract, final, sealed, partials, singleton, protected, agregação de métodos) que não são utilizados em JavaScript, porém existem e são muito utilizadas em Java, C# e outros.',
@@ -55,11 +60,6 @@ var data = [
     titulo: 'Aula 5 - Looping',
     descricao: 'Nesta aula ensino como utilizar a estrutura de repetição (lopping) e a diferença de um programa utilizando repetição e não usando repetição. ',
     videoYoutube: 'https://www.youtube.com/watch?v=XwmFtcPanIU'
-  },
-  {
-    titulo: 'Aula 4 - Operadores condicionais e lógicos parte 2',
-    descricao: 'Nesta aula iremos falar sobre operadores condicionais, concatenação de strings, diferença de variável string e inteiro, operadores lógicos ',
-    videoYoutube: 'https://www.youtube.com/watch?v=nYF_WhoexhY'
   },
 ]
 
