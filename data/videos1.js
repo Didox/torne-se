@@ -1,5 +1,10 @@
 var data = [
   {
+    titulo: 'Aula 5 - Looping',
+    descricao: 'Nesta aula ensino como utilizar a estrutura de repetição (lopping) e a diferença de um programa utilizando repetição e não usando repetição. ',
+    videoYoutube: 'https://www.youtube.com/watch?v=XwmFtcPanIU'
+  },
+  {
     titulo: 'Aula 4 - Operadores condicionais e lógicos parte 2',
     descricao: 'Nesta aula iremos falar sobre operadores condicionais, concatenação de strings, diferença de variável string e inteiro, operadores lógicos ',
     videoYoutube: 'https://www.youtube.com/watch?v=nYF_WhoexhY'
