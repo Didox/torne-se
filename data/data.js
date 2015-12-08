@@ -6,11 +6,16 @@ var version = {
 var aviso = {
   message: '',
   confirm: true,
-  url: 'video.html?id=WbjNDguEugw',
+  url: 'video.html?id=7sw5bFo7qFs',
   openUrl: false
 }
 
 var data = [
+  {
+    titulo: 'Aula 13 - Tratamento de strings e regular expression ',
+    descricao: 'Nesta Aula vc irá aprender o conceito de tratamento de strings, utilizando comandos como split, replace, e outros. Irá conhecer também Regular Expression (Regex) e como a regex pode facilitar um programa onde você tem a necessidade de trabalhar com textos.',
+    videoYoutube: 'https://www.youtube.com/watch?v=7sw5bFo7qFs'
+  },
   {
     titulo: 'Aula 12 - Programação assíncrona',
     descricao: 'Nesta aula você irá aprender o conceito de programação assíncrona, conhecida também como programação orientado a evento ou a tread. Utilizando os callback do javascript.',
@@ -55,11 +60,6 @@ var data = [
     titulo: 'Aula 6 - Array',
     descricao: 'Nesta aula você irá aprender como utilizar o Array (coleção de espaços de memória), verá na prática a sua utilização e criará junto comigo um programa para calcular a média de alunos. ',
     videoYoutube: 'https://www.youtube.com/watch?v=e3r9Q9L0-sU'
-  },
-  {
-    titulo: 'Aula 5 - Looping',
-    descricao: 'Nesta aula ensino como utilizar a estrutura de repetição (lopping) e a diferença de um programa utilizando repetição e não usando repetição. ',
-    videoYoutube: 'https://www.youtube.com/watch?v=XwmFtcPanIU'
   },
 ]
 
