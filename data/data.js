@@ -4,7 +4,7 @@ var version = {
 }
 
 var aviso = {
-  message: '',
+  message: 'Olá aluno, aula nova disponível\nTema: tratamento de strings\nDeseja assistir agora?',
   confirm: true,
   url: 'video.html?id=7sw5bFo7qFs',
   openUrl: false
