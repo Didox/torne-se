@@ -1,3 +1,4 @@
 .git
 .git/*
 newrelic_agent.log
+*.csv
