@@ -4,7 +4,7 @@ var version = {
 }
 
 var aviso = {
-  message: '',
+  message: 'Nova aula disponível\nTema: Tipos e tipagem de variáveis\nDeseja assistir agora?',
   confirm: true,
   url: 'video.html?id=nXX4u0eYYfQ',
   openUrl: false
