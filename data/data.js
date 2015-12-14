@@ -6,11 +6,16 @@ var version = {
 var aviso = {
   message: '',
   confirm: true,
-  url: 'video.html?id=7sw5bFo7qFs',
+  url: 'video.html?id=nXX4u0eYYfQ',
   openUrl: false
 }
 
 var data = [
+  {
+    titulo: 'Aula 14 - Tipos e tipagem de variáveis',
+    descricao: 'Nesta aula você irá aprender os tipos de variáveis existentes em algumas linguagens de programação. As tipagens feitas ou alocações (dinâmica ou estática) e se a linguagem é fortemente tipada ou de tipagem fraca.',
+    videoYoutube: 'https://www.youtube.com/watch?v=nXX4u0eYYfQ'
+  },
   {
     titulo: 'Aula 13 - Tratamento de strings e regular expression ',
     descricao: 'Nesta Aula vc irá aprender o conceito de tratamento de strings, utilizando comandos como split, replace, e outros. Irá conhecer também Regular Expression (Regex) e como a regex pode facilitar um programa onde você tem a necessidade de trabalhar com textos.',
@@ -55,12 +60,7 @@ var data = [
     titulo: 'Aula 7 - Hash',
     descricao: 'Nesta aula você irá aprender a utilizar Hash, ou seja uma forma estruturada para organizar suas variáveis como um objeto ',
     videoYoutube: 'https://www.youtube.com/watch?v=SCL93-7zWWw'
-  },
-  {
-    titulo: 'Aula 6 - Array',
-    descricao: 'Nesta aula você irá aprender como utilizar o Array (coleção de espaços de memória), verá na prática a sua utilização e criará junto comigo um programa para calcular a média de alunos. ',
-    videoYoutube: 'https://www.youtube.com/watch?v=e3r9Q9L0-sU'
-  },
+  }
 ]
 
 $(document).ready(function(){
