@@ -1,5 +1,10 @@
 var data = [
   {
+    titulo: 'Aula 6 - Array',
+    descricao: 'Nesta aula você irá aprender como utilizar o Array (coleção de espaços de memória), verá na prática a sua utilização e criará junto comigo um programa para calcular a média de alunos. ',
+    videoYoutube: 'https://www.youtube.com/watch?v=e3r9Q9L0-sU'
+  },
+  {
     titulo: 'Aula 5 - Looping',
     descricao: 'Nesta aula ensino como utilizar a estrutura de repetição (lopping) e a diferença de um programa utilizando repetição e não usando repetição. ',
     videoYoutube: 'https://www.youtube.com/watch?v=XwmFtcPanIU'
