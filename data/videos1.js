@@ -1,5 +1,10 @@
 var data = [
   {
+    titulo: 'Aula 7 - Hash',
+    descricao: 'Nesta aula você irá aprender a utilizar Hash, ou seja uma forma estruturada para organizar suas variáveis como um objeto ',
+    videoYoutube: 'https://www.youtube.com/watch?v=SCL93-7zWWw'
+  },
+  {
     titulo: 'Aula 6 - Array',
     descricao: 'Nesta aula você irá aprender como utilizar o Array (coleção de espaços de memória), verá na prática a sua utilização e criará junto comigo um programa para calcular a média de alunos. ',
     videoYoutube: 'https://www.youtube.com/watch?v=e3r9Q9L0-sU'
