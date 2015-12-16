@@ -4,13 +4,18 @@ var version = {
 }
 
 var aviso = {
-  message: '',
+  message: 'Nova aula disponível\nTema: Aprendendo HTML\nDeseja assistir agora?',
   confirm: true,
-  url: 'video.html?id=nXX4u0eYYfQ',
+  url: 'video.html?id=-9vZHPB19NI',
   openUrl: false
 }
 
 var data = [
+  {
+    titulo: 'Aula 15 - Aprendendo html Parte 1',
+    descricao: 'Na aula de hoje iremos aprender os conceitos básicos de um html, para que serve e como utilizá-lo.',
+    videoYoutube: 'https://www.youtube.com/watch?v=-9vZHPB19NI'
+  },
   {
     titulo: 'Aula 14 - Tipos e tipagem de variáveis',
     descricao: 'Nesta aula você irá aprender os tipos de variáveis existentes em algumas linguagens de programação. As tipagens feitas ou alocações (dinâmica ou estática) e se a linguagem é fortemente tipada ou de tipagem fraca.',
@@ -55,11 +60,6 @@ var data = [
     titulo: 'Aula 8 - Funções',
     descricao: 'Nesta aula você irá aprender como criar uma função em javascript, para que serve e quais os tipos de funções utilizadas. ',
     videoYoutube: 'https://www.youtube.com/watch?v=WGbVQTWqEko'
-  },
-  {
-    titulo: 'Aula 7 - Hash',
-    descricao: 'Nesta aula você irá aprender a utilizar Hash, ou seja uma forma estruturada para organizar suas variáveis como um objeto ',
-    videoYoutube: 'https://www.youtube.com/watch?v=SCL93-7zWWw'
   }
 ]
 
