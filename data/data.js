@@ -4,7 +4,7 @@ var version = {
 }
 
 var aviso = {
-  message: 'Nova aula disponível\nTema: Aprendendo HTML\nDeseja assistir agora?',
+  message: '',
   confirm: true,
   url: 'video.html?id=-9vZHPB19NI',
   openUrl: false
