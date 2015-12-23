@@ -1,5 +1,10 @@
 var data = [
   {
+    titulo: 'Aula 8 - Funções',
+    descricao: 'Nesta aula você irá aprender como criar uma função em javascript, para que serve e quais os tipos de funções utilizadas. ',
+    videoYoutube: 'https://www.youtube.com/watch?v=WGbVQTWqEko'
+  },
+  {
     titulo: 'Aula 7 - Hash',
     descricao: 'Nesta aula você irá aprender a utilizar Hash, ou seja uma forma estruturada para organizar suas variáveis como um objeto ',
     videoYoutube: 'https://www.youtube.com/watch?v=SCL93-7zWWw'
