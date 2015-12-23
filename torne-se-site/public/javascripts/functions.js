@@ -14,6 +14,10 @@ app.hideLoading = function(moveTop){
 app.showLoading();
 
 $(document).ready(function(){
+  $('#findAula #aula').keypress(function(e){
+    if(e.keyCode==13) $('#findAula .button').click();
+  });
+
   if(! document.location.href.match(/(aula\?)|(alunos)|(empresas)|(objetivo)/)){
     app.hideLoading();
   }
