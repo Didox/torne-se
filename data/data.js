@@ -4,13 +4,18 @@ var version = {
 }
 
 var aviso = {
-  message: '',
+  message: 'Nova aula disponível\nDeseja assistir agora?',
   confirm: true,
-  url: 'video.html?id=-9vZHPB19NI',
+  url: 'video.html?id=GbdrPMCcVxw',
   openUrl: false
 }
 
 var data = [
+  {
+    titulo: 'Aula 15 - Aprendendo html Parte 2',
+    descricao: 'Nesta aula você irá aprender a parte 2 da aula aprendendo HTML, vendo agora outras tags como "a", "fildset" e outras.',
+    videoYoutube: 'https://www.youtube.com/watch?v=GbdrPMCcVxw'
+  },
   {
     titulo: 'Aula 15 - Aprendendo html Parte 1',
     descricao: 'Na aula de hoje iremos aprender os conceitos básicos de um html, para que serve e como utilizá-lo.',
@@ -55,11 +60,6 @@ var data = [
     titulo: 'Aula 9 - Funções recursivas e constantes',
     descricao: 'Nesta aula você irá aprender o que é uma variável constante e como aplicar em um programa, também irá aprender o que é funções recursivas, como utiliza-las e como aplicar em um programa.',
     videoYoutube: 'https://www.youtube.com/watch?v=NYGGaTd_xZk'
-  },
-  {
-    titulo: 'Aula 8 - Funções',
-    descricao: 'Nesta aula você irá aprender como criar uma função em javascript, para que serve e quais os tipos de funções utilizadas. ',
-    videoYoutube: 'https://www.youtube.com/watch?v=WGbVQTWqEko'
   }
 ]
 
