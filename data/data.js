@@ -4,13 +4,18 @@ var version = {
 }
 
 var aviso = {
-  message: '',
+  message: 'Nova aula disponível\nDeseja assistir agora?',
   confirm: true,
-  url: 'video.html?id=GbdrPMCcVxw',
+  url: 'video.html?id=Ht40eIIY_OQ',
   openUrl: false
 }
 
 var data = [
+  {
+    titulo: 'Aula 15 - Aprendendo html Parte 3',
+    descricao: 'Nesta aula você irá aprender as tags html, img, form, input, frame, iframe e frameset.',
+    videoYoutube: 'https://www.youtube.com/watch?v=Ht40eIIY_OQ'
+  },
   {
     titulo: 'Aula 15 - Aprendendo html Parte 2',
     descricao: 'Nesta aula você irá aprender a parte 2 da aula aprendendo HTML, vendo agora outras tags como "a", "fildset" e outras.',
@@ -55,11 +60,6 @@ var data = [
     titulo: 'Aula 10 - Programação funcional',
     descricao: 'Nesta aula você aprenderá o que é programação funcional, como escrever um código mais organizado e simples utilizando funções, e separá-los em arquivos, deixando em contextos diferentes.',
     videoYoutube: 'https://www.youtube.com/watch?v=DbR-luEtC1I'
-  },
-  {
-    titulo: 'Aula 9 - Funções recursivas e constantes',
-    descricao: 'Nesta aula você irá aprender o que é uma variável constante e como aplicar em um programa, também irá aprender o que é funções recursivas, como utiliza-las e como aplicar em um programa.',
-    videoYoutube: 'https://www.youtube.com/watch?v=NYGGaTd_xZk'
   }
 ]
 
