@@ -1,5 +1,10 @@
 var data = [
   {
+    titulo: 'Aula 9 - Funções recursivas e constantes',
+    descricao: 'Nesta aula você irá aprender o que é uma variável constante e como aplicar em um programa, também irá aprender o que é funções recursivas, como utiliza-las e como aplicar em um programa.',
+    videoYoutube: 'https://www.youtube.com/watch?v=NYGGaTd_xZk'
+  },
+  {
     titulo: 'Aula 8 - Funções',
     descricao: 'Nesta aula você irá aprender como criar uma função em javascript, para que serve e quais os tipos de funções utilizadas. ',
     videoYoutube: 'https://www.youtube.com/watch?v=WGbVQTWqEko'
