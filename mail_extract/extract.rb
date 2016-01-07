@@ -7,6 +7,7 @@ s_emails = []
 
 csv_header = "Email;First Name;Last Name\n"
 
+index = 0
 emails.each do |k,v|
   puts "------------------------------------------"
   puts v['nome']
@@ -15,8 +16,11 @@ emails.each do |k,v|
   puts "------------------------------------------"
 
   csv_header += "#{v['nome']};#{v['email']};\n"
+  index += 1
 end
 
 puts s_emails.join(", ")
 
 File.write('email.csv', csv_header)
+
+puts "Quantidade: #{index}"

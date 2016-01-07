@@ -2,55 +2,86 @@ require 'capybara'
 require 'rest_client'
 require 'byebug'
 
-emails = RestClient.get 'https://scorching-fire-3573.firebaseio.com/emails.json'
-emails = JSON.parse(emails)
-text_emails = File.read('email_backup.csv') rescue ""
+@emails = RestClient.get 'https://scorching-fire-3573.firebaseio.com/emails.json'
+@emails = JSON.parse(@emails)
 
-new_email = false
-emails.each do |k,v|
-  unless(text_emails.include?(v['email']))
-    new_email = true
-  end
+@session = Capybara::Session.new(:selenium)
+user = ENV["user"]
+pass = ENV["pass"]
+@session.visit("https://us12.admin.mailchimp.com")
+
+@session.within("#login-form") do
+  @session.fill_in('username', :with => user)
+  @session.fill_in('password', :with => pass)
+  sleep(1)
+  @session.find(".button-large.p0.size1of1.hide-mobile").click
 end
 
-if(new_email)
-  session = Capybara::Session.new(:selenium)
+sleep(3)
 
-  user = ENV["user"]
-  pass = ENV["pass"]
-  session.visit("https://us12.admin.mailchimp.com")
-
-  session.within("#login-form") do
-    session.fill_in('username', :with => user)
-    session.fill_in('password', :with => pass)
-    sleep(1)
-    session.find(".button-large.p0.size1of1.hide-mobile").click
+def confere_and_find_emailchimp
+  emailchimp = []
+  emails_chimp_100
+  if(@emails.size > @quantidade_mailchimp)
+    @session.all(".table-contents .profile-view a").each do |link|
+      emailchimp << link.text.downcase.strip
+    end
   end
+  return emailchimp
+end
 
-  sleep(3)
-
-  puts "======================== QUANTIDADE DE EMAILS #{emails.size} =========================="
-  emails.each do |k,v|
-    unless(text_emails.include?(v['email']))
-      session.visit("https://us12.admin.mailchimp.com/lists/members/add?id=34953")
-      session.within("#add-member-form") do
+def cadastra(text_emails)
+  @emails.each do |k,v|
+    unless(text_emails.include?(v['email'].downcase.strip))
+      @session.visit("https://us12.admin.mailchimp.com/lists/members/add?id=34953")
+      @session.within("#add-member-form") do
         begin
-          session.fill_in('MERGE0', :with => v['email'])
-          session.fill_in('MERGE1', :with => v['nome'])
-          if(session.find("#optin-confirm")[:checked] != "true")
-            sleep(2)
-            session.find("#optin-confirm").click
+          @session.fill_in('MERGE0', :with => v['email'])
+          @session.fill_in('MERGE1', :with => v['nome'])
+          if(@session.find("#optin-confirm")[:checked] != "true")
+            sleep(3)
+            @session.find("#optin-confirm").click
+            sleep(1)
           end
-          session.find(".button.p0").click
-          session.visit("https://us12.admin.mailchimp.com")
+          @session.find(".button.p0").click
+          @session.visit("https://us12.admin.mailchimp.com")
         rescue;end
       end
     end
   end
 
   csv_header = "Email;First Name;Last Name\n"
-  emails.each do |k,v|
+  @emails.each do |k,v|
     csv_header += "#{v['nome']};#{v['email']};\n"
   end
   File.write('email_backup.csv', csv_header)
+
+  emails_chimp_100
 end
+
+def emails_chimp_100
+  @session.visit("https://us12.admin.mailchimp.com/lists/members/?id=34953#p:1-s:100")
+  sleep(5)
+  @quantidade_mailchimp = @session.find(".sub-count").text.to_i
+end
+
+text_emails = confere_and_find_emailchimp
+#text_emails = File.read('email_backup.csv') rescue ""
+
+new_email = false
+unless text_emails.empty?
+  @emails.each do |k,v|
+    unless(text_emails.include?(v['email'].downcase.strip))
+      new_email = true
+    end
+  end
+end
+
+if new_email
+  cadastra(text_emails)
+end
+
+puts "======================== QUANTIDADE DE EMAILS #{@emails.size} =========================="
+puts "======================== QUANTIDADE DE MAILCHIMP #{@quantidade_mailchimp} =========================="
+
+
