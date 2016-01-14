@@ -6,11 +6,16 @@ var version = {
 var aviso = {
   message: 'Nova aula disponível\nDeseja assistir agora?',
   confirm: true,
-  url: 'video.html?id=v1GuWjYCrhA',
+  url: 'video.html?id=HAaLR1iJsB4',
   openUrl: false
 }
 
 var data = [
+  {
+    titulo: 'Aula 16 - Uso de styles e css parte 2',
+    descricao: 'Continuação da aula aprendendo html + css. Criando arquivo.css e estilizando uma página através de uma imagem de layout.',
+    videoYoutube: 'https://www.youtube.com/watch?v=HAaLR1iJsB4'
+  },
   {
     titulo: 'Aula 16 - Uso de styles e css parte 1',
     descricao: 'Nesta aula você irá aprender para que serve o CSS, como estilizar uma pagina HTML, dando cor, layout e vida a sua página.',
@@ -55,11 +60,6 @@ var data = [
     titulo: 'Aula 11 - Orientação a Objetos parte 2',
     descricao: 'Esta aula você verá métodos staticos, construtores, constantes, singleton e mais alguns conceitos para orientação a objetos, ou seja uma forma mais organizada de programar.',
     videoYoutube: 'https://www.youtube.com/watch?v=JH3dISDHjc0'
-  },
-  {
-    titulo: 'Aula 11 - Orientação a Objetos parte 1',
-    descricao: 'Nesta aula você irá conhecer um dos assuntos que mais fazem diferença entre um bom programador e somente um programador, organizar o seu código utilizando orientação a objetos.',
-    videoYoutube: 'https://www.youtube.com/watch?v=K7VMgGX9vIY'
   }
 ]
 
