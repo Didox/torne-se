@@ -1,5 +1,10 @@
 var data = [
   {
+    titulo: 'Aula 11 - Orientação a Objetos parte 1',
+    descricao: 'Nesta aula você irá conhecer um dos assuntos que mais fazem diferença entre um bom programador e somente um programador, organizar o seu código utilizando orientação a objetos.',
+    videoYoutube: 'https://www.youtube.com/watch?v=K7VMgGX9vIY'
+  },
+  {
     titulo: 'Aula 10 - Programação funcional',
     descricao: 'Nesta aula você aprenderá o que é programação funcional, como escrever um código mais organizado e simples utilizando funções, e separá-los em arquivos, deixando em contextos diferentes.',
     videoYoutube: 'https://www.youtube.com/watch?v=DbR-luEtC1I'
