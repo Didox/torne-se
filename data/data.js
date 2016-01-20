@@ -6,11 +6,16 @@ var version = {
 var aviso = {
   message: '',
   confirm: true,
-  url: 'video.html?id=HAaLR1iJsB4',
+  url: 'video.html?id=JDmv8Yj95bw',
   openUrl: false
 }
 
 var data = [
+  {
+    titulo: 'Aula 16 - Uso de styles e css parte 3',
+    descricao: 'Nesta aula mostro o final da explicação de html + css, ou seja terminando mais uma parte do exercício que é transformar uma imagem em um HTML.',
+    videoYoutube: 'https://www.youtube.com/watch?v=JDmv8Yj95bw'
+  },
   {
     titulo: 'Aula 16 - Uso de styles e css parte 2',
     descricao: 'Continuação da aula aprendendo html + css. Criando arquivo.css e estilizando uma página através de uma imagem de layout.',
@@ -55,11 +60,6 @@ var data = [
     titulo: 'Aula 11 - Orientação a Objetos parte 3',
     descricao: 'Nesta aula você aprenderá os outros conceitos envolvidos em orientação a objetos (abstract, final, sealed, partials, singleton, protected, agregação de métodos) que não são utilizados em JavaScript, porém existem e são muito utilizadas em Java, C# e outros.',
     videoYoutube: 'https://www.youtube.com/watch?v=_BmpvTMSn0c'
-  },
-  {
-    titulo: 'Aula 11 - Orientação a Objetos parte 2',
-    descricao: 'Esta aula você verá métodos staticos, construtores, constantes, singleton e mais alguns conceitos para orientação a objetos, ou seja uma forma mais organizada de programar.',
-    videoYoutube: 'https://www.youtube.com/watch?v=JH3dISDHjc0'
   }
 ]
 
