@@ -12,6 +12,11 @@ var aviso = {
 
 var data = [
   {
+    titulo: 'Aula 17 - Aprendendo DHTML',
+    descricao: 'Nesta aula você irá aprender como transformar o seu HTML estático em dinâmico, ou seja fazer a integração do html com o javascript.',
+    videoYoutube: 'https://www.youtube.com/watch?v=vfbS2qN8dH8'
+  },
+  {
     titulo: 'Aula 16 - Uso de styles e css parte 3',
     descricao: 'Nesta aula mostro o final da explicação de html + css, ou seja terminando mais uma parte do exercício que é transformar uma imagem em um HTML.',
     videoYoutube: 'https://www.youtube.com/watch?v=JDmv8Yj95bw'
@@ -55,11 +60,6 @@ var data = [
     titulo: 'Aula 12 - Programação assíncrona',
     descricao: 'Nesta aula você irá aprender o conceito de programação assíncrona, conhecida também como programação orientado a evento ou a tread. Utilizando os callback do javascript.',
     videoYoutube: 'https://www.youtube.com/watch?v=WbjNDguEugw'
-  },
-  {
-    titulo: 'Aula 11 - Orientação a Objetos parte 3',
-    descricao: 'Nesta aula você aprenderá os outros conceitos envolvidos em orientação a objetos (abstract, final, sealed, partials, singleton, protected, agregação de métodos) que não são utilizados em JavaScript, porém existem e são muito utilizadas em Java, C# e outros.',
-    videoYoutube: 'https://www.youtube.com/watch?v=_BmpvTMSn0c'
   }
 ]
 
