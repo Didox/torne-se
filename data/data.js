@@ -6,7 +6,7 @@ var version = {
 var aviso = {
   message: 'Nova aula disponível\nDeseja assistir agora?',
   confirm: true,
-  url: 'video.html?id=JDmv8Yj95bw',
+  url: 'video.html?id=vfbS2qN8dH8',
   openUrl: false
 }
 
