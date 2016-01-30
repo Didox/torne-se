@@ -1,5 +1,10 @@
 var data = [
   {
+    titulo: 'Aula 11 - Orientação a Objetos parte 3',
+    descricao: 'Nesta aula você aprenderá os outros conceitos envolvidos em orientação a objetos (abstract, final, sealed, partials, singleton, protected, agregação de métodos) que não são utilizados em JavaScript, porém existem e são muito utilizadas em Java, C# e outros.',
+    videoYoutube: 'https://www.youtube.com/watch?v=_BmpvTMSn0c'
+  },
+  {
     titulo: 'Aula 11 - Orientação a Objetos parte 2',
     descricao: 'Esta aula você verá métodos staticos, construtores, constantes, singleton e mais alguns conceitos para orientação a objetos, ou seja uma forma mais organizada de programar.',
     videoYoutube: 'https://www.youtube.com/watch?v=JH3dISDHjc0'
