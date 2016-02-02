@@ -6,11 +6,16 @@ var version = {
 var aviso = {
   message: '',
   confirm: true,
-  url: 'video.html?id=vfbS2qN8dH8',
+  url: 'video.html?id=LH7AXRwZY0o',
   openUrl: false
 }
 
 var data = [
+  {
+    titulo: 'Aula 17 - Aprendendo DHTML parte 2',
+    descricao: 'Nesta aula você aprenderá como fazer validação de um formulário, como manipular elementos DOM (nextSibling, previousSibling), animação utilizando opacity e as funções setTimeout e setInterval.',
+    videoYoutube: 'https://www.youtube.com/watch?v=LH7AXRwZY0o'
+  },
   {
     titulo: 'Aula 17 - Aprendendo DHTML',
     descricao: 'Nesta aula você irá aprender como transformar o seu HTML estático em dinâmico ou seja fazer a integração do html com o javascript.',
