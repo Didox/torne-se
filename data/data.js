@@ -17,7 +17,7 @@ var data = [
     videoYoutube: 'https://www.youtube.com/watch?v=LH7AXRwZY0o'
   },
   {
-    titulo: 'Aula 17 - Aprendendo DHTML',
+    titulo: 'Aula 17 - Aprendendo DHTML parte 1',
     descricao: 'Nesta aula você irá aprender como transformar o seu HTML estático em dinâmico ou seja fazer a integração do html com o javascript.',
     videoYoutube: 'https://www.youtube.com/watch?v=vfbS2qN8dH8'
   },
