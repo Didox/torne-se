@@ -5,7 +5,8 @@
   </head>
   <body class="home">
     <%- include('../shared/header', {display_loading: 'block'}) %>
-    <div class="container">
+    <%- include('../shared/adsense') %>
+    <div class="container pague">
       <br>
       <div class="buttons aula">
         <a class="button" href="/aulas" >Voltar</a>
@@ -20,7 +21,6 @@
         </div>
       </div>
     </div>
-    <%- include('../shared/adsense') %>
     <%- include('../shared/form') %>
     <%- include('../shared/facelike') %>
     <%- include('../shared/footer') %>
