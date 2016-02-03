@@ -180,6 +180,9 @@ div.container{
 div.container.pague, div.container.form, div.container.adsense{ 
   margin-top: 20px;
 }
+.top div.container.adsense{ 
+  margin-top: 0px;
+}
 div.container button, .button{
     background-repeat: repeat-x;
     border-color: #245580;
