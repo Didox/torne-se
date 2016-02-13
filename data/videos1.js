@@ -57,7 +57,7 @@ var data = [
   {
     titulo: 'Aula 3 - Operadores matemáticos',
     descricao: 'Nesta aula iremos aprender como utilizar a lógica de programação para resolver expressões numéricas, utilizando os operadores matemáticos. ',
-    videoYoutube: 'https://www.youtube.com/watch?v=z-_vVAyJLrY'
+    videoYoutube: 'https://www.youtube.com/watch?v=Ak5PnSGAzII'
   },
   {
     titulo: 'Aula 2 - Variáveis',
