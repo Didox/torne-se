@@ -4,13 +4,18 @@ var version = {
 }
 
 var aviso = {
-  message: 'Aula nova disponível\nDeseja assistir agora?',
+  message: '',
   confirm: true,
-  url: 'video.html?id=LH7AXRwZY0o',
+  url: 'video.html?id=701jjz1-VFE',
   openUrl: false
 }
 
 var data = [
+  {
+    titulo: 'Aula 18 - JQuery',
+    descricao: 'Nesta aula você irá aprender um dos frameworks mais famosos para quem trabalha com Frond-End ou seja com javascript. JQuery é muito poderoso, com ele você irá economizar muito tempo ao trabalhar com DHTML.',
+    videoYoutube: 'https://www.youtube.com/watch?v=701jjz1-VFE'
+  },
   {
     titulo: 'Aula 17 - Aprendendo DHTML parte 2',
     descricao: 'Nesta aula você aprenderá como fazer validação de um formulário, como manipular elementos DOM (nextSibling, previousSibling), animação utilizando opacity e as funções setTimeout e setInterval.',
