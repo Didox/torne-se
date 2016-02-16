@@ -12,7 +12,7 @@ var aviso = {
 
 var data = [
   {
-    titulo: 'Aula 19 - JQuery',
+    titulo: 'Aula 19 - Utilizando linha de comando',
     descricao: 'Olá alunos, nesta aula vocês irão ver como utilizar a linha do Unix e DOS, para agilizar no processo no desenvolvimento de programas. Utilizar comandos como: dir, mkdir, ls copy, move, mv, cp.',
     videoYoutube: 'https://www.youtube.com/watch?v=3vc8FrAKC7Q'
   },
