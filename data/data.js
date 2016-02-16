@@ -6,11 +6,16 @@ var version = {
 var aviso = {
   message: '',
   confirm: true,
-  url: 'video.html?id=701jjz1-VFE',
+  url: 'video.html?id=3vc8FrAKC7Q',
   openUrl: false
 }
 
 var data = [
+  {
+    titulo: 'Aula 19 - JQuery',
+    descricao: 'Olá alunos, nesta aula vocês irão ver como utilizar a linha do Unix e DOS, para agilizar no processo no desenvolvimento de programas. Utilizar comandos como: dir, mkdir, ls copy, move, mv, cp.',
+    videoYoutube: 'https://www.youtube.com/watch?v=3vc8FrAKC7Q'
+  },
   {
     titulo: 'Aula 18 - JQuery',
     descricao: 'Nesta aula você irá aprender um dos frameworks mais famosos para quem trabalha com Frond-End ou seja com javascript. JQuery é muito poderoso, com ele você irá economizar muito tempo ao trabalhar com DHTML.',
