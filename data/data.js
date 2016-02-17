@@ -6,11 +6,16 @@ var version = {
 var aviso = {
   message: 'Nova aula disponível\nDeseja assistir agora?',
   confirm: true,
-  url: 'video.html?id=3vc8FrAKC7Q',
+  url: 'video.html?id=JiyKMqVfP1M',
   openUrl: false
 }
 
 var data = [
+  {
+    titulo: 'Aula 20 - Versionando seu código (aprendendo git)',
+    descricao: 'Nesta aula explico o conceito de versionamento de código, utilizando a ferramenta GIT, você poderá guardar os seus arquivos em um servidor, recuperando as versões do mesmo, ou seja não perdendo o seu trabalho que levou anos para fazer, outra coisa boa é o conceito de colaboração, deixar o seu código aberto para outras pessoas colaborarem com a evolução do projeto.',
+    videoYoutube: 'https://www.youtube.com/watch?v=JiyKMqVfP1M'
+  },
   {
     titulo: 'Aula 19 - Utilizando linha de comando',
     descricao: 'Olá alunos, nesta aula vocês irão ver como utilizar a linha do Unix e DOS, para agilizar no processo no desenvolvimento de programas. Utilizar comandos como: dir, mkdir, ls copy, move, mv, cp.',
