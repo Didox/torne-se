@@ -5,22 +5,27 @@
   </head>
   <body class="home">
     <%- include('../shared/header', {display_loading: 'none'}) %>
-    <div class="container">
-      <div>
-        <h3>Futuro do Projeto torne-se um programador</h3>
-        <p>
-          Para entender assista o video abaixo:
-        </p>
+    <div class="coluna1">
+      <div class="container">
+        <div>
+          <h3>Futuro do Projeto torne-se um programador</h3>
+          <p>
+            Para entender assista o video abaixo:
+          </p>
 
-        <iframe class="fluxo_video" onload='app.hideLoading()' src='https://www.youtube.com/embed/SbAmLb6gQDU' frameborder='0' allowfullscreen>
-        </iframe>
+          <iframe class="fluxo_video" onload='app.hideLoading()' src='https://www.youtube.com/embed/SbAmLb6gQDU' frameborder='0' allowfullscreen>
+          </iframe>
+        </div>
+        <br>
+        <div class="buttons sobre">
+          <a class="button" href="/sobre">Sobre</a>
+        </div>
       </div>
-      <br>
-      <div class="buttons sobre">
-        <a class="button" href="/sobre">Sobre</a>
-      </div>
+      <%- include('../shared/adsense') %>
     </div>
-    <%- include('../shared/adsense') %>
+    <div class="coluna2">
+      <%- include('../shared/ads') %>
+    </div>
     <%- include('../shared/footer') %>
   </body>
 </html>

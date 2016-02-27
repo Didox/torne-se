@@ -5,27 +5,33 @@
   </head>
   <body class="home">
     <%- include('../shared/header', {display_loading: 'block'}) %>
-    <div class="top">
-      <%- include('../shared/adsense') %>
-    </div>
-    <div class="container pague">
-      <br>
-      <div class="buttons aula">
-        <a class="button" href="/aulas" >Voltar</a>
+    <div class="coluna1">
+      <div class="top">
+        <%- include('../shared/adsense') %>
       </div>
-      <div>
-        <div id="video_container">
-          <h3 id="titulo"></h3>
-          <p id="descricao"></p>
-          <div id="video"></div>
-          <div id="fb-root"></div>
-          <%- include('../shared/share') %>
+      <div class="container margin">
+        <br>
+        <div class="buttons aula">
+          <a class="button" href="/aulas" >Voltar</a>
+        </div>
+        <div>
+          <div id="video_container">
+            <h3 id="titulo"></h3>
+            <p id="descricao"></p>
+            <div id="video"></div>
+            <div id="fb-root"></div>
+            <%- include('../shared/share') %>
+          </div>
         </div>
       </div>
+      <%- include('../shared/form') %>
+      <%- include('../shared/adsense') %>
+      <%- include('../shared/facelike') %>
+      <%- include('../shared/donate') %>
     </div>
-    <%- include('../shared/form') %>
-    <%- include('../shared/facelike') %>
-    <%- include('../shared/donate') %>
+    <div class="coluna2">
+      <%- include('../shared/ads') %>
+    </div>
     <%- include('../shared/footer') %>
     <script type="text/javascript" src="https://rawgit.com/Didox/torne-se/master/data/data.js"></script>
   </body>

@@ -5,13 +5,18 @@
   </head>
   <body class="home">
     <%- include('shared/header', {display_loading: 'none'}) %>
-    <div class="container">
-      <h3>Projeto torne-se um programador</h3>
-      <p>
-        Olá alunos, ocorreu erro na página, clique <a href="/">aqui</a> para voltar para home.
-      </p>
+    <div class="coluna1">
+      <div class="container">
+        <h3>Projeto torne-se um programador</h3>
+        <p>
+          Olá alunos, ocorreu erro na página, clique <a href="/">aqui</a> para voltar para home.
+        </p>
+      </div>
+      <%- include('shared/adsense') %>
     </div>
-    <%- include('../shared/adsense') %>
+    <div class="coluna2">
+      <%- include('shared/ads') %>
+    </div>
     <%- include('shared/footer') %>
   </body>
 </html>

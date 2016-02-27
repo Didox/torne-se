@@ -65,8 +65,12 @@ a{
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   -webkit-touch-callout: none;
 }
-.pague { display: block; margin-top: 20px; padding-bottom: 20px; }
+.margin { display: block; margin-top: 10px; padding-bottom: 10px; }
 
+.coluna1{float:left; margin-top: 10px;}
+.coluna2{float: left;background-color: #fff;width: 170px;height: 610px; margin-right:20px; margin-top:10px; padding: 5px; padding-top: 10px;border-radius: 4px}
+
+.coluna1 .top{margin-top: -10px!important;}
 
 #email_container label{ width: 44px; display: inline-block; }
 #email_container .nom{ margin-bottom: 2px; }
@@ -88,7 +92,8 @@ img.image-capa { width: 100%; margin-bottom: -3px; }
 #video iframe, .fluxo_video{ width:98%; height: 300px }
 .fluxo img{ width:300px }
 .download img{ width:200px }
-
+.coluna2{display: none;}
+.coluna1{width: 100%}
 /*Phones Small devices Tablets (≥768px)  Medium devices Desktops (≥992px)  Large devices Desktops (≥1200px)*/
 @media (min-width: 768px) {
   img.image-tornese { width: 680px; }
@@ -107,13 +112,26 @@ img.image-capa { width: 100%; margin-bottom: -3px; }
   .download img{ width:300px }
 }
 @media (min-width: 1200px) {
-  img.image-tornese { width: 950px; }
+  img.image-tornese { width: 900px; }
   img.image-capa { width: 680px; }
   .video img { width: 500px !important; height: auto !important; }
   .inputFind{ width: 500px; }
   #video iframe, .fluxo_video{ width:1100px; height: 700px }
   .fluxo img{ width:800px }
   .download img{ width:350px }
+  .coluna2{display: block;}
+  .coluna1{width: 83%}
+  header{height:54px!important}
+  header #nome_site a{
+    width: 300px!important;
+    font-size: 20px!important;
+  }
+  div.container button, .button{
+    font-size: 25px!important;
+  }
+}
+@media (min-width: 1600px) {
+  .coluna1{width: 87%}
 }
 
 /* GERAL */
@@ -177,12 +195,10 @@ div.container{
   border-radius: 6px;
   padding: 10px;
 }
-div.container.pague, div.container.form, div.container.adsense{ 
-  margin-top: 20px;
+div.container.form, div.container.adsense{ 
+  margin-top: 10px;
 }
-.top div.container.adsense{ 
-  margin-top: 0px;
-}
+
 div.container button, .button{
     background-repeat: repeat-x;
     border-color: #245580;
@@ -198,7 +214,7 @@ div.container button, .button{
     font-weight: normal;
 }
 div.container .buttons{
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 div.container p{
   padding: 10px;
@@ -211,7 +227,7 @@ div.container #videos .video{
   background-color: #265a88;width: 100px;height: 18px;border-radius: 4px;padding: 6px;margin-left: 2px;color: #fff;font-size: 12px;
 }
 
-div.container #loadMore{ padding-top: 20px; }
+div.container #loadMore{ padding-top: 10px; }
 div.container .voltarTopo{ padding: 15px; }
 div.container .voltarTopo img{ background-image: none; width: 50px; }
 div.container .buttons.aula {
@@ -236,22 +252,23 @@ div.container #vagas li div.vaga{
   width: 90%;
   text-align: left;
 }
-footer{position:fixed;bottom:0;z-index:10;float:left;padding:4px;width:100%;height:20px;background:#405e99;-webkit-backface-visibility:hidden;box-sizing: border-box;-webkit-box-sizing: border-box}
-footer div{color:#fff;font-size:10px;float:right;margin-right:10px}
+footer{margin-top:20px; float:left;padding:10px;width:100%;height:40px;background:#405e99;-webkit-backface-visibility:hidden;box-sizing: border-box;-webkit-box-sizing: border-box}
+footer p{color:#fff;font-size:14px;text-align: right; text-shadow: 2px 2px 2px #000;}
 
 p.carregando{
   text-indent: -99999px;
   background: url('../imagens/spinner.gif') no-repeat center;
 }
 
-.load_container{ height: 10px; margin-top: 10px; margin-bottom: 5px; }
+.load_container{ height: 1px; margin-top: 5px; margin-bottom: 5px; }
+.load_container .carregando { width: 100%;position: absolute; margin-top:13px; }
 
 header #logo{float:left;}
 header #logo img{background-image: none;}
 header #logo a{width: auto; height: auto;}
 
 header #nome_site{float:left; width: 80%}
-header #nome_site a{display: block;margin: auto;width: 180px;font: 16px 'appleberry';color: #fff;text-align: center;text-transform: uppercase;}
+header #nome_site a{display: block;margin: auto;width: 180px;font: 16px 'appleberry';color: #fff;text-align: center;text-transform: uppercase;text-shadow: 2px 2px 2px #000;}
 header #findAula{width: 86%}
 header #findAula input{width: 65%;text-align: center; border:1px solid #337ab7;height: 23px;border-radius: 4px;color: #265a88;padding: 3px; font-size: 18px; }
 @media (min-width: 768px) {

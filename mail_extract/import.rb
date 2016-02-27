@@ -22,7 +22,7 @@ sleep(3)
 def confere_and_find_emailchimp
   emailchimp = []
   emails_chimp_100
-  if(@emails.size > @quantidade_mailchimp)
+  if(@emails.size.to_i > @quantidade_mailchimp.to_i)
     @session.all(".table-contents .profile-view a").each do |link|
       emailchimp << link.text.downcase.strip
     end
