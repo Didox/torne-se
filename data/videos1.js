@@ -1,5 +1,35 @@
 var data = [
   {
+    titulo: 'Aula 15 - Aprendendo html Parte 3',
+    descricao: 'Nesta aula você irá aprender as tags html, img, form, input, frame, iframe e frameset.',
+    videoYoutube: 'https://www.youtube.com/watch?v=Ht40eIIY_OQ'
+  },
+  {
+    titulo: 'Aula 15 - Aprendendo html Parte 2',
+    descricao: 'Nesta aula você irá aprender a parte 2 da aula aprendendo HTML, vendo agora outras tags como "a", "fildset" e outras.',
+    videoYoutube: 'https://www.youtube.com/watch?v=GbdrPMCcVxw'
+  },
+  {
+    titulo: 'Aula 15 - Aprendendo html Parte 1',
+    descricao: 'Na aula de hoje iremos aprender os conceitos básicos de um html, para que serve e como utilizá-lo.',
+    videoYoutube: 'https://www.youtube.com/watch?v=-9vZHPB19NI'
+  },
+  {
+    titulo: 'Aula 14 - Tipos e tipagem de variáveis',
+    descricao: 'Nesta aula você irá aprender os tipos de variáveis existentes em algumas linguagens de programação. As tipagens feitas ou alocações (dinâmica ou estática) e se a linguagem é fortemente tipada ou de tipagem fraca.',
+    videoYoutube: 'https://www.youtube.com/watch?v=nXX4u0eYYfQ'
+  },
+  {
+    titulo: 'Aula 13 - Tratamento de strings e regular expression ',
+    descricao: 'Nesta Aula vc irá aprender o conceito de tratamento de strings, utilizando comandos como split, replace, e outros. Irá conhecer também Regular Expression (Regex) e como a regex pode facilitar um programa onde você tem a necessidade de trabalhar com textos.',
+    videoYoutube: 'https://www.youtube.com/watch?v=7sw5bFo7qFs'
+  },
+  {
+    titulo: 'Aula 12 - Programação assíncrona',
+    descricao: 'Nesta aula você irá aprender o conceito de programação assíncrona, conhecida também como programação orientado a evento ou a tread. Utilizando os callback do javascript.',
+    videoYoutube: 'https://www.youtube.com/watch?v=WbjNDguEugw'
+  },
+  {
     titulo: 'Aula 11 - Orientação a Objetos parte 3',
     descricao: 'Nesta aula você aprenderá os outros conceitos envolvidos em orientação a objetos (abstract, final, sealed, partials, singleton, protected, agregação de métodos) que não são utilizados em JavaScript, porém existem e são muito utilizadas em Java, C# e outros.',
     videoYoutube: 'https://www.youtube.com/watch?v=_BmpvTMSn0c'
@@ -33,42 +63,7 @@ var data = [
     titulo: 'Aula 7 - Hash',
     descricao: 'Nesta aula você irá aprender a utilizar Hash, ou seja uma forma estruturada para organizar suas variáveis como um objeto ',
     videoYoutube: 'https://www.youtube.com/watch?v=SCL93-7zWWw'
-  },
-  {
-    titulo: 'Aula 6 - Array',
-    descricao: 'Nesta aula você irá aprender como utilizar o Array (coleção de espaços de memória), verá na prática a sua utilização e criará junto comigo um programa para calcular a média de alunos. ',
-    videoYoutube: 'https://www.youtube.com/watch?v=e3r9Q9L0-sU'
-  },
-  {
-    titulo: 'Aula 5 - Looping',
-    descricao: 'Nesta aula ensino como utilizar a estrutura de repetição (lopping) e a diferença de um programa utilizando repetição e não usando repetição. ',
-    videoYoutube: 'https://www.youtube.com/watch?v=XwmFtcPanIU'
-  },
-  {
-    titulo: 'Aula 4 - Operadores condicionais e lógicos parte 2',
-    descricao: 'Nesta aula iremos falar sobre operadores condicionais, concatenação de strings, diferença de variável string e inteiro, operadores lógicos ',
-    videoYoutube: 'https://www.youtube.com/watch?v=nYF_WhoexhY'
-  },
-  {
-    titulo: 'Aula 4 - Operadores condicionais e lógicos parte 1',
-    descricao: 'Nesta aula iremos falar sobre operadores condicionais, concatenação de strings, diferença de variável string e inteiro, operadores lógicos ',
-    videoYoutube: 'https://www.youtube.com/watch?v=cN_F2E7yKVQ'
-  },
-  {
-    titulo: 'Aula 3 - Operadores matemáticos',
-    descricao: 'Nesta aula iremos aprender como utilizar a lógica de programação para resolver expressões numéricas, utilizando os operadores matemáticos. ',
-    videoYoutube: 'https://www.youtube.com/watch?v=Ak5PnSGAzII'
-  },
-  {
-    titulo: 'Aula 2 - Variáveis',
-    descricao: 'Este vídeo mostra o que é uma variável, para que serve uma variável e como utilizar uma variável em um código fonte ',
-    videoYoutube: 'https://www.youtube.com/watch?v=5_ak7LNFyWw'
-  },
-  {
-    titulo: 'Aula 1 - Conceitos básicos',
-    descricao: 'Aula 1 que fala sobre os conceitos básicos de como ser um programador',
-    videoYoutube: 'https://www.youtube.com/watch?v=oHJzyf3EwWU'
-  },
+  }
 ]
 
 $(document).ready(function(){

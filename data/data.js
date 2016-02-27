@@ -55,36 +55,6 @@ var data = [
     titulo: 'Aula 16 - Uso de styles e css parte 1',
     descricao: 'Nesta aula você irá aprender para que serve o CSS, como estilizar uma pagina HTML, dando cor, layout e vida a sua página.',
     videoYoutube: 'https://www.youtube.com/watch?v=v1GuWjYCrhA'
-  },
-  {
-    titulo: 'Aula 15 - Aprendendo html Parte 3',
-    descricao: 'Nesta aula você irá aprender as tags html, img, form, input, frame, iframe e frameset.',
-    videoYoutube: 'https://www.youtube.com/watch?v=Ht40eIIY_OQ'
-  },
-  {
-    titulo: 'Aula 15 - Aprendendo html Parte 2',
-    descricao: 'Nesta aula você irá aprender a parte 2 da aula aprendendo HTML, vendo agora outras tags como "a", "fildset" e outras.',
-    videoYoutube: 'https://www.youtube.com/watch?v=GbdrPMCcVxw'
-  },
-  {
-    titulo: 'Aula 15 - Aprendendo html Parte 1',
-    descricao: 'Na aula de hoje iremos aprender os conceitos básicos de um html, para que serve e como utilizá-lo.',
-    videoYoutube: 'https://www.youtube.com/watch?v=-9vZHPB19NI'
-  },
-  {
-    titulo: 'Aula 14 - Tipos e tipagem de variáveis',
-    descricao: 'Nesta aula você irá aprender os tipos de variáveis existentes em algumas linguagens de programação. As tipagens feitas ou alocações (dinâmica ou estática) e se a linguagem é fortemente tipada ou de tipagem fraca.',
-    videoYoutube: 'https://www.youtube.com/watch?v=nXX4u0eYYfQ'
-  },
-  {
-    titulo: 'Aula 13 - Tratamento de strings e regular expression ',
-    descricao: 'Nesta Aula vc irá aprender o conceito de tratamento de strings, utilizando comandos como split, replace, e outros. Irá conhecer também Regular Expression (Regex) e como a regex pode facilitar um programa onde você tem a necessidade de trabalhar com textos.',
-    videoYoutube: 'https://www.youtube.com/watch?v=7sw5bFo7qFs'
-  },
-  {
-    titulo: 'Aula 12 - Programação assíncrona',
-    descricao: 'Nesta aula você irá aprender o conceito de programação assíncrona, conhecida também como programação orientado a evento ou a tread. Utilizando os callback do javascript.',
-    videoYoutube: 'https://www.youtube.com/watch?v=WbjNDguEugw'
   }
 ]
 
