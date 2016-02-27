@@ -6,11 +6,16 @@ var version = {
 var aviso = {
   message: '',
   confirm: true,
-  url: 'video.html?id=JiyKMqVfP1M',
+  url: 'video.html?id=AHWYDpI70zQ',
   openUrl: false
 }
 
 var data = [
+  {
+    titulo: 'Aula 21 - Aplicação back-end com Node.js',
+    descricao: 'Nesta aula você verá as diferenças entre uma aplicação back-end e front-end, aprenderá como instalar o node.js com framework express,  o que é um framework, como manipular o arquivo hosts da sua máquina e como levantar um servidor na sua máquina.',
+    videoYoutube: 'https://www.youtube.com/watch?v=AHWYDpI70zQ'
+  },
   {
     titulo: 'Aula 20 - Versionando seu código (aprendendo git)',
     descricao: 'Nesta aula explico o conceito de versionamento de código, utilizando a ferramenta GIT, você poderá guardar os seus arquivos em um servidor, recuperando as versões do mesmo, ou seja não perdendo o seu trabalho que levou anos para fazer, outra coisa boa é o conceito de colaboração, deixar o seu código aberto para outras pessoas colaborarem com a evolução do projeto.',
