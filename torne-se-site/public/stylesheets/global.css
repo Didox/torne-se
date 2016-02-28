@@ -32,6 +32,10 @@ fieldset, form, label, legend, input, button {
   src: url(/fonts/appleberry.woff) format("truetype");
 }
 
+.white{
+  color: #fff;
+}
+
 strong{
   font-weight: 700;
 }
