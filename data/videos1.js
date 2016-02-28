@@ -68,6 +68,7 @@ var data = [
 
 $(document).ready(function(){
   if($("#videos").size() > 0){
+    $("#loadMore").remove();
     loadVideos(true, 2);
   }
 });
