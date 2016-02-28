@@ -372,8 +372,6 @@ header #findAula .button{
 .ultimas-aulas a.all:hover{
   color: #3399cc;
   background: #fff;
-  width: 158px;
-  padding: 5px;
   text-shadow: none;
 }
 
