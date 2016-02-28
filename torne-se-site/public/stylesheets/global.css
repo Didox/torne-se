@@ -72,7 +72,7 @@ a{
 .margin { display: block; margin-top: 10px; padding-bottom: 10px; }
 
 .coluna1{float:left; margin-top: 10px;}
-.coluna2{float: left;background-color: #fff;width: 170px;height: 610px; margin-right:20px; margin-top:10px; padding: 5px; padding-top: 10px;border-radius: 4px}
+.sidebar{text-align: center; float: left;background-color: #fff;width: 170px;height: 610px; margin-right:20px; margin-top:10px; padding: 5px; padding-top: 10px;border-radius: 4px}
 
 .coluna1 .top{margin-top: -10px!important;}
 
@@ -96,7 +96,7 @@ img.image-capa { width: 100%; margin-bottom: -3px; }
 #video iframe, .fluxo_video{ width:98%; height: 300px }
 .fluxo img{ width:300px }
 .download img{ width:200px }
-.coluna2{display: none;}
+.sidebar{display: none;}
 .coluna1{width: 100%}
 /*Phones Small devices Tablets (≥768px)  Medium devices Desktops (≥992px)  Large devices Desktops (≥1200px)*/
 @media (min-width: 768px) {
@@ -123,7 +123,7 @@ img.image-capa { width: 100%; margin-bottom: -3px; }
   #video iframe, .fluxo_video{ width:98%; height: 700px }
   .fluxo img{ width:800px }
   .download img{ width:350px }
-  .coluna2{display: block;}
+  .sidebar{display: block;}
   .coluna1{width: 83%}
   header{height:54px!important}
   header #nome_site a{
@@ -258,8 +258,8 @@ div.container #vagas li div.vaga{
 }
 footer{margin-top:20px; float:left;padding:12px;width:100%;height:40px;background:#405e99;-webkit-backface-visibility:hidden;box-sizing: border-box;-webkit-box-sizing: border-box}
 footer p{float: right; color:#fff;font-size:14px;text-align: right; text-shadow: 2px 2px 2px #000;}
-footer img{margin-top: -7px;margin-left: 10px; float: left; width: 35px; height: 33px; background:none!important;}
-footer img.youtube{margin-top: -8px; width: 40px; height: 35px}
+footer img{margin-top: -7px;margin-left: 10px; float: left; width: 33px; height: 33px; background:none!important;}
+footer img.youtube{height: 32px}
 
 p.carregando{
   text-indent: -99999px;
@@ -274,7 +274,7 @@ header #logo img{background-image: none;}
 header #logo a{width: auto; height: auto;}
 
 header #nome_site{float:left; width: 80%}
-header #nome_site a{display: block;margin: auto;width: 180px;font: 16px 'appleberry';color: #fff;text-align: center;text-transform: uppercase;text-shadow: 2px 2px 2px #000;}
+header #nome_site a{display: block;margin: auto;width: 180px;font: 16px 'appleberry';color: #fff;text-align: center;text-transform: uppercase;text-shadow: 1px 1px 1px #000;}
 header #findAula{width: 86%}
 header #findAula input{width: 65%;text-align: center; border:1px solid #337ab7;height: 23px;border-radius: 4px;color: #265a88;padding: 3px; font-size: 18px; }
 @media (min-width: 768px) {
@@ -327,5 +327,50 @@ header #findAula .button{
   margin-top: 10px!important;
 }
 
+.ultimas-aulas div.title{
+  font-family: 'appleberry';
+  font-size: 13px;
+  color: #fff;
+  width: 160px;
+  padding: 5px;
+  background: #3399cc;
+  text-align: center;
+  text-shadow: 1px 1px 1px #000;
+  border-top-left-radius:4px;
+  border-top-right-radius:4px;
+  text-transform: uppercase;
+}
+.ultimas-aulas ul{
+  overflow: hidden;
+  height: 548px;
+}
+.ultimas-aulas ul li{
+  margin-top: 20px;
+}
+
+.ultimas-aulas a.all{
+  margin-top: 10px;
+  display: block;
+  font-family: 'appleberry';
+  font-size: 13px;
+  color: #fff;
+  width: 160px;
+  padding: 5px;
+  background: #3399cc;
+  text-align: center;
+  text-shadow: 1px 1px 1px #000;
+  text-transform: uppercase;
+  border-bottom-left-radius:4px;
+  border-bottom-right-radius:4px;
+}
+
+.ultimas-aulas a.all:hover{
+  color: #3399cc;
+  background: #fff;
+  width: 160px;
+  padding: 5px;
+  border: 1px solid #3399cc;
+  text-shadow: none;
+}
 
 

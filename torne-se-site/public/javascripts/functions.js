@@ -29,6 +29,7 @@ $(document).ready(function(){
 
   app.loadButtonsActions();
   app.actionFind();
+  app.loadLastLessions();
 });
 
 app.notEmpty = function(str) {
@@ -38,6 +39,29 @@ app.notEmpty = function(str) {
 app.empty = function(str) {
   return !app.notEmpty(str);
 };
+
+app.loadLastLessions = function(){
+  if($(".ultimas-aulas").size() > 0 && $(".ultimas-aulas").css('display') != "none"){
+    var html = "<div class=\"title\">Últimas aulas</div>";
+    html += "<ul>";
+    
+    for(i=0;i<4; i++){
+      html += "<li>";
+      html += "  <div>";
+      html += "    <a href=\"/aula?id=" + app.getIdYoutubeImagem(data[i].videoYoutube) + "\">";
+      html += "      <img src='" + app.getYoutubeImagem(data[i].videoYoutube) + "' style='width: 100px;height: 80px;'>";
+      html += "      <p>" + data[i].titulo + "</p>";
+      html += "      <span style='display:none'>" + data[i].descricao + "</span>";
+      html += "    </a>";
+      html += "  </div>";
+      html += "</li>"
+    }
+
+    html += "</ul>";
+    html += "<a class=\"all\" href=\"/aulas\">Todas as aulas</a>";
+    $(".ultimas-aulas").html(html);
+  }
+}
 
 app.actionFind = function(){
   if(window.location.href.indexOf("aulas") != -1){
