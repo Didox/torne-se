@@ -13,7 +13,7 @@ var aviso = {
 var data = [
   {
     titulo: 'Aula 22 - Criando aplicação back-end',
-    descricao: 'Nesta aula mostro na prática a diferença de uma aplicação back-end e front-end, mostro como criar novas rotas no Node.js e ensino como utilizar os métodos POST e GET para cadastro.',
+    descricao: 'Nesta aula mostro na prática a diferença de uma aplicação back-end e front-end, mostro como criar novas rotas no Node.js e ensino como utilizar os verbos POST e GET para cadastro.',
     videoYoutube: 'https://www.youtube.com/watch?v=SxCjF0t4O3M'
   },
   {
