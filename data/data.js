@@ -6,11 +6,21 @@ var version = {
 var aviso = {
   message: '',
   confirm: true,
-  url: 'video.html?id=AHWYDpI70zQ',
+  url: 'video.html?id=kKxnxSQKE4c',
   openUrl: false
 }
 
 var data = [
+  {
+    titulo: 'Aula 23 - Gravando dados em arquivos',
+    descricao: 'Nesta aula você aprenderá como gravar os seus dados que estão na memória de um servidor, dentro de arquivos, recuperando assim os dados depois que reiniciar o seu servidor.',
+    videoYoutube: 'https://www.youtube.com/watch?v=kKxnxSQKE4c'
+  },
+  {
+    titulo: 'Aula 22 - Criando aplicação back-end',
+    descricao: 'Nesta aula mostro na prática a diferença de uma aplicação back-end e front-end, mostro como criar novas rotas no Node.js e ensino como utilizar os verbos POST e GET para cadastro.',
+    videoYoutube: 'https://www.youtube.com/watch?v=SxCjF0t4O3M'
+  },
   {
     titulo: 'Aula 21 - Aplicação back-end com Node.js',
     descricao: 'Nesta aula você verá as diferenças entre uma aplicação back-end e front-end, aprenderá como instalar o node.js com framework express,  o que é um framework, como manipular o arquivo hosts da sua máquina e como levantar um servidor na sua máquina.',
