@@ -42,7 +42,7 @@ app.empty = function(str) {
 
 app.loadLastLessions = function(){
   if($(".ultimas-aulas").size() > 0 && $(".ultimas-aulas").css('display') != "none"){
-    var html = "<div class=\"title\">Últimas aulas</div>";
+    var html = "<a class=\"header link\" href=\"/aulas\">Últimas aulas</a>";
     html += "<ul>";
     
     for(i=0;i<4; i++){
@@ -58,7 +58,7 @@ app.loadLastLessions = function(){
     }
 
     html += "</ul>";
-    html += "<a class=\"all\" href=\"/aulas\">Todas as aulas</a>";
+    html += "<a class=\"link footer\" href=\"/aulas\">Últimas aulas</a>";
     $(".ultimas-aulas").html(html);
   }
 }

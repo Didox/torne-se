@@ -4,7 +4,11 @@ var AulasController = {
   },
 
   aula: function(request, response) {
-    response.render('aulas/show');
+    response.render('aulas/show', {tipo: request.query.tipo});
+  },
+
+  iniciante: function(request, response) {
+    response.render('aulas/iniciante');
   }
 }
 

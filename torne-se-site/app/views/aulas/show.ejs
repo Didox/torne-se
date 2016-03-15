@@ -12,7 +12,11 @@
       <div class="container margin">
         <br>
         <div class="buttons aula">
-          <a class="button" href="/aulas" >Voltar</a>
+          <% if(tipo == 'iniciante'){ %>
+            <a class="button" href="/aulas/iniciante" >Voltar</a>
+          <% }else{ %>
+            <a class="button" href="/aulas" >Voltar</a>
+          <% } %>
         </div>
         <div>
           <div id="video_container">
