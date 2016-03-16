@@ -4,13 +4,18 @@ var version = {
 }
 
 var aviso = {
-  message: '',
+  message: 'Nova aula disponível\nDeseja assistir agora?',
   confirm: true,
-  url: 'video.html?id=kKxnxSQKE4c',
+  url: 'video.html?id=sspYqCwqguk',
   openUrl: false
 }
 
 var data = [
+  {
+    titulo: 'Aula 24 - Pesquisando em arquivos',
+    descricao: 'Nesta aula você irá aprender como buscar dados em arquivos, utilizando os comandos .toLowerCase()  . toUpperCase() para maiúsculo e minúsculo, Regex para busca, match exato, lógica para validação de strings, looping e muito mais.',
+    videoYoutube: 'https://www.youtube.com/watch?v=sspYqCwqguk'
+  },
   {
     titulo: 'Aula 23 - Gravando dados em arquivos',
     descricao: 'Nesta aula você aprenderá como gravar os seus dados que estão na memória de um servidor, dentro de arquivos, recuperando assim os dados depois que reiniciar o seu servidor.',
