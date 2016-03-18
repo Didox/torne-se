@@ -151,7 +151,7 @@ app.loadMore = function(file, callback){
   $("#loadMore").html("<p class=\"carregando\">Carregando</p>");
   var s = document.createElement('script');
   s.onload = callback;
-  s.setAttribute('src','https://rawgit.com/Didox/torne-se/master/data/' + file);
+  s.setAttribute('src','http://www.torneseumprogramador.com.br/javascripts/data/' + file);
   document.head.appendChild(s);
 }
 
