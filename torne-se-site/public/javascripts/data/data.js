@@ -4,13 +4,19 @@ var version = {
 }
 
 var aviso = {
-  message: '',
+  //message: '',
+  message: 'Nova aula disponível\nDeseja assistir agora?',
   confirm: true,
-  url: 'video.html?id=sspYqCwqguk',
+  url: 'video.html?id=00ARVfHHVz8',
   openUrl: false
 }
 
 var data = [
+  {
+    titulo: 'Aula 25 - Editando e excluindo dados em arquivos',
+    descricao: 'Nesta aula iremos concluir o nosso CRUD (Create, Read, Update, Delete), fazendo com que o cadastro que criamos, tenha a possibilidade de fazer o processo completo de um cadastro.',
+    videoYoutube: 'https://www.youtube.com/watch?v=00ARVfHHVz8'
+  },
   {
     titulo: 'Aula 24 - Pesquisando em arquivos',
     descricao: 'Nesta aula você irá aprender como buscar dados em arquivos, utilizando os comandos .toLowerCase()  . toUpperCase() para maiúsculo e minúsculo, Regex para busca, match exato, lógica para validação de strings, looping e muito mais.',
@@ -65,11 +71,6 @@ var data = [
     titulo: 'Aula 16 - Uso de styles e css parte 2',
     descricao: 'Continuação da aula aprendendo html + css. Criando arquivo.css e estilizando uma página através de uma imagem de layout.',
     videoYoutube: 'https://www.youtube.com/watch?v=HAaLR1iJsB4'
-  },
-  {
-    titulo: 'Aula 16 - Uso de styles e css parte 1',
-    descricao: 'Nesta aula você irá aprender para que serve o CSS, como estilizar uma pagina HTML, dando cor, layout e vida a sua página.',
-    videoYoutube: 'https://www.youtube.com/watch?v=v1GuWjYCrhA'
   }
 ]
 

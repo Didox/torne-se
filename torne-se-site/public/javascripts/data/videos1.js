@@ -1,5 +1,10 @@
 var data = [
   {
+    titulo: 'Aula 16 - Uso de styles e css parte 1',
+    descricao: 'Nesta aula você irá aprender para que serve o CSS, como estilizar uma pagina HTML, dando cor, layout e vida a sua página.',
+    videoYoutube: 'https://www.youtube.com/watch?v=v1GuWjYCrhA'
+  },
+  {
     titulo: 'Aula 15 - Aprendendo html Parte 3',
     descricao: 'Nesta aula você irá aprender as tags html, img, form, input, frame, iframe e frameset.',
     videoYoutube: 'https://www.youtube.com/watch?v=Ht40eIIY_OQ'
