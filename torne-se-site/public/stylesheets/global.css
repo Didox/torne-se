@@ -278,6 +278,9 @@ p.carregando{
 .load_container{ height: 1px; margin-top: 5px; margin-bottom: 5px; }
 .load_container .carregando { width: 100%;position: absolute; margin-top:13px; }
 
+
+img.noLoad{background-image: none!important;}
+
 header #logo{float:left;}
 header #logo img{background-image: none;}
 header #logo a{width: auto; height: auto;}
