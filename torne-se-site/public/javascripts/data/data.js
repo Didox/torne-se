@@ -4,14 +4,19 @@ var version = {
 }
 
 var aviso = {
-  message: '',
-  //message: 'Nova aula disponível\nDeseja assistir agora?',
+  //message: '',
+  message: 'Nova aula disponível\nDeseja assistir agora?',
   confirm: true,
-  url: 'video.html?id=00ARVfHHVz8',
+  url: 'video.html?id=1oddz49LZgo',
   openUrl: false
 }
 
 var data = [
+  {
+    titulo: 'Aula 26 - Refatorando codigo',
+    descricao: 'Nesta aula você irá junto comigo refatorar o código que fizemos nas aulas anteriores, organizando-o em arquivos separados e criando objetos para melhorar a visualização e o entendimento do código. Visando manutenção no futuro.',
+    videoYoutube: 'https://www.youtube.com/watch?v=1oddz49LZgo'
+  },
   {
     titulo: 'Aula 25 - Editando e excluindo dados em arquivos',
     descricao: 'Nesta aula iremos concluir o nosso CRUD (Create, Read, Update, Delete), fazendo com que o cadastro que criamos, tenha a possibilidade de fazer o processo completo de um cadastro.',
@@ -66,11 +71,6 @@ var data = [
     titulo: 'Aula 16 - Uso de styles e css parte 3',
     descricao: 'Nesta aula mostro o final da explicação de html + css, ou seja terminando mais uma parte do exercício que é transformar uma imagem em um HTML.',
     videoYoutube: 'https://www.youtube.com/watch?v=JDmv8Yj95bw'
-  },
-  {
-    titulo: 'Aula 16 - Uso de styles e css parte 2',
-    descricao: 'Continuação da aula aprendendo html + css. Criando arquivo.css e estilizando uma página através de uma imagem de layout.',
-    videoYoutube: 'https://www.youtube.com/watch?v=HAaLR1iJsB4'
   }
 ]
 

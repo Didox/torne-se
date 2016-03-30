@@ -1,5 +1,10 @@
 var data = [
   {
+    titulo: 'Aula 16 - Uso de styles e css parte 2',
+    descricao: 'Continuação da aula aprendendo html + css. Criando arquivo.css e estilizando uma página através de uma imagem de layout.',
+    videoYoutube: 'https://www.youtube.com/watch?v=HAaLR1iJsB4'
+  },
+  {
     titulo: 'Aula 16 - Uso de styles e css parte 1',
     descricao: 'Nesta aula você irá aprender para que serve o CSS, como estilizar uma pagina HTML, dando cor, layout e vida a sua página.',
     videoYoutube: 'https://www.youtube.com/watch?v=v1GuWjYCrhA'
