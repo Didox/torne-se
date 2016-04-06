@@ -376,4 +376,7 @@ header #findAula .button{
   border-bottom-right-radius:4px;
 }
 
-
+.facebookWidget{display:none;position:relative;z-index:11}
+.facebookWidget:before{position:fixed;top:0;left:0;float:left;width:100%;height:100%;background:rgba(0,0,0,.75);content:''}
+.facebookWidget .widget{position:fixed;top:50%;left:50%;float:left;margin:-65px 0 0 -150px;width:300px;height:130px;background:#fff}
+.facebookWidget .widget .fechar{position:absolute;bottom:100%;right:0;float:left;padding:5px 0;font:bold 14px arial;color:#fff;cursor:pointer}

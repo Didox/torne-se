@@ -1,5 +1,10 @@
 var data = [
   {
+    titulo: 'Aula 16 - Uso de styles e css parte 3',
+    descricao: 'Nesta aula mostro o final da explicação de html + css, ou seja terminando mais uma parte do exercício que é transformar uma imagem em um HTML.',
+    videoYoutube: 'https://www.youtube.com/watch?v=JDmv8Yj95bw'
+  },
+  {
     titulo: 'Aula 16 - Uso de styles e css parte 2',
     descricao: 'Continuação da aula aprendendo html + css. Criando arquivo.css e estilizando uma página através de uma imagem de layout.',
     videoYoutube: 'https://www.youtube.com/watch?v=HAaLR1iJsB4'
@@ -68,11 +73,6 @@ var data = [
     titulo: 'Aula 8 - Funções',
     descricao: 'Nesta aula você irá aprender como criar uma função em javascript, para que serve e quais os tipos de funções utilizadas. ',
     videoYoutube: 'https://www.youtube.com/watch?v=WGbVQTWqEko'
-  },
-  {
-    titulo: 'Aula 7 - Hash',
-    descricao: 'Nesta aula você irá aprender a utilizar Hash, ou seja uma forma estruturada para organizar suas variáveis como um objeto ',
-    videoYoutube: 'https://www.youtube.com/watch?v=SCL93-7zWWw'
   }
 ]
 

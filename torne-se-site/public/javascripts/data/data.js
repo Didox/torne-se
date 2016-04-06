@@ -7,11 +7,16 @@ var aviso = {
   //message: '',
   message: 'Nova aula disponível\nDeseja assistir agora?',
   confirm: true,
-  url: 'video.html?id=1oddz49LZgo',
+  url: 'video.html?id=_IKoyIi7VAo',
   openUrl: false
 }
 
 var data = [
+  {
+    titulo: 'Aula 27 - Utilizando comandos SQL',
+    descricao: 'Nesta aula você irá aprender os conceitos de banco de dados SQL, porque utiliza-lo e quando utiliza-lo, aprenderá como incluir, alterar, selecionar e deletar dados, como utilizar um client para facilitar a criação de comandos.',
+    videoYoutube: 'https://www.youtube.com/watch?v=_IKoyIi7VAo'
+  },
   {
     titulo: 'Aula 26 - Refatorando codigo',
     descricao: 'Nesta aula você irá junto comigo refatorar o código que fizemos nas aulas anteriores, organizando-o em arquivos separados e criando objetos para melhorar a visualização e o entendimento do código. Visando manutenção no futuro.',
@@ -66,11 +71,6 @@ var data = [
     titulo: 'Aula 17 - Aprendendo DHTML parte 1',
     descricao: 'Nesta aula você irá aprender como transformar o seu HTML estático em dinâmico ou seja fazer a integração do html com o javascript.',
     videoYoutube: 'https://www.youtube.com/watch?v=vfbS2qN8dH8'
-  },
-  {
-    titulo: 'Aula 16 - Uso de styles e css parte 3',
-    descricao: 'Nesta aula mostro o final da explicação de html + css, ou seja terminando mais uma parte do exercício que é transformar uma imagem em um HTML.',
-    videoYoutube: 'https://www.youtube.com/watch?v=JDmv8Yj95bw'
   }
 ]
 

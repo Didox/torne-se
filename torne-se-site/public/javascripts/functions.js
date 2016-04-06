@@ -30,6 +30,21 @@ $(document).ready(function(){
   app.loadButtonsActions();
   app.actionFind();
   app.loadLastLessions();
+
+  if(document.cookie.indexOf('facebookWidgetTornese')==-1){
+    setTimeout(function(){
+      $('.facebookWidget').fadeIn();
+      $('.facebookWidget .widget').append('<span class="fechar">Fechar</span>');
+      $('.facebookWidget .widget .fechar').click(function(e){
+        e.preventDefault();
+        $('.facebookWidget').fadeOut();
+      });
+      var data=new Date();
+      data.setTime(data.getTime()+(15*24*60*60*1000)); // 15 DIAS
+      document.cookie='facebookWidgetTornese=sim;expires='+data.toUTCString()+';path=/';
+    },5000);
+  }
+
 });
 
 app.notEmpty = function(str) {
