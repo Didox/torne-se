@@ -4,8 +4,8 @@ var version = {
 }
 
 var aviso = {
-  //message: '',
-  message: 'Nova aula disponível\nDeseja assistir agora?',
+  message: '',
+  //message: 'Nova aula disponível\nDeseja assistir agora?',
   confirm: true,
   url: 'video.html?id=_IKoyIi7VAo',
   openUrl: false
