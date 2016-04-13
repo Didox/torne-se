@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <%- include('../shared/head', { title: "Projeto torne-se um programador - empresas" }) %>
+    <%- include('../shared/head', {
+      titulo: "Projeto torne-se um programador - para os empresas",
+      descricao: "Olá empresários, o video abaixo explica bem os beneficíos que vocês podem obter entrando para o projeto.",
+      url: "http://www.torneseumprogramador.com.br/sobre/empresas",
+      imagem: "http://img.youtube.com/vi/1LIThTgWHJg/maxresdefault.jpg",
+    }) %>
   </head>
   <body class="home">
     <%- include('../shared/header', {display_loading: 'none'}) %>
@@ -10,7 +15,7 @@
         <div>
           <h3>Projeto torne-se um programador para as empresas</h3>
           <p>
-            Olá empresas, o video abaixo explica bem os beneficíos que vocês podem obter entrando para o projeto.
+            Olá empresários, o video abaixo explica bem os beneficíos que vocês podem obter entrando para o projeto.
           </p>
 
           <iframe class="fluxo_video" onload='app.hideLoading()' src='https://www.youtube.com/embed/1LIThTgWHJg' frameborder='0' allowfullscreen>

@@ -1,4 +1,22 @@
-<title><%= title %></title>
+<%
+if(!this.titulo){
+  this.titulo = "Projeto torne-se um programador - Aprenda a desenvolver soluções"
+}
+
+if(!this.descricao){
+  this.descricao = "Com ele você irá aprender tudo que precisa para se tornar um programador."
+}
+
+if(!this.url){
+  this.url = "http://www.torneseumprogramador.com.br/"
+}
+
+if(!this.imagem){
+  this.imagem = "http://www.torneseumprogramador.com.br/imagens/facebookCover.png"
+}
+
+%>
+<title><%= titulo %></title>
 <meta charset="utf-8" />
 <meta name="format-detection" content="telephone=no">
 <meta name="viewport" content="width=device-width,user-scalable=no">
@@ -7,13 +25,13 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta property="twitter:site" content="@didox">
-<meta property="twitter:title" content="Projeto torne-se um programador - Aprenda a desenvolver soluções">
-<meta property="twitter:description" content="Com ele você irá aprender tudo que precisa para se tornar um programador.">
-<meta property="twitter:image" content="http://www.torneseumprogramador.com.br/imagens/facebookCover.png">
+<meta property="twitter:title" content="<%= titulo %>">
+<meta property="twitter:description" content="<%= descricao %>">
+<meta property="twitter:image" content="<%= imagem %>">
 
 <meta property="og:site_name" content="Projeto torne-se um programador">
-<meta property="og:title" content="Projeto torne-se um programador - Aprenda a desenvolver soluções">
+<meta property="og:title" content="<%= titulo %>">
 <meta property="og:type" content="website">
-<meta property="og:url" content="http://www.torneseumprogramador.com.br/">
-<meta property="og:image" content="http://www.torneseumprogramador.com.br/imagens/facebookCover.png">
-<meta property="og:description" content="Com ele você irá aprender tudo que precisa para se tornar um programador.">
+<meta property="og:url" content="<%= url %>">
+<meta property="og:image" content="<%= imagem %>">
+<meta property="og:description" content="<%= descricao %>">

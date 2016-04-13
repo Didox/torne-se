@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <%- include('../shared/head', { title: "Projeto torne-se um programador - aulas" }) %>
+    <%- include('../shared/head', {
+      titulo: "Projeto torne-se um programador - " + aula.titulo,
+      descricao: aula.descricao,
+      url: "http://www.torneseumprogramador.com.br/aula?id=" + aula.videoYoutube,
+      imagem: "http://img.youtube.com/vi/" + aula.videoYoutube + "/maxresdefault.jpg",
+    }) %>
   </head>
   <body class="home">
     <%- include('../shared/header', {display_loading: 'block'}) %>
@@ -19,12 +24,14 @@
           <% } %>
         </div>
         <div>
-          <div id="video_container">
-            <h3 id="titulo"></h3>
-            <p id="descricao"></p>
-            <div id="video"></div>
+          <div id="video_painel">
+            <h3 id="titulo"><%= aula.titulo %></h3>
+            <p id="descricao"><%= aula.descricao %></p>
+            <div id="video">
+              <iframe onload="app.hideLoading()" src="https://www.youtube.com/embed/<%= aula.videoYoutube %>" frameborder="0" allowfullscreen></iframe>
+            </div>
             <div id="fb-root"></div>
-            <%- include('../shared/share') %>
+            <%- include('../shared/share', {url: 'http://www.torneseumprogramador.com.br/aula?id=' + aula.videoYoutube}) %>
           </div>
         </div>
       </div>

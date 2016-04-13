@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <%- include('../shared/head', { title: "Projeto torne-se um programador" }) %>
+    <%- include('../shared/head') %>
   </head>
   <body class="home">
     <%- include('../shared/header', {display_loading: 'none'}) %>
@@ -28,7 +28,7 @@
           <a class="button" href="/sobre">Sobre</a>
         </div>
         <%- include('../shared/download') %>
-        <%- include('../shared/share') %>
+        <%- include('../shared/share', {url: 'http://www.torneseumprogramador.com.br'}) %>
       </div>
       <%- include('../shared/form') %>
       <%- include('../shared/adsense') %>
