@@ -4,14 +4,19 @@ var version = {
 }
 
 var aviso = {
-  message: '',
-  //message: 'Nova aula disponível\nDeseja assistir agora?',
+  //message: '',
+  message: 'Nova aula disponível\nDeseja assistir agora?',
   confirm: true,
-  url: 'video.html?id=_IKoyIi7VAo',
+  url: 'video.html?id=ZZ5AWeMa5mE',
   openUrl: false
 }
 
 var data = [
+  {
+    titulo: 'Aula 28 - Como conectar sua aplicação ao MySql',
+    descricao: 'Nesta aula explico como conectar nossa aplicação em Node.js no MySql, fazendo uma refatoração em nosso código deixando a responsabilidade dos dados no nosso servidor de banco de dados.',
+    videoYoutube: 'https://www.youtube.com/watch?v=ZZ5AWeMa5mE'
+  },
   {
     titulo: 'Aula 27 - Utilizando comandos SQL',
     descricao: 'Nesta aula você irá aprender os conceitos de banco de dados SQL, porque utiliza-lo e quando utiliza-lo, aprenderá como incluir, alterar, selecionar e deletar dados, como utilizar um client para facilitar a criação de comandos.',
