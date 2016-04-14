@@ -37,9 +37,11 @@
             </li>
             <% } %>
           </ul>
+          <% if(aulas.length > 10){ %>
           <li id="loadMoreVideo">
             <button type="button" onclick="app.moreVideos();">Carregar mais</button>
           </li>
+          <% } %>
           <% } else { %>
             <p>
               Olá alunos, a aula que você está procurando não foi encontrada, clique <a href="/aulas">aqui</a> para voltar a pagina de aulas.
