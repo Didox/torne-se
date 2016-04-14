@@ -13,6 +13,8 @@ app.set('view engine', 'ejs');
 
 app.use(function(req, res, next) {
   res.header('Vary', 'X-Device, Origin');
+  // 60s x 60m x 24h x 3d 
+  // 3600 cache de 1 hora ou seja 60m
   res.setHeader('Cache-Control', 'max-age=3600, public, no-transform');
   next();
 });
