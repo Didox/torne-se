@@ -1,3 +1,4 @@
+<% this.termo = (!this.termo ? "" : this.termo); %>
 <header>
   <div id="logo">
     <a href="/">
@@ -5,17 +6,19 @@
     </a>
   </logo>
   </div>
-  <div id="nome_site">
+  <div id="nome_site" style="<%= termo != '' ? 'display:none!important' : '' %>">
     <a href="/">Projeto torne-se um programador</a>
   </div>
-  <div id="lupa">
+  <div id="lupa" style="<%= termo != '' ? 'display:none!important' : '' %>">
     <a href="javascript:void(0);">
       <img src="/imagens/lupa.png" width="30" heigth="30">
     </a>
   </div>
-  <div id="findAula">
-    <input type="text" id="aula" placeholder="Procurar aulas">
-    <a href="javascript:void(0);" class="button">Buscar</a>
+  <div id="findAula" style="<%= termo != '' ? 'display:block!important' : '' %>">
+    <form action="/aulas" method="GET">
+      <input type="text" id="aula" name="q" value="<%= termo %>" placeholder="Procurar aulas">
+      <input type="submit" class="button" value="Buscar">
+    </form>
   </div>
 </header>
 <div class="load_container">

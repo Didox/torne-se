@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <%- include('../shared/head', { titulo: "Projeto torne-se um programador - aulas" }) %>
@@ -9,13 +9,42 @@
       <div class="top">
         <%- include('../shared/adsense') %>
       </div>
-      <div class="container margin">
+      <div class="container margin container-aulas">
         <br>
         <div class="buttons">
           <a class="button" href="/" >Voltar</a>
         </div>
         <div>
-          <ul id="videos"></ul>
+          <% if(aulas.length > 0){ %>
+          <ul id="videos-dinamico">
+            <% for(var i=0; i< aulas.length; i++){ %>
+            <li>
+              <% if(i < 10){ %>
+              <div class="video">
+                 <a href="/aula?id=<%= aulas[i].videoYoutube %>&aula=<%= aulas[i].numero %>">
+                    <img src="http://img.youtube.com/vi/<%= aulas[i].videoYoutube %>/hqdefault.jpg" style="width: 200px;height: 150px;">      
+                    <p><%= aulas[i].titulo %></p>
+                 </a>
+              </div>
+              <% } else { %>
+              <div class="video hidden">
+                 <a href="/aula?id=<%= aulas[i].videoYoutube %>&aula=<%= aulas[i].numero %>">
+                    <img src="" data-imagem="http://img.youtube.com/vi/<%= aulas[i].videoYoutube %>/hqdefault.jpg" style="width: 200px;height: 150px;">      
+                    <p><%= aulas[i].titulo %></p>
+                 </a>
+              </div>
+              <% } %>
+            </li>
+            <% } %>
+          </ul>
+          <li id="loadMoreVideo">
+            <button type="button" onclick="app.moreVideos();">Carregar mais</button>
+          </li>
+          <% } else { %>
+            <p>
+              Olá alunos, a aula que você está procurando não foi encontrada, clique <a href="/aulas">aqui</a> para voltar a pagina de aulas.
+            </p>
+          <% } %>
         </div>
         <div class="voltarTopo">
           <a href="#">

@@ -10,6 +10,7 @@ router.get('/', HomeController.index);
 router.get('/aula', AulasController.aula);
 router.get('/aulas', AulasController.index);
 router.get('/aulas/iniciante', AulasController.iniciante);
+router.get('/aulas.json', AulasController.todas);
 
 router.get('/vagas', VagasController.index);
 

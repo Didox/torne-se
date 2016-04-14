@@ -35,7 +35,9 @@ fieldset, form, label, legend, input, button {
 .white{
   color: #fff;
 }
-
+.hidden{
+  display: none!important;
+}
 strong{
   font-weight: 700;
 }
@@ -73,7 +75,7 @@ a{
 
 .coluna1{float:left; margin-top: 10px;}
 .sidebar{text-align: center; float: left;background-color: #fff;
-  width: 170px;height: 614px; margin-right:20px; margin-top:10px; 
+  width: 170px;height: 626px; margin-right:20px; margin-top:10px; 
   padding: 5px; border-radius: 8px}
 
 .coluna1 .top{margin-top: -10px!important;}
@@ -313,6 +315,8 @@ header #lupa img{background-image: none;}
 header #findAula{display:none;float:right;}
 
 header #findAula .button{
+  width: 100px;
+  height: 30px;
   background-repeat: repeat-x;
   border: 1px solid #fff;
   background-color: #265a88;
