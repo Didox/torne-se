@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  app.loadVideos();
   app.loadButtonsActions();
   app.actionFind();
 });
@@ -26,10 +27,78 @@ app.isMobile = function(){
   else { return false; }
 };
 
-app.getYoutubeImagem = function(youtube_url){
-  var id_video = app.getIdYoutubeImagem(youtube_url);
-  return video_imagem = "http://img.youtube.com/vi/"+ id_video + "/hqdefault.jpg";
-};
+app.moreVideos = function(){
+  var i = 0;
+  $("#videos .video.hidden").each(function(){
+    if(i < 10){
+      $(this).removeClass("hidden");
+      var imagem = $(this).find("img").data("imagem");
+      $(this).find("img").attr("src", imagem);
+    }
+    else{
+      return;
+    }
+    i++;
+  });
+
+  if($("#videos .video.hidden").size() == 0){
+    $("#loadMoreVideo").remove();
+  }
+}
+
+app.loadVideos = function(){
+  if($("#videos").size() > 0){
+    $.ajax({
+      url: app.urlServico + "/aulas.json"
+    }).done(function(aulas) {
+      var html = "";
+  
+      for(i=0;i<aulas.length; i++){
+        html += "<li>";
+        html += "  <div class='video " + (i < 10 ? "" : "hidden") + "'>";
+        html += "    <a href=\"javascript:app.openInternalLink('video.html?id=" + aulas[i].videoYoutube + "');\">";
+        html += "      <img " + (i < 10 ? "src='http://img.youtube.com/vi/"+ aulas[i].videoYoutube + "/hqdefault.jpg'" : "data-imagem='http://img.youtube.com/vi/"+ aulas[i].videoYoutube + "/hqdefault.jpg'") + " style='width: 200px;height: 150px;'>";
+        html += "      <p>" + aulas[i].titulo + "</p>";
+        html += "    </a>";
+        html += "  </div>";
+        html += "</li>"
+      }
+
+      $("#videos").html(html);
+
+      if(aulas.length > 10){
+        $("#loadMoreVideo").show();
+      }
+    });
+  }
+}
+
+app.loadVideo = function(){
+  if($("#video_container").size() > 0){
+    $.ajax({
+      url: app.urlServico + "/aulas.json"
+    }).done(function(aulas) {
+      var html = "";
+  
+      for(i=0;i<aulas.length; i++){
+        html += "<li>";
+        html += "  <div class='video " + (i < 10 ? "" : "hidden") + "'>";
+        html += "    <a href=\"javascript:app.openInternalLink('video.html?id=" + aulas[i].videoYoutube + "');\">";
+        html += "      <img " + (i < 10 ? "src='http://img.youtube.com/vi/"+ aulas[i].videoYoutube + "/hqdefault.jpg'" : "data-imagem='http://img.youtube.com/vi/"+ aulas[i].videoYoutube + "/hqdefault.jpg'") + " style='width: 200px;height: 150px;'>";
+        html += "      <p>" + aulas[i].titulo + "</p>";
+        html += "    </a>";
+        html += "  </div>";
+        html += "</li>"
+      }
+
+      $("#videos").html(html);
+
+      if(aulas.length > 10){
+        $("#loadMoreVideo").show();
+      }
+    });
+  }
+}
 
 app.getHtmlVideo = function(youtube_url) {
   app.showLoading()

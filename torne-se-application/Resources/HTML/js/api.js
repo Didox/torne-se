@@ -1,6 +1,7 @@
 var app = window.app || {};
 
 app.appVersion       = 9.4;
+app.urlServico       = "http://www.torneseumprogramador.com.br";
 
 app.showLoading = function(){
   $(".carregando").show();
