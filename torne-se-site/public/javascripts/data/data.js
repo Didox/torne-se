@@ -4,40 +4,53 @@ var version = {
 }
 
 var aviso = {
-  message: '',
-  //message: 'Nova aula disponível\nDeseja assistir agora?',
+  //message: '',
+  message: 'Nova aula disponível\nDeseja assistir agora?',
   confirm: true,
-  url: 'video.html?id=ZZ5AWeMa5mE',
+  url: 'video.html?id=065fBE0Jezk',
   openUrl: false
 }
 
 var data = [
   {
+    numero: 29,
+    titulo: 'Aula 29 - Utilizando Bootstrap',
+    descricao: 'Nesta aula vocês irão aprender o que é o bootstrap, para que serve e como dar vida a um html básico utilizando a sua folha de estilo. Mudaremos o nosso cadastro deixando-o mais bonito.',
+    videoYoutube: 'https://www.youtube.com/watch?v=065fBE0Jezk',
+    tipo: 'html_css'
+  },
+  {
+    numero: 28,
     titulo: 'Aula 28 - Como conectar sua aplicação ao MySql',
     descricao: 'Nesta aula explico como conectar nossa aplicação em Node.js no MySql, fazendo uma refatoração em nosso código deixando a responsabilidade dos dados no nosso servidor de banco de dados.',
     videoYoutube: 'https://www.youtube.com/watch?v=ZZ5AWeMa5mE'
   },
   {
+    numero: 27,
     titulo: 'Aula 27 - Utilizando comandos SQL',
     descricao: 'Nesta aula você irá aprender os conceitos de banco de dados SQL, porque utiliza-lo e quando utiliza-lo, aprenderá como incluir, alterar, selecionar e deletar dados, como utilizar um client para facilitar a criação de comandos.',
     videoYoutube: 'https://www.youtube.com/watch?v=_IKoyIi7VAo'
   },
   {
+    numero: 26,
     titulo: 'Aula 26 - Refatorando codigo',
     descricao: 'Nesta aula você irá junto comigo refatorar o código que fizemos nas aulas anteriores, organizando-o em arquivos separados e criando objetos para melhorar a visualização e o entendimento do código. Visando manutenção no futuro.',
     videoYoutube: 'https://www.youtube.com/watch?v=1oddz49LZgo'
   },
   {
+    numero: 25,
     titulo: 'Aula 25 - Editando e excluindo dados em arquivos',
     descricao: 'Nesta aula iremos concluir o nosso CRUD (Create, Read, Update, Delete), fazendo com que o cadastro que criamos, tenha a possibilidade de fazer o processo completo de um cadastro.',
     videoYoutube: 'https://www.youtube.com/watch?v=00ARVfHHVz8'
   },
   {
+    numero: 24,
     titulo: 'Aula 24 - Pesquisando em arquivos',
     descricao: 'Nesta aula você irá aprender como buscar dados em arquivos, utilizando os comandos .toLowerCase()  . toUpperCase() para maiúsculo e minúsculo, Regex para busca, match exato, lógica para validação de strings, looping e muito mais.',
     videoYoutube: 'https://www.youtube.com/watch?v=sspYqCwqguk'
   },
   {
+    numero: 23,
     titulo: 'Aula 23 - Gravando dados em arquivos',
     descricao: 'Nesta aula você aprenderá como gravar os seus dados que estão na memória de um servidor, dentro de arquivos, recuperando assim os dados depois que reiniciar o seu servidor.',
     videoYoutube: 'https://www.youtube.com/watch?v=kKxnxSQKE4c'
@@ -61,21 +74,6 @@ var data = [
     titulo: 'Aula 19 - Utilizando linha de comando',
     descricao: 'Olá alunos, nesta aula vocês irão ver como utilizar a linha do Unix e DOS, para agilizar no processo no desenvolvimento de programas. Utilizar comandos como: dir, mkdir, ls copy, move, mv, cp.',
     videoYoutube: 'https://www.youtube.com/watch?v=3vc8FrAKC7Q'
-  },
-  {
-    titulo: 'Aula 18 - JQuery',
-    descricao: 'Nesta aula você irá aprender um dos frameworks mais famosos para quem trabalha com Frond-End ou seja com javascript. JQuery é muito poderoso, com ele você irá economizar muito tempo ao trabalhar com DHTML.',
-    videoYoutube: 'https://www.youtube.com/watch?v=701jjz1-VFE'
-  },
-  {
-    titulo: 'Aula 17 - Aprendendo DHTML parte 2',
-    descricao: 'Nesta aula você aprenderá como fazer validação de um formulário, como manipular elementos DOM (nextSibling, previousSibling), animação utilizando opacity e as funções setTimeout e setInterval.',
-    videoYoutube: 'https://www.youtube.com/watch?v=LH7AXRwZY0o'
-  },
-  {
-    titulo: 'Aula 17 - Aprendendo DHTML parte 1',
-    descricao: 'Nesta aula você irá aprender como transformar o seu HTML estático em dinâmico ou seja fazer a integração do html com o javascript.',
-    videoYoutube: 'https://www.youtube.com/watch?v=vfbS2qN8dH8'
   }
 ]
 

@@ -1,5 +1,12 @@
 [
   {
+    numero: 29,
+    titulo: 'Aula 29 - Utilizando Bootstrap',
+    descricao: 'Nesta aula vocês irão aprender o que é o bootstrap, para que serve e como dar vida a um html básico utilizando a sua folha de estilo. Mudaremos o nosso cadastro deixando-o mais bonito.',
+    videoYoutube: '065fBE0Jezk',
+    tipo: 'html_css'
+  },
+  {
     numero: 28,
     titulo: 'Aula 28 - Como conectar sua aplicação ao MySql',
     descricao: 'Nesta aula explico como conectar nossa aplicação em Node.js no MySql, fazendo uma refatoração em nosso código deixando a responsabilidade dos dados no nosso servidor de banco de dados.',
@@ -74,63 +81,63 @@
     titulo: 'Aula 18 - JQuery',
     descricao: 'Nesta aula você irá aprender um dos frameworks mais famosos para quem trabalha com Frond-End ou seja com javascript. JQuery é muito poderoso, com ele você irá economizar muito tempo ao trabalhar com DHTML.',
     videoYoutube: '701jjz1-VFE',
-    tipo: 'outros'
+    tipo: 'dhtml'
   },
   {
     numero: 17.2,
     titulo: 'Aula 17 - Aprendendo DHTML parte 2',
     descricao: 'Nesta aula você aprenderá como fazer validação de um formulário, como manipular elementos DOM (nextSibling, previousSibling), animação utilizando opacity e as funções setTimeout e setInterval.',
     videoYoutube: 'LH7AXRwZY0o',
-    tipo: 'outros'
+    tipo: 'dhtml'
   },
   {
     numero: 17,
     titulo: 'Aula 17 - Aprendendo DHTML parte 1',
     descricao: 'Nesta aula você irá aprender como transformar o seu HTML estático em dinâmico ou seja fazer a integração do html com o javascript.',
     videoYoutube: 'vfbS2qN8dH8',
-    tipo: 'outros'
+    tipo: 'dhtml'
   },
   {
     numero: 16.2,
     titulo: 'Aula 16 - Uso de styles e css parte 3',
     descricao: 'Nesta aula mostro o final da explicação de html + css, ou seja terminando mais uma parte do exercício que é transformar uma imagem em um HTML.',
     videoYoutube: 'JDmv8Yj95bw',
-    tipo: 'outros'
+    tipo: 'dhtml'
   },
   {
     numero: 16.1,
     titulo: 'Aula 16 - Uso de styles e css parte 2',
     descricao: 'Continuação da aula aprendendo html + css. Criando arquivo.css e estilizando uma página através de uma imagem de layout.',
     videoYoutube: 'HAaLR1iJsB4',
-    tipo: 'outros'
+    tipo: 'html_css'
   },
   {
     numero: 16,
     titulo: 'Aula 16 - Uso de styles e css parte 1',
     descricao: 'Nesta aula você irá aprender para que serve o CSS, como estilizar uma pagina HTML, dando cor, layout e vida a sua página.',
     videoYoutube: 'v1GuWjYCrhA',
-    tipo: 'outros'
+    tipo: 'html_css'
   },
   {
     numero: 15.2,
     titulo: 'Aula 15 - Aprendendo html Parte 3',
     descricao: 'Nesta aula você irá aprender as tags html, img, form, input, frame, iframe e frameset.',
     videoYoutube: 'Ht40eIIY_OQ',
-    tipo: 'outros'
+    tipo: 'html_css'
   },
   {
     numero: 15.1,
     titulo: 'Aula 15 - Aprendendo html Parte 2',
     descricao: 'Nesta aula você irá aprender a parte 2 da aula aprendendo HTML, vendo agora outras tags como "a", "fildset" e outras.',
     videoYoutube: 'GbdrPMCcVxw',
-    tipo: 'outros'
+    tipo: 'html_css'
   },
   {
     numero: 15,
     titulo: 'Aula 15 - Aprendendo html Parte 1',
     descricao: 'Na aula de hoje iremos aprender os conceitos básicos de um html, para que serve e como utilizá-lo.',
     videoYoutube: '-9vZHPB19NI',
-    tipo: 'outros'
+    tipo: 'html_css'
   },
   {
     numero: 14,

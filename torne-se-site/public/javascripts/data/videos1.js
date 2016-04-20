@@ -1,5 +1,20 @@
 var data = [
   {
+    titulo: 'Aula 18 - JQuery',
+    descricao: 'Nesta aula você irá aprender um dos frameworks mais famosos para quem trabalha com Frond-End ou seja com javascript. JQuery é muito poderoso, com ele você irá economizar muito tempo ao trabalhar com DHTML.',
+    videoYoutube: 'https://www.youtube.com/watch?v=701jjz1-VFE'
+  },
+  {
+    titulo: 'Aula 17 - Aprendendo DHTML parte 2',
+    descricao: 'Nesta aula você aprenderá como fazer validação de um formulário, como manipular elementos DOM (nextSibling, previousSibling), animação utilizando opacity e as funções setTimeout e setInterval.',
+    videoYoutube: 'https://www.youtube.com/watch?v=LH7AXRwZY0o'
+  },
+  {
+    titulo: 'Aula 17 - Aprendendo DHTML parte 1',
+    descricao: 'Nesta aula você irá aprender como transformar o seu HTML estático em dinâmico ou seja fazer a integração do html com o javascript.',
+    videoYoutube: 'https://www.youtube.com/watch?v=vfbS2qN8dH8'
+  },
+  {
     titulo: 'Aula 16 - Uso de styles e css parte 3',
     descricao: 'Nesta aula mostro o final da explicação de html + css, ou seja terminando mais uma parte do exercício que é transformar uma imagem em um HTML.',
     videoYoutube: 'https://www.youtube.com/watch?v=JDmv8Yj95bw'
@@ -58,21 +73,6 @@ var data = [
     titulo: 'Aula 11 - Orientação a Objetos parte 1',
     descricao: 'Nesta aula você irá conhecer um dos assuntos que mais fazem diferença entre um bom programador e somente um programador, organizar o seu código utilizando orientação a objetos.',
     videoYoutube: 'https://www.youtube.com/watch?v=K7VMgGX9vIY'
-  },
-  {
-    titulo: 'Aula 10 - Programação funcional',
-    descricao: 'Nesta aula você aprenderá o que é programação funcional, como escrever um código mais organizado e simples utilizando funções, e separá-los em arquivos, deixando em contextos diferentes.',
-    videoYoutube: 'https://www.youtube.com/watch?v=DbR-luEtC1I'
-  },
-  {
-    titulo: 'Aula 9 - Funções recursivas e constantes',
-    descricao: 'Nesta aula você irá aprender o que é uma variável constante e como aplicar em um programa, também irá aprender o que é funções recursivas, como utiliza-las e como aplicar em um programa.',
-    videoYoutube: 'https://www.youtube.com/watch?v=NYGGaTd_xZk'
-  },
-  {
-    titulo: 'Aula 8 - Funções',
-    descricao: 'Nesta aula você irá aprender como criar uma função em javascript, para que serve e quais os tipos de funções utilizadas. ',
-    videoYoutube: 'https://www.youtube.com/watch?v=WGbVQTWqEko'
   }
 ]
 

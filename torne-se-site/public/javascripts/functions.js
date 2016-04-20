@@ -96,7 +96,7 @@ app.loadLastLessions = function(){
     for(i=0;i<4; i++){
       html += "<li>";
       html += "  <div>";
-      html += "    <a href=\"/aula?id=" + app.getIdYoutubeImagem(data[i].videoYoutube) + "\">";
+      html += "    <a href=\"/aula?id=" + app.getIdYoutubeImagem(data[i].videoYoutube) + "&aula=" + data[i].numero + "\">";
       html += "      <img src='" + app.getYoutubeImagem(data[i].videoYoutube) + "' style='width: 100px;height: 80px;'>";
       html += "      <p>" + data[i].titulo + "</p>";
       html += "      <span style='display:none'>" + data[i].descricao + "</span>";
