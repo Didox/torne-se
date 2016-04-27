@@ -18,7 +18,7 @@ $(document).ready(function(){
   app.appDownload();
   app.loadButtonsActions();
   app.loadLastLessions();
-  app.faPagePopUp();
+  //app.faPagePopUp();
   //app.moreVideoByScroll();
 });
 

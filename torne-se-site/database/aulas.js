@@ -1,5 +1,12 @@
 [
   {
+    numero: 30,
+    titulo: 'Aula 30 - Como utilizar Ajax',
+    descricao: 'Nesta aula você irá aprender para que serve o Ajax (Asynchronous JavaScript and XML), criando um combo (select box) que faz load em cascata de estado e cidade. Também irá ver como incluir um pedaço de html em sua página por Ajax.',
+    videoYoutube: '3yb_JMEdgD0',
+    tipo: 'html_css'
+  },
+  {
     numero: 29,
     titulo: 'Aula 29 - Utilizando Bootstrap',
     descricao: 'Nesta aula vocês irão aprender o que é o bootstrap, para que serve e como dar vida a um html básico utilizando a sua folha de estilo. Mudaremos o nosso cadastro deixando-o mais bonito.',

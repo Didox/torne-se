@@ -4,14 +4,21 @@ var version = {
 }
 
 var aviso = {
-  message: '',
-  //message: 'Nova aula disponível\nDeseja assistir agora?',
+  //message: '',
+  message: 'Nova aula disponível\nDeseja assistir agora?',
   confirm: true,
-  url: 'video.html?id=065fBE0Jezk',
+  url: 'video.html?id=3yb_JMEdgD0',
   openUrl: false
 }
 
 var data = [
+  {
+    numero: 30,
+    titulo: 'Aula 30 - Como utilizar Ajax',
+    descricao: 'Nesta aula você irá aprender para que serve o Ajax (Asynchronous JavaScript and XML), criando um combo (select box) que faz load em cascata de estado e cidade. Também irá ver como incluir um pedaço de html em sua página por Ajax.',
+    videoYoutube: 'https://www.youtube.com/watch?v=3yb_JMEdgD0',
+    tipo: 'html_css'
+  },
   {
     numero: 29,
     titulo: 'Aula 29 - Utilizando Bootstrap',
