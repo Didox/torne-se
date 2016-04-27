@@ -26,6 +26,11 @@ def confere_and_find_emailchimp
     @session.all(".table-contents .profile-view a").each do |link|
       emailchimp << link.text.downcase.strip
     end
+    @session.all(".button-small[title=Next]")[0].click
+    sleep(3)
+    @session.all(".table-contents .profile-view a").each do |link|
+      emailchimp << link.text.downcase.strip
+    end
   end
   return emailchimp
 end
@@ -60,7 +65,7 @@ def cadastra(text_emails)
 end
 
 def emails_chimp_100
-  @session.visit("https://us12.admin.mailchimp.com/lists/members/?id=34953#p:1-s:100")
+  @session.visit("https://us12.admin.mailchimp.com/lists/members/?id=34953#p:1-s:200")
   sleep(5)
   @quantidade_mailchimp = @session.find(".sub-count").text.to_i
 end
