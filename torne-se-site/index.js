@@ -12,6 +12,8 @@ app.set('views', __dirname + '/app/views');
 app.set('view engine', 'ejs');
 
 app.use(function(req, res, next) {
+  app.locals.isMobile = /mobile/i.test(req.headers['user-agent']);
+  
   res.header('Vary', 'X-Device, Origin');
   // 60s x 60m x 24h x 3d 
   // 3600 cache de 1 hora ou seja 60m
