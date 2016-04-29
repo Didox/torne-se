@@ -12,6 +12,11 @@ app.set('views', __dirname + '/app/views');
 app.set('view engine', 'ejs');
 
 app.use(function(req, res, next) {
+  if(req.headers.host == "torneseumprogramador.com.br"){
+    res.redirect("http://www.torneseumprogramador.com.br");
+    return;
+  }
+
   app.locals.isMobile = /mobile/i.test(req.headers['user-agent']);
   
   res.header('Vary', 'X-Device, Origin');
