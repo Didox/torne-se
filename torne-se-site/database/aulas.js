@@ -1,10 +1,31 @@
 [
   {
+    numero: 33,
+    titulo: 'Aula 33 - Conectando seu aplicativo a uma API',
+    descricao: 'Nesta aula explico como criar um serviço utilizando REST para trazer os dados cadastrados em uma base de pessoas e altero o aplicativo para ler estes dados.',
+    videoYoutube: 'bSltPlO_JcU',
+    tipo: 'aplicativos'
+  },
+  {
+    numero: 32,
+    titulo: 'Aula 32 - Desenvolvimento de aplicativos',
+    descricao: 'Nesta aula você irá aprender como configurar o ambiente de desenvolvimento de um aplicativo utilizando o framework Titanium, com a linguagem de programação JavaScript e gerenciador de pacotes do Node.js. Como buildar seu primeiro aplicativo até instalá-lo em seu celular.',
+    videoYoutube: '6AsgxL4SsTM',
+    tipo: 'aplicativos'
+  },
+  {
+    numero: 31,
+    titulo: 'Aula 31 - Como fazer deploy de sua aplicação',
+    descricao: 'Nesta aula você irá aprender como colocar sua aplicação em produção (Fazendo deploy), iremos utilizar o serviço chamado heroku.com, para hospedar o nosso website.',
+    videoYoutube: 'xTTVyD2WrnU',
+    tipo: 'deploy'
+  },
+  {
     numero: 30,
     titulo: 'Aula 30 - Como utilizar Ajax',
     descricao: 'Nesta aula você irá aprender para que serve o Ajax (Asynchronous JavaScript and XML), criando um combo (select box) que faz load em cascata de estado e cidade. Também irá ver como incluir um pedaço de html em sua página por Ajax.',
     videoYoutube: '3yb_JMEdgD0',
-    tipo: 'html_css'
+    tipo: 'dhtml'
   },
   {
     numero: 29,

@@ -7,17 +7,38 @@ var aviso = {
   //message: '',
   message: 'Nova aula disponível\nDeseja assistir agora?',
   confirm: true,
-  url: 'video.html?id=3yb_JMEdgD0',
+  url: 'video.html?id=bSltPlO_JcU',
   openUrl: false
 }
 
 var data = [
   {
+    numero: 33,
+    titulo: 'Aula 33 - Conectando seu aplicativo a uma API',
+    descricao: 'Nesta aula explico como criar um serviço utilizando REST para trazer os dados cadastrados em uma base de pessoas e altero o aplicativo para ler estes dados.',
+    videoYoutube: 'https://www.youtube.com/watch?v=bSltPlO_JcU',
+    tipo: 'aplicativos'
+  },
+  {
+    numero: 32,
+    titulo: 'Aula 32 - Desenvolvimento de aplicativos',
+    descricao: 'Nesta aula você irá aprender como configurar o ambiente de desenvolvimento de um aplicativo utilizando o framework Titanium, com a linguagem de programação JavaScript e gerenciador de pacotes do Node.js. Como buildar seu primeiro aplicativo até instalá-lo em seu celular.',
+    videoYoutube: 'https://www.youtube.com/watch?v=6AsgxL4SsTM',
+    tipo: 'aplicativos'
+  },
+  {
+    numero: 31,
+    titulo: 'Aula 31 - Como fazer deploy de sua aplicação',
+    descricao: 'Nesta aula você irá aprender como colocar sua aplicação em produção (Fazendo deploy), iremos utilizar o serviço chamado heroku.com, para hospedar o nosso website.',
+    videoYoutube: 'https://www.youtube.com/watch?v=xTTVyD2WrnU',
+    tipo: 'deploy'
+  },
+  {
     numero: 30,
     titulo: 'Aula 30 - Como utilizar Ajax',
     descricao: 'Nesta aula você irá aprender para que serve o Ajax (Asynchronous JavaScript and XML), criando um combo (select box) que faz load em cascata de estado e cidade. Também irá ver como incluir um pedaço de html em sua página por Ajax.',
     videoYoutube: 'https://www.youtube.com/watch?v=3yb_JMEdgD0',
-    tipo: 'html_css'
+    tipo: 'dhtml'
   },
   {
     numero: 29,
@@ -71,16 +92,6 @@ var data = [
     titulo: 'Aula 21 - Aplicação back-end com Node.js',
     descricao: 'Nesta aula você verá as diferenças entre uma aplicação back-end e front-end, aprenderá como instalar o node.js com framework express,  o que é um framework, como manipular o arquivo hosts da sua máquina e como levantar um servidor na sua máquina.',
     videoYoutube: 'https://www.youtube.com/watch?v=AHWYDpI70zQ'
-  },
-  {
-    titulo: 'Aula 20 - Versionando seu código (aprendendo git)',
-    descricao: 'Nesta aula explico o conceito de versionamento de código, utilizando a ferramenta GIT, você poderá guardar os seus arquivos em um servidor, recuperando as versões do mesmo, ou seja não perdendo o seu trabalho que levou anos para fazer, outra coisa boa é o conceito de colaboração, deixar o seu código aberto para outras pessoas colaborarem com a evolução do projeto.',
-    videoYoutube: 'https://www.youtube.com/watch?v=JiyKMqVfP1M'
-  },
-  {
-    titulo: 'Aula 19 - Utilizando linha de comando',
-    descricao: 'Olá alunos, nesta aula vocês irão ver como utilizar a linha do Unix e DOS, para agilizar no processo no desenvolvimento de programas. Utilizar comandos como: dir, mkdir, ls copy, move, mv, cp.',
-    videoYoutube: 'https://www.youtube.com/watch?v=3vc8FrAKC7Q'
   }
 ]
 
