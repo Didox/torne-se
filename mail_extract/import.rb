@@ -36,6 +36,7 @@ def confere_and_find_emailchimp
 end
 
 def cadastra(text_emails)
+  @emails_novos = []
   @emails.each do |k,v|
     unless(text_emails.include?(v['email'].downcase.strip))
       @session.visit("https://us12.admin.mailchimp.com/lists/members/add?id=34953")
@@ -50,6 +51,7 @@ def cadastra(text_emails)
           end
           @session.find(".button.p0").click
           @session.visit("https://us12.admin.mailchimp.com")
+          @emails_novos << v
         rescue;end
       end
     end
@@ -61,6 +63,7 @@ def cadastra(text_emails)
   end
   File.write('email_backup.csv', csv_header)
 
+  File.write('email_novos.txt', @emails_novos);
   emails_chimp_100
 end
 
@@ -82,6 +85,12 @@ unless text_emails.empty?
   end
 end
 
+# emails_novos = "";
+# @emails.map{|key,val| key}.each do |e| 
+#   emails_novos += (!text_emails.include?(e) ? e : '' )
+# end
+# byebug
+
 if new_email
   cadastra(text_emails)
 end
@@ -90,3 +99,4 @@ puts "======================== QUANTIDADE DE EMAILS #{@emails.size} ============
 puts "======================== QUANTIDADE DE MAILCHIMP #{@quantidade_mailchimp} =========================="
 
 
+#emails - subscribe: daviconed2015@gmail.com.br - Davi Conde Silva
