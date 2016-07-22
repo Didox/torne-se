@@ -1,1 +1,0 @@
-[{"email"=>"Fabio.orikuchi@gmail.com", "nome"=>"Fabio"}]
